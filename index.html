@@ -7,11 +7,29 @@
 <meta name="description" content="Buy professional 4K aerial drone footage of Indian cities. 1084 clips from Bangalore Chennai Delhi Hyderabad Jaipur Varanasi and more.">
 <meta name="keywords" content="drone footage india,aerial stock video,4K drone clips,india stock footage,aerial photography india,buy drone footage india">
 <meta property="og:title" content="INDIA DRONE FOOTAGE | 4K Aerial Stock Videos">
-<meta property="og:description" content="Buy professional 4K aerial drone footage of Indian cities. 1084 clips from Bangalore Chennai Delhi Hyderabad Jaipur Varanasi and more.">
-<meta property="og:url" content="https://kishanjose.github.io/index.html">
-<style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Segoe UI',sans-serif;background:#0a0a0a;color:#fff;}</style>
+<meta property="og:url" content="https://kishanjose.github.io/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;background:#0a0a0a;color:#fff;}
+.city-card{background:#1a1a1a;border-radius:12px;overflow:hidden;border:1px solid #333;cursor:pointer;transition:border-color 0.3s,transform 0.3s;}
+.city-card:hover{border-color:#ff6b00;transform:translateY(-4px);}
+.city-thumb{position:relative;height:200px;overflow:hidden;}
+.city-thumb img{width:100%;height:100%;object-fit:cover;transition:opacity 0.4s ease;}
+.city-thumb-overlay{position:absolute;bottom:0;left:0;right:0;padding:8px;background:linear-gradient(transparent,rgba(0,0,0,0.7));}
+.thumb-dots{display:flex;gap:4px;justify-content:center;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.4);transition:background 0.3s;}
+.dot.active{background:#ff6b00;}
+.city-card-body{padding:18px;}
+.city-name{font-size:1.2em;font-weight:bold;color:#ff6b00;margin-bottom:5px;}
+.city-info{color:#aaa;font-size:0.85em;margin-bottom:10px;}
+.city-price-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.badge-std{background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.78em;}
+.badge-pro{background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.78em;}
+.city-clip-price{color:#aaa;font-size:0.78em;}
+</style>
 </head>
-<body><header style="background:#111;padding:20px 30px;border-bottom:2px solid #ff6b00;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
+<body>
+<header style="background:#111;padding:20px 30px;border-bottom:2px solid #ff6b00;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
 <a href="index.html" style="font-size:1.5em;font-weight:bold;color:#ff6b00;text-decoration:none;letter-spacing:1px;">🎬 INDIA DRONE FOOTAGE</a>
 <nav>
 <a href="index.html" style="color:#ccc;text-decoration:none;margin-left:15px;">Home</a>
@@ -47,88 +65,248 @@
 </div>
 </div>
 <h2 style="text-align:center;font-size:1.6em;margin:30px 0 15px;">Browse by City</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;padding:10px 30px;max-width:1200px;margin:0 auto;">
-<a href="bangalore.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Bangalore</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">58 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹8,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹20,000</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;padding:10px 30px;max-width:1200px;margin:0 auto;">
+
+<div class="city-card" id="city_bangalore" 
+     onmouseenter="startCarousel('city_bangalore')" 
+     onmouseleave="stopCarousel('city_bangalore')"
+     onclick="window.location='bangalore.html'"
+     data-images='["screenshots/Bangalore_Clip_001.jpg", "screenshots/Bangalore_Clip_002.jpg", "screenshots/Bangalore_Clip_003.jpg", "screenshots/Bangalore_Clip_004.jpg", "screenshots/Bangalore_Clip_005.jpg", "screenshots/Bangalore_Clip_006.jpg", "screenshots/Bangalore_Clip_007.jpg", "screenshots/Bangalore_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_bangalore_img" src="screenshots/Bangalore_Clip_001.jpg" alt="Bangalore drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_bangalore_dots">
+                <span class="dot active" id="city_bangalore_dot_0"></span><span class="dot " id="city_bangalore_dot_1"></span><span class="dot " id="city_bangalore_dot_2"></span><span class="dot " id="city_bangalore_dot_3"></span><span class="dot " id="city_bangalore_dot_4"></span><span class="dot " id="city_bangalore_dot_5"></span><span class="dot " id="city_bangalore_dot_6"></span><span class="dot " id="city_bangalore_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Bangalore</div>
+        <div class="city-info">58 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹8,000</span>
+            <span class="badge-pro">Professional ₹20,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="chennai.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Chennai</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">169 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹14,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹35,000</span>
+<div class="city-card" id="city_chennai" 
+     onmouseenter="startCarousel('city_chennai')" 
+     onmouseleave="stopCarousel('city_chennai')"
+     onclick="window.location='chennai.html'"
+     data-images='["screenshots/Chennai_Clip_001.jpg", "screenshots/Chennai_Clip_002.jpg", "screenshots/Chennai_Clip_003.jpg", "screenshots/Chennai_Clip_004.jpg", "screenshots/Chennai_Clip_005.jpg", "screenshots/Chennai_Clip_006.jpg", "screenshots/Chennai_Clip_007.jpg", "screenshots/Chennai_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_chennai_img" src="screenshots/Chennai_Clip_001.jpg" alt="Chennai drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_chennai_dots">
+                <span class="dot active" id="city_chennai_dot_0"></span><span class="dot " id="city_chennai_dot_1"></span><span class="dot " id="city_chennai_dot_2"></span><span class="dot " id="city_chennai_dot_3"></span><span class="dot " id="city_chennai_dot_4"></span><span class="dot " id="city_chennai_dot_5"></span><span class="dot " id="city_chennai_dot_6"></span><span class="dot " id="city_chennai_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Chennai</div>
+        <div class="city-info">169 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹14,000</span>
+            <span class="badge-pro">Professional ₹35,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="delhi.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Delhi</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">64 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹14,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹35,000</span>
+<div class="city-card" id="city_delhi" 
+     onmouseenter="startCarousel('city_delhi')" 
+     onmouseleave="stopCarousel('city_delhi')"
+     onclick="window.location='delhi.html'"
+     data-images='["screenshots/Delhi_Clip_001.jpg", "screenshots/Delhi_Clip_002.jpg", "screenshots/Delhi_Clip_003.jpg", "screenshots/Delhi_Clip_004.jpg", "screenshots/Delhi_Clip_005.jpg", "screenshots/Delhi_Clip_006.jpg", "screenshots/Delhi_Clip_007.jpg", "screenshots/Delhi_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_delhi_img" src="screenshots/Delhi_Clip_001.jpg" alt="Delhi drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_delhi_dots">
+                <span class="dot active" id="city_delhi_dot_0"></span><span class="dot " id="city_delhi_dot_1"></span><span class="dot " id="city_delhi_dot_2"></span><span class="dot " id="city_delhi_dot_3"></span><span class="dot " id="city_delhi_dot_4"></span><span class="dot " id="city_delhi_dot_5"></span><span class="dot " id="city_delhi_dot_6"></span><span class="dot " id="city_delhi_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Delhi</div>
+        <div class="city-info">64 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹14,000</span>
+            <span class="badge-pro">Professional ₹35,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="greater-noida.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Greater Noida</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">93 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹14,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹35,000</span>
+<div class="city-card" id="city_greater_noida" 
+     onmouseenter="startCarousel('city_greater_noida')" 
+     onmouseleave="stopCarousel('city_greater_noida')"
+     onclick="window.location='greater-noida.html'"
+     data-images='["screenshots/Greater_Noida_Clip_001.jpg", "screenshots/Greater_Noida_Clip_002.jpg", "screenshots/Greater_Noida_Clip_003.jpg", "screenshots/Greater_Noida_Clip_004.jpg", "screenshots/Greater_Noida_Clip_005.jpg", "screenshots/Greater_Noida_Clip_006.jpg", "screenshots/Greater_Noida_Clip_007.jpg", "screenshots/Greater_Noida_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_greater_noida_img" src="screenshots/Greater_Noida_Clip_001.jpg" alt="Greater Noida drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_greater_noida_dots">
+                <span class="dot active" id="city_greater_noida_dot_0"></span><span class="dot " id="city_greater_noida_dot_1"></span><span class="dot " id="city_greater_noida_dot_2"></span><span class="dot " id="city_greater_noida_dot_3"></span><span class="dot " id="city_greater_noida_dot_4"></span><span class="dot " id="city_greater_noida_dot_5"></span><span class="dot " id="city_greater_noida_dot_6"></span><span class="dot " id="city_greater_noida_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Greater Noida</div>
+        <div class="city-info">93 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹14,000</span>
+            <span class="badge-pro">Professional ₹35,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="gurugram.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Gurugram</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">60 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹14,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹35,000</span>
+<div class="city-card" id="city_gurugram" 
+     onmouseenter="startCarousel('city_gurugram')" 
+     onmouseleave="stopCarousel('city_gurugram')"
+     onclick="window.location='gurugram.html'"
+     data-images='["screenshots/Gurugram_Clip_001.jpg", "screenshots/Gurugram_Clip_002.jpg", "screenshots/Gurugram_Clip_003.jpg", "screenshots/Gurugram_Clip_004.jpg", "screenshots/Gurugram_Clip_005.jpg", "screenshots/Gurugram_Clip_006.jpg", "screenshots/Gurugram_Clip_007.jpg", "screenshots/Gurugram_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_gurugram_img" src="screenshots/Gurugram_Clip_001.jpg" alt="Gurugram drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_gurugram_dots">
+                <span class="dot active" id="city_gurugram_dot_0"></span><span class="dot " id="city_gurugram_dot_1"></span><span class="dot " id="city_gurugram_dot_2"></span><span class="dot " id="city_gurugram_dot_3"></span><span class="dot " id="city_gurugram_dot_4"></span><span class="dot " id="city_gurugram_dot_5"></span><span class="dot " id="city_gurugram_dot_6"></span><span class="dot " id="city_gurugram_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Gurugram</div>
+        <div class="city-info">60 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹14,000</span>
+            <span class="badge-pro">Professional ₹35,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="hyderabad.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Hyderabad</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">134 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹14,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹35,000</span>
+<div class="city-card" id="city_hyderabad" 
+     onmouseenter="startCarousel('city_hyderabad')" 
+     onmouseleave="stopCarousel('city_hyderabad')"
+     onclick="window.location='hyderabad.html'"
+     data-images='["screenshots/Hyderabad_Clip_001.jpg", "screenshots/Hyderabad_Clip_002.jpg", "screenshots/Hyderabad_Clip_003.jpg", "screenshots/Hyderabad_Clip_004.jpg", "screenshots/Hyderabad_Clip_005.jpg", "screenshots/Hyderabad_Clip_006.jpg", "screenshots/Hyderabad_Clip_007.jpg", "screenshots/Hyderabad_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_hyderabad_img" src="screenshots/Hyderabad_Clip_001.jpg" alt="Hyderabad drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_hyderabad_dots">
+                <span class="dot active" id="city_hyderabad_dot_0"></span><span class="dot " id="city_hyderabad_dot_1"></span><span class="dot " id="city_hyderabad_dot_2"></span><span class="dot " id="city_hyderabad_dot_3"></span><span class="dot " id="city_hyderabad_dot_4"></span><span class="dot " id="city_hyderabad_dot_5"></span><span class="dot " id="city_hyderabad_dot_6"></span><span class="dot " id="city_hyderabad_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Hyderabad</div>
+        <div class="city-info">134 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹14,000</span>
+            <span class="badge-pro">Professional ₹35,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="jaipur.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Jaipur</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">300 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹18,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹45,000</span>
+<div class="city-card" id="city_jaipur" 
+     onmouseenter="startCarousel('city_jaipur')" 
+     onmouseleave="stopCarousel('city_jaipur')"
+     onclick="window.location='jaipur.html'"
+     data-images='["screenshots/Jaipur_Clip_001.jpg", "screenshots/Jaipur_Clip_002.jpg", "screenshots/Jaipur_Clip_003.jpg", "screenshots/Jaipur_Clip_004.jpg", "screenshots/Jaipur_Clip_005.jpg", "screenshots/Jaipur_Clip_006.jpg", "screenshots/Jaipur_Clip_007.jpg", "screenshots/Jaipur_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_jaipur_img" src="screenshots/Jaipur_Clip_001.jpg" alt="Jaipur drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_jaipur_dots">
+                <span class="dot active" id="city_jaipur_dot_0"></span><span class="dot " id="city_jaipur_dot_1"></span><span class="dot " id="city_jaipur_dot_2"></span><span class="dot " id="city_jaipur_dot_3"></span><span class="dot " id="city_jaipur_dot_4"></span><span class="dot " id="city_jaipur_dot_5"></span><span class="dot " id="city_jaipur_dot_6"></span><span class="dot " id="city_jaipur_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Jaipur</div>
+        <div class="city-info">300 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹18,000</span>
+            <span class="badge-pro">Professional ₹45,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="noida.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Noida</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">63 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹14,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹35,000</span>
+<div class="city-card" id="city_noida" 
+     onmouseenter="startCarousel('city_noida')" 
+     onmouseleave="stopCarousel('city_noida')"
+     onclick="window.location='noida.html'"
+     data-images='["screenshots/Noida_Clip_001.jpg", "screenshots/Noida_Clip_002.jpg", "screenshots/Noida_Clip_003.jpg", "screenshots/Noida_Clip_004.jpg", "screenshots/Noida_Clip_005.jpg", "screenshots/Noida_Clip_006.jpg", "screenshots/Noida_Clip_007.jpg", "screenshots/Noida_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_noida_img" src="screenshots/Noida_Clip_001.jpg" alt="Noida drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_noida_dots">
+                <span class="dot active" id="city_noida_dot_0"></span><span class="dot " id="city_noida_dot_1"></span><span class="dot " id="city_noida_dot_2"></span><span class="dot " id="city_noida_dot_3"></span><span class="dot " id="city_noida_dot_4"></span><span class="dot " id="city_noida_dot_5"></span><span class="dot " id="city_noida_dot_6"></span><span class="dot " id="city_noida_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Noida</div>
+        <div class="city-info">63 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹14,000</span>
+            <span class="badge-pro">Professional ₹35,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="pondy.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Pondy</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">24 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹6,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹15,000</span>
+<div class="city-card" id="city_pondy" 
+     onmouseenter="startCarousel('city_pondy')" 
+     onmouseleave="stopCarousel('city_pondy')"
+     onclick="window.location='pondy.html'"
+     data-images='["screenshots/Pondy_Clip_001.jpg", "screenshots/Pondy_Clip_002.jpg", "screenshots/Pondy_Clip_003.jpg", "screenshots/Pondy_Clip_004.jpg", "screenshots/Pondy_Clip_005.jpg", "screenshots/Pondy_Clip_006.jpg", "screenshots/Pondy_Clip_007.jpg", "screenshots/Pondy_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_pondy_img" src="screenshots/Pondy_Clip_001.jpg" alt="Pondy drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_pondy_dots">
+                <span class="dot active" id="city_pondy_dot_0"></span><span class="dot " id="city_pondy_dot_1"></span><span class="dot " id="city_pondy_dot_2"></span><span class="dot " id="city_pondy_dot_3"></span><span class="dot " id="city_pondy_dot_4"></span><span class="dot " id="city_pondy_dot_5"></span><span class="dot " id="city_pondy_dot_6"></span><span class="dot " id="city_pondy_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Pondy</div>
+        <div class="city-info">24 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹6,000</span>
+            <span class="badge-pro">Professional ₹15,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a><a href="varanasi.html" style="background:#1a1a1a;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:1px solid #333;display:block;">
-<div style="font-size:1.3em;font-weight:bold;color:#ff6b00;margin-bottom:6px;">Varanasi</div>
-<div style="color:#aaa;font-size:0.85em;margin-bottom:12px;">119 clips available</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-<span style="background:#2a2a2a;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Standard ₹12,000</span>
-<span style="background:#ff6b00;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.8em;">Professional ₹30,000</span>
+<div class="city-card" id="city_varanasi" 
+     onmouseenter="startCarousel('city_varanasi')" 
+     onmouseleave="stopCarousel('city_varanasi')"
+     onclick="window.location='varanasi.html'"
+     data-images='["screenshots/Varanasi_Clip_001.jpg", "screenshots/Varanasi_Clip_002.jpg", "screenshots/Varanasi_Clip_003.jpg", "screenshots/Varanasi_Clip_004.jpg", "screenshots/Varanasi_Clip_005.jpg", "screenshots/Varanasi_Clip_006.jpg", "screenshots/Varanasi_Clip_007.jpg", "screenshots/Varanasi_Clip_008.jpg"]'
+     data-idx="0">
+    <div class="city-thumb">
+        <img id="city_varanasi_img" src="screenshots/Varanasi_Clip_001.jpg" alt="Varanasi drone footage" loading="lazy">
+        <div class="city-thumb-overlay">
+            <div class="thumb-dots" id="city_varanasi_dots">
+                <span class="dot active" id="city_varanasi_dot_0"></span><span class="dot " id="city_varanasi_dot_1"></span><span class="dot " id="city_varanasi_dot_2"></span><span class="dot " id="city_varanasi_dot_3"></span><span class="dot " id="city_varanasi_dot_4"></span><span class="dot " id="city_varanasi_dot_5"></span><span class="dot " id="city_varanasi_dot_6"></span><span class="dot " id="city_varanasi_dot_7"></span>
+            </div>
+        </div>
+    </div>
+    <div class="city-card-body">
+        <div class="city-name">Varanasi</div>
+        <div class="city-info">119 clips available</div>
+        <div class="city-price-row">
+            <span class="badge-std">Standard ₹12,000</span>
+            <span class="badge-pro">Professional ₹30,000</span>
+        </div>
+        <div class="city-clip-price">Individual clips ₹1,500 / ₹4,500</div>
+    </div>
 </div>
-<div style="color:#aaa;font-size:0.8em;">Individual clips ₹1,500 / ₹4,500</div>
-</a>
 </div>
 <div style="max-width:1100px;margin:60px auto;padding:0 30px;">
 <h2 style="font-size:1.6em;margin-bottom:25px;text-align:center;">Frequently Asked Questions</h2>
@@ -146,7 +324,8 @@
 <p style="color:#aaa;margin-bottom:25px;line-height:1.6;">5,000+ clips across India. Custom locations, bulk orders or exclusive licensing — we can help.</p>
 <a href="https://wa.me/9962091488?text=Hi%20Kishan%2C%20I%20need%20a%20custom%20quote." style="background:#25D366;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px;display:inline-block;">💬 WhatsApp</a>
 <a href="mailto:Kishanscreenwriting@gmail.com?subject=Custom Quote" style="background:#ff6b00;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px;display:inline-block;">📧 Email</a>
-</div><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
+</div>
+<footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:1100px;margin:0 auto 25px;">
 <div><h4 style="color:#ff6b00;margin-bottom:10px;letter-spacing:1px;">INDIA DRONE FOOTAGE</h4>
 <p style="color:#aaa;font-size:0.85em;line-height:1.6;">Professional 4K aerial drone footage from across India. Shot by Kishan Rahul since 2018.</p></div>
@@ -171,5 +350,36 @@
 <div style="text-align:center;color:#555;font-size:0.8em;border-top:1px solid #222;padding-top:15px;max-width:1100px;margin:0 auto;">
 © 2026 INDIA DRONE FOOTAGE by Kishan Rahul | Non-exclusive license | <a href="terms.html" style="color:#ff6b00;">Terms</a>
 </div></footer>
-<a href="https://wa.me/9962091488?text=Hi%20Kishan%2C%20I%20am%20interested%20in%20your%20drone%20footage." style="position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;border-radius:50px;padding:12px 20px;text-decoration:none;font-weight:bold;font-size:0.9em;z-index:999;box-shadow:0 4px 15px rgba(37,211,102,0.4);">💬 WhatsApp</a></body>
+<a href="https://wa.me/9962091488?text=Hi%20Kishan%2C%20I%20am%20interested%20in%20your%20drone%20footage." style="position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;border-radius:50px;padding:12px 20px;text-decoration:none;font-weight:bold;font-size:0.9em;z-index:999;box-shadow:0 4px 15px rgba(37,211,102,0.4);">💬 WhatsApp</a>
+<script>
+const timers = {};
+function startCarousel(id) {
+    const card = document.getElementById(id);
+    const img = document.getElementById(id + '_img');
+    const images = JSON.parse(card.dataset.images);
+    let idx = 0;
+    timers[id] = setInterval(() => {
+        idx = (idx + 1) % images.length;
+        img.style.opacity = '0';
+        setTimeout(() => {
+            img.src = images[idx];
+            img.style.opacity = '1';
+        }, 200);
+        document.querySelectorAll('#' + id + ' .dot').forEach((d, i) => {
+            d.classList.toggle('active', i === idx);
+        });
+    }, 900);
+}
+function stopCarousel(id) {
+    clearInterval(timers[id]);
+    const card = document.getElementById(id);
+    const img = document.getElementById(id + '_img');
+    const images = JSON.parse(card.dataset.images);
+    img.src = images[0];
+    document.querySelectorAll('#' + id + ' .dot').forEach((d, i) => {
+        d.classList.toggle('active', i === 0);
+    });
+}
+</script>
+</body>
 </html>
