@@ -51,7 +51,8 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 <script>
 const SUPABASE_URL = "https://pdlvwpsgqnqwrmymqksn.supabase.co";
 const SUPABASE_ANON = "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa";
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+const _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+const supabase = _supabase;
 
 async function checkAuth() {
   const { data: { session } } = await supabase.auth.getSession();
