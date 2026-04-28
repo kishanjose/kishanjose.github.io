@@ -19,8 +19,18 @@
 <a href="faq.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;transition:all 0.2s;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">FAQ</a>
 <a href="terms.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;transition:all 0.2s;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">Terms</a>
 <a href="mailto:hello@indiadronefootage.com" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;transition:all 0.2s;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">Contact</a>
+<a href="login.html" id="nav-account" style="color:#ff6b00;text-decoration:none;padding:16px 18px;font-size:0.88em;font-weight:bold;">Sign In</a>
 </div>
-</header>
+</header><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function() {
+  var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+  sb.auth.getSession().then(function(r) {
+    var el = document.getElementById("nav-account");
+    if (el && r.data.session) { el.textContent = "My Account"; el.href = "account.html"; }
+  });
+})();
+</script>
 <div style="background:#111;padding:50px 30px;text-align:center;border-bottom:2px solid #ff6b00;">
 <h1 style="font-size:2.2em;color:#ff6b00;margin-bottom:8px;">License Information</h1>
 <p style="color:#aaa;">Choose the right license for your project</p>
