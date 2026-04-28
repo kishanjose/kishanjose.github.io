@@ -21,8 +21,7 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 .purchase-info h3{color:#fff;font-size:0.95em;margin-bottom:5px;}
 .purchase-info p{color:#aaa;font-size:0.82em;}
 .badge{background:rgba(255,107,0,0.15);border:1px solid #ff6b00;color:#ff6b00;padding:3px 10px;border-radius:20px;font-size:0.75em;}
-.btn-download{background:#ff6b00;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:0.88em;font-weight:bold;white-space:nowrap;}
-.btn-download:hover{background:#e55900;}
+.btn-download{background:#ff6b00;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:0.88em;font-weight:bold;}
 .empty{text-align:center;padding:60px 20px;color:#555;}
 .empty a{color:#ff6b00;text-decoration:none;}
 .loading{text-align:center;padding:40px;color:#555;}
@@ -33,7 +32,6 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 </style>
 </head>
 <body>
-
 <header style="background:#0a0a0a;padding:0;border-bottom:2px solid #ff6b00;position:sticky;top:0;z-index:1000;">
 <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0;">
 <a href="index.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">Home</a>
@@ -50,25 +48,14 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 <div class="loading" id="loading">Loading your account...</div>
 <div id="main-content" style="display:none;">
 <div class="header">
-<div>
 <h1>My Account</h1>
-</div>
 <button class="btn-signout" onclick="signOut()">Sign Out</button>
 </div>
-
 <div class="user-info" id="user-info"></div>
-
 <div class="stats">
-<div class="stat">
-<div class="num" id="total-purchases">0</div>
-<div class="label">Total Purchases</div>
+<div class="stat"><div class="num" id="total-purchases">0</div><div class="label">Total Purchases</div></div>
+<div class="stat"><div class="num" id="total-spent">0</div><div class="label">Total Spent</div></div>
 </div>
-<div class="stat">
-<div class="num" id="total-spent">₹0</div>
-<div class="label">Total Spent</div>
-</div>
-</div>
-
 <div class="section-title">Your Purchases</div>
 <div id="purchases-list"></div>
 </div>
@@ -76,80 +63,93 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+var sb = window.supabase.createClient(
+  "https://pdlvwpsgqnqwrmymqksn.supabase.co",
+  "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa"
+);
 
-async function loadAccount() {
-  // Handle OAuth callback tokens in URL hash
+function signOut() {
+  sb.auth.signOut().then(function() {
+    window.location.href = "index.html";
+  });
+}
+
+function showNoPurchases() {
+  document.getElementById("purchases-list").innerHTML = '<div class="empty"><p style="margin-bottom:15px;">No purchases yet</p><a href="index.html">Browse footage</a></div>';
+  document.getElementById("total-purchases").textContent = "0";
+  document.getElementById("total-spent").textContent = "Rs 0";
+}
+
+function loadAccount() {
   if (window.location.hash && window.location.hash.includes("access_token")) {
-    const { data, error } = await sb.auth.getSession();
-    // Clean up URL
     window.history.replaceState(null, "", window.location.pathname);
   }
 
-  const { data: { session } } = await sb.auth.getSession();
+  sb.auth.getSession().then(function(result) {
+    var session = result.data.session;
+    if (!session) {
+      window.location.href = "login.html?redirect=account.html";
+      return;
+    }
 
-  if (!session) {
-    window.location.href = "login.html?redirect=account.html";
-    return;
-  }
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
 
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("main-content").style.display = "block";
+    var user = session.user;
+    var meta = user.user_metadata || {};
+    var avatar = meta.avatar_url || "";
+    var name = meta.full_name || meta.name || user.email.split("@")[0];
 
-  const user = session.user;
-  const meta = user.user_metadata || {};
-  const avatar = meta.avatar_url || "";
-  const name = meta.full_name || meta.name || user.email.split("@")[0];
+    var userInfoHtml = "";
+    if (avatar) {
+      userInfoHtml += '<img src="' + avatar + '" alt="Profile">';
+    }
+    userInfoHtml += '<div><div class="name">' + name + '</div><div class="email">' + user.email + '</div></div>';
+    document.getElementById("user-info").innerHTML = userInfoHtml;
 
-  document.getElementById("user-info").innerHTML = `
-    ${avatar ? `<img src="${avatar}" alt="Profile">` : ""}
-    <div>
-      <div class="name">${name}</div>
-      <div class="email">${user.email}</div>
-    </div>
-  `;
+    sb.from("purchases")
+      .select("*")
+      .eq("email", user.email)
+      .order("purchased_at", { ascending: false })
+      .then(function(result) {
+        console.log("Purchases:", result.data, "Error:", result.error);
+        
+        var purchases = result.data;
+        var error = result.error;
 
-  const { data: purchases, error } = await sb
-    .from("purchases")
-    .select("*")
-    .eq("email", user.email)
-    .order("purchased_at", { ascending: false });
+        if (error) {
+          console.error("Error:", error);
+          showNoPurchases();
+          return;
+        }
 
-  if (error || !purchases) {
-    document.getElementById("purchases-list").innerHTML = "<div class='empty'><p>Error loading purchases.</p></div>";
-    return;
-  }
+        if (!purchases || purchases.length === 0) {
+          showNoPurchases();
+          return;
+        }
 
-  document.getElementById("total-purchases").textContent = purchases.length;
-  const total = purchases.reduce((sum, p) => sum + (p.amount || 0), 0);
-  document.getElementById("total-spent").textContent = "₹" + total.toLocaleString("en-IN");
+        document.getElementById("total-purchases").textContent = purchases.length;
+        var total = 0;
+        for (var i = 0; i < purchases.length; i++) {
+          total += purchases[i].amount || 0;
+        }
+        document.getElementById("total-spent").textContent = "Rs " + total.toLocaleString("en-IN");
 
-  const list = document.getElementById("purchases-list");
-  if (purchases.length === 0) {
-    list.innerHTML = `<div class="empty">
-      <p style="margin-bottom:15px;">No purchases yet</p>
-      <a href="index.html">Browse footage →</a>
-    </div>`;
-    return;
-  }
-
-  list.innerHTML = purchases.map(p => `
-    <div class="purchase-card">
-      <div class="purchase-info">
-        <h3>${p.clip_name}</h3>
-        <p>${p.city} &nbsp;|&nbsp; ${new Date(p.purchased_at).toLocaleDateString("en-IN", {day:"numeric",month:"short",year:"numeric"})} &nbsp;|&nbsp; ₹${(p.amount||0).toLocaleString("en-IN")}</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-        <span class="badge">${p.license_type}</span>
-        <a href="${p.drive_link}" target="_blank" class="btn-download">⬇ Download</a>
-      </div>
-    </div>
-  `).join("");
-}
-
-async function signOut() {
-  await sb.auth.signOut();
-  window.location.href = "index.html";
+        var html = "";
+        for (var i = 0; i < purchases.length; i++) {
+          var p = purchases[i];
+          var date = new Date(p.purchased_at).toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric"});
+          html += '<div class="purchase-card">';
+          html += '<div class="purchase-info"><h3>' + p.clip_name + '</h3>';
+          html += '<p>' + p.city + ' | ' + date + ' | Rs ' + (p.amount||0).toLocaleString("en-IN") + '</p></div>';
+          html += '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">';
+          html += '<span class="badge">' + p.license_type + '</span>';
+          html += '<a href="' + p.drive_link + '" target="_blank" class="btn-download">Download</a>';
+          html += '</div></div>';
+        }
+        document.getElementById("purchases-list").innerHTML = html;
+      });
+  });
 }
 
 loadAccount();
