@@ -27,10 +27,10 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 .error{color:#ff4444;font-size:0.85em;margin-top:10px;display:none;text-align:center;}
 .forgot{text-align:right;margin-top:-10px;margin-bottom:15px;}
 .forgot a{color:#ff6b00;font-size:0.85em;text-decoration:none;}
+.purchase-banner{background:#1a0a00;border:1px solid #ff6b00;border-radius:8px;padding:12px 15px;margin-bottom:20px;font-size:0.85em;color:#ff6b00;text-align:center;}
 </style>
 </head>
 <body>
-
 <header style="background:#0a0a0a;padding:0;border-bottom:2px solid #ff6b00;position:sticky;top:0;z-index:1000;">
 <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0;">
 <a href="index.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">Home</a>
@@ -45,6 +45,9 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 
 <div class="container">
 <div class="card">
+<div class="purchase-banner" id="purchase-banner" style="display:none;">
+  Sign in to complete your purchase
+</div>
 <h2>Sign In</h2>
 <p>Access your purchases and download your footage</p>
 
@@ -73,44 +76,73 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
-const params = new URLSearchParams(window.location.search);
-const redirect = params.get("redirect") || "account.html";
+var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
 
-sb.auth.onAuthStateChange(function(event, session) {
-  if (event === "SIGNED_IN" && session) {
-    window.location.href = "account.html";
-  }
-});
+function getRedirectUrl() {
+  try {
+    var stored = sessionStorage.getItem("pending_purchase");
+    if (stored) {
+      var p = JSON.parse(stored);
+      if (p.clip && p.rzp) {
+        return "buy.html?" +
+          "clip=" + encodeURIComponent(p.clip) +
+          "&city=" + encodeURIComponent(p.city) +
+          "&license=" + encodeURIComponent(p.license) +
+          "&drive=" + encodeURIComponent(p.drive) +
+          "&amount=" + p.amount +
+          "&rzp=" + encodeURIComponent(p.rzp);
+      }
+    }
+  } catch(e) {}
+  var params = new URLSearchParams(window.location.search);
+  return params.get("redirect") || "account.html";
+}
 
-sb.auth.getSession().then(function(result) {
-  if (result.data.session) {
-    window.location.href = "account.html";
-  }
-});
+function init() {
+  try {
+    var stored = sessionStorage.getItem("pending_purchase");
+    if (stored) {
+      document.getElementById("purchase-banner").style.display = "block";
+    }
+  } catch(e) {}
+
+  sb.auth.onAuthStateChange(function(event, session) {
+    if (event === "SIGNED_IN" && session) {
+      window.location.href = getRedirectUrl();
+    }
+  });
+
+  sb.auth.getSession().then(function(result) {
+    if (result.data.session) {
+      window.location.href = getRedirectUrl();
+    }
+  });
+}
 
 async function signIn() {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
-  const errorEl = document.getElementById("error");
-  const result = await sb.auth.signInWithPassword({ email: email, password: password });
+  var email = document.getElementById("email").value.trim();
+  var password = document.getElementById("password").value;
+  var errorEl = document.getElementById("error");
+  var result = await sb.auth.signInWithPassword({email: email, password: password});
   if (result.error) {
     errorEl.textContent = result.error.message;
     errorEl.style.display = "block";
-  } else {
-    window.location.href = redirect;
   }
 }
 
 async function signInGoogle() {
+  var redirectTo = "https://indiadronefootage.com/" + getRedirectUrl();
   await sb.auth.signInWithOAuth({
     provider: "google",
-    options: { redirectTo: "https://indiadronefootage.com/account.html" }
+    options: {redirectTo: redirectTo}
   });
 }
 
-document.getElementById("password").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") signIn();
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("password").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") signIn();
+  });
+  init();
 });
 </script>
 </body>

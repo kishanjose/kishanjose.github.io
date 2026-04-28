@@ -16,12 +16,13 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 .price{font-size:1.8em;font-weight:bold;color:#ff6b00;margin:15px 0;}
 .user-bar{background:#111;border-radius:8px;padding:12px 15px;margin:15px 0;display:flex;align-items:center;justify-content:space-between;border:1px solid #333;}
 .user-bar span{color:#aaa;font-size:0.88em;}
-.user-bar strong{color:#ff6b00;}
-.btn{width:100%;padding:14px;background:#ff6b00;color:#fff;border:none;border-radius:8px;font-size:1em;font-weight:bold;cursor:pointer;}
+.user-bar strong{color:#ff6b00;font-size:0.88em;}
+.btn{width:100%;padding:14px;background:#ff6b00;color:#fff;border:none;border-radius:8px;font-size:1em;font-weight:bold;cursor:pointer;margin-top:10px;}
 .btn:hover{background:#e55900;}
 .btn:disabled{background:#555;cursor:not-allowed;}
-.note{font-size:0.8em;color:#666;text-align:center;margin-top:15px;}
-.loading{text-align:center;padding:40px;color:#555;}
+.note{font-size:0.8em;color:#666;text-align:center;margin-top:15px;line-height:1.5;}
+.loading{text-align:center;padding:60px;color:#555;font-size:0.95em;}
+.delivery-note{background:#0d1f0d;border:1px solid #2d4a2d;border-radius:8px;padding:12px 15px;margin-top:15px;font-size:0.82em;color:#4CAF50;}
 footer{background:#111;border-top:1px solid #222;padding:20px;text-align:center;color:#555;font-size:0.8em;}
 </style>
 </head>
@@ -41,28 +42,32 @@ footer{background:#111;border-top:1px solid #222;padding:20px;text-align:center;
 <div class="container">
 <div class="loading" id="loading">Checking your account...</div>
 <div class="card" id="main-card" style="display:none;">
-<h2>Complete Your Purchase</h2>
-<p style="color:#aaa;font-size:0.9em;">Review your order and proceed to payment.</p>
+  <h2>Complete Your Purchase</h2>
+  <p style="color:#aaa;font-size:0.9em;margin-top:5px;">Review your order before payment.</p>
 
-<div class="clip-info" id="clip-info">
-<p><strong id="clip-name">Loading...</strong></p>
-<p>License: <strong id="license-type">-</strong></p>
-<p>City: <strong id="city-name">-</strong></p>
-<p>Format: <strong>4K MP4</strong></p>
-</div>
+  <div class="clip-info">
+    <p><strong id="clip-name">-</strong></p>
+    <p>License: <strong id="license-type">-</strong></p>
+    <p>City: <strong id="city-name">-</strong></p>
+    <p>Format: <strong>4K MP4</strong></p>
+  </div>
 
-<div class="price" id="price-display">Rs -</div>
+  <div class="price" id="price-display">Rs -</div>
 
-<div class="user-bar">
-<span>Purchasing as: <strong id="user-email">-</strong></span>
-<a href="account.html" style="color:#aaa;font-size:0.8em;text-decoration:none;">My Account</a>
-</div>
+  <div class="user-bar">
+    <span>Signed in as: <strong id="user-email">-</strong></span>
+    <a href="account.html" style="color:#aaa;font-size:0.8em;text-decoration:none;">My Account →</a>
+  </div>
 
-<button class="btn" id="pay-btn" onclick="proceedToPayment()">
-Proceed to Payment
-</button>
+  <button class="btn" id="pay-btn" onclick="proceedToPayment()">
+    Pay Now — Proceed to Razorpay
+  </button>
 
-<p class="note">Your download link will be sent to your email and saved in My Account after payment.</p>
+  <div class="delivery-note">
+    ⚡ Instant delivery — Drive link sent to your email immediately after payment. Also saved in My Account.
+  </div>
+
+  <p class="note">By proceeding you agree to our <a href="terms.html" style="color:#ff6b00;">Terms & Conditions</a>. Non-exclusive license.</p>
 </div>
 </div>
 
@@ -75,10 +80,11 @@ Proceed to Payment
 var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
 var RAILWAY_URL = "https://web-production-553ab.up.railway.app";
 var currentUser = null;
+var purchaseData = null;
 
 function getParams() {
   var params = new URLSearchParams(window.location.search);
-  return {
+  var p = {
     clip: params.get("clip") || "",
     city: params.get("city") || "",
     license: params.get("license") || "Standard",
@@ -86,56 +92,101 @@ function getParams() {
     amount: params.get("amount") || "1500",
     rzp: params.get("rzp") || ""
   };
+  return p;
+}
+
+function savePurchaseToStorage(p) {
+  try {
+    sessionStorage.setItem("pending_purchase", JSON.stringify(p));
+  } catch(e) {}
+}
+
+function getPurchaseFromStorage() {
+  try {
+    var stored = sessionStorage.getItem("pending_purchase");
+    return stored ? JSON.parse(stored) : null;
+  } catch(e) { return null; }
+}
+
+function clearPurchaseStorage() {
+  try { sessionStorage.removeItem("pending_purchase"); } catch(e) {}
+}
+
+function displayPurchase(p) {
+  document.getElementById("clip-name").textContent = p.clip || "Unknown Clip";
+  document.getElementById("license-type").textContent = p.license;
+  document.getElementById("city-name").textContent = p.city;
+  document.getElementById("price-display").textContent = "Rs " + parseInt(p.amount).toLocaleString("en-IN");
+  if (!p.rzp) {
+    document.getElementById("pay-btn").disabled = true;
+    document.getElementById("pay-btn").textContent = "Payment link unavailable";
+  }
+  purchaseData = p;
 }
 
 function init() {
   sb.auth.getSession().then(function(result) {
     var session = result.data.session;
+
     if (!session) {
-      var currentUrl = window.location.href;
-      window.location.href = "login.html?redirect=" + encodeURIComponent(currentUrl);
+      var p = getParams();
+      if (p.clip && p.rzp) {
+        savePurchaseToStorage(p);
+      }
+      window.location.href = "login.html";
       return;
     }
+
     currentUser = session.user;
     document.getElementById("loading").style.display = "none";
     document.getElementById("main-card").style.display = "block";
-    var p = getParams();
-    document.getElementById("clip-name").textContent = p.clip || "Unknown Clip";
-    document.getElementById("license-type").textContent = p.license;
-    document.getElementById("city-name").textContent = p.city;
-    document.getElementById("price-display").textContent = "Rs " + parseInt(p.amount).toLocaleString("en-IN");
     document.getElementById("user-email").textContent = currentUser.email;
-    if (!p.rzp) {
-      document.getElementById("pay-btn").disabled = true;
-      document.getElementById("pay-btn").textContent = "Invalid payment link";
+
+    var p = getParams();
+    if (p.clip && p.rzp) {
+      savePurchaseToStorage(p);
+      displayPurchase(p);
+    } else {
+      var stored = getPurchaseFromStorage();
+      if (stored && stored.clip && stored.rzp) {
+        displayPurchase(stored);
+        window.history.replaceState(null, "", "buy.html?" +
+          "clip=" + encodeURIComponent(stored.clip) +
+          "&city=" + encodeURIComponent(stored.city) +
+          "&license=" + encodeURIComponent(stored.license) +
+          "&drive=" + encodeURIComponent(stored.drive) +
+          "&amount=" + stored.amount +
+          "&rzp=" + encodeURIComponent(stored.rzp)
+        );
+      } else {
+        document.getElementById("main-card").innerHTML = "<p style='color:#aaa;text-align:center;padding:20px;'>No purchase details found. <a href='index.html' style='color:#ff6b00;'>Browse footage</a></p>";
+      }
     }
   });
 }
 
 async function proceedToPayment() {
-  var p = getParams();
+  if (!purchaseData || !currentUser) return;
   var btn = document.getElementById("pay-btn");
   btn.disabled = true;
-  btn.textContent = "Please wait...";
+  btn.textContent = "Redirecting to payment...";
   try {
-    var response = await fetch(RAILWAY_URL + "/collect-email", {
+    await fetch(RAILWAY_URL + "/collect-email", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
         email: currentUser.email,
-        clip: p.clip,
-        city: p.city,
-        license: p.license,
-        drive: p.drive,
-        amount: parseInt(p.amount),
-        razorpay_url: p.rzp
+        clip: purchaseData.clip,
+        city: purchaseData.city,
+        license: purchaseData.license,
+        drive: purchaseData.drive,
+        amount: parseInt(purchaseData.amount),
+        razorpay_url: purchaseData.rzp
       })
     });
-    var data = await response.json();
-    window.location.href = p.rzp;
-  } catch(e) {
-    window.location.href = p.rzp;
-  }
+  } catch(e) {}
+  clearPurchaseStorage();
+  window.location.href = purchaseData.rzp;
 }
 
 init();

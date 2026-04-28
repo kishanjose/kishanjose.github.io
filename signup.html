@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Sign Up | INDIA DRONE FOOTAGE</title>
+<title>Create Account | INDIA DRONE FOOTAGE</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:100vh;}
@@ -26,10 +26,10 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 .link a{color:#ff6b00;text-decoration:none;}
 .error{color:#ff4444;font-size:0.85em;margin-top:10px;display:none;text-align:center;}
 .success{color:#4CAF50;font-size:0.85em;margin-top:10px;display:none;text-align:center;}
+.purchase-banner{background:#1a0a00;border:1px solid #ff6b00;border-radius:8px;padding:12px 15px;margin-bottom:20px;font-size:0.85em;color:#ff6b00;text-align:center;}
 </style>
 </head>
 <body>
-
 <header style="background:#0a0a0a;padding:0;border-bottom:2px solid #ff6b00;position:sticky;top:0;z-index:1000;">
 <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0;">
 <a href="index.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">Home</a>
@@ -44,6 +44,9 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 
 <div class="container">
 <div class="card">
+<div class="purchase-banner" id="purchase-banner" style="display:none;">
+  Create an account to complete your purchase
+</div>
 <h2>Create Account</h2>
 <p>Sign up to purchase and download footage instantly</p>
 
@@ -76,14 +79,54 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+
+function getRedirectUrl() {
+  try {
+    var stored = sessionStorage.getItem("pending_purchase");
+    if (stored) {
+      var p = JSON.parse(stored);
+      if (p.clip && p.rzp) {
+        return "buy.html?" +
+          "clip=" + encodeURIComponent(p.clip) +
+          "&city=" + encodeURIComponent(p.city) +
+          "&license=" + encodeURIComponent(p.license) +
+          "&drive=" + encodeURIComponent(p.drive) +
+          "&amount=" + p.amount +
+          "&rzp=" + encodeURIComponent(p.rzp);
+      }
+    }
+  } catch(e) {}
+  return "account.html";
+}
+
+function init() {
+  try {
+    var stored = sessionStorage.getItem("pending_purchase");
+    if (stored) {
+      document.getElementById("purchase-banner").style.display = "block";
+    }
+  } catch(e) {}
+
+  sb.auth.onAuthStateChange(function(event, session) {
+    if (event === "SIGNED_IN" && session) {
+      window.location.href = getRedirectUrl();
+    }
+  });
+
+  sb.auth.getSession().then(function(result) {
+    if (result.data.session) {
+      window.location.href = getRedirectUrl();
+    }
+  });
+}
 
 async function signUp() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
-  const errorEl = document.getElementById("error");
-  const successEl = document.getElementById("success");
+  var name = document.getElementById("name").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var password = document.getElementById("password").value;
+  var errorEl = document.getElementById("error");
+  var successEl = document.getElementById("success");
 
   if (!email || !password) {
     errorEl.textContent = "Email and password are required";
@@ -96,30 +139,37 @@ async function signUp() {
     return;
   }
 
-  const result = await sb.auth.signUp({
+  var result = await sb.auth.signUp({
     email: email,
     password: password,
-    options: { data: { full_name: name } }
+    options: {data: {full_name: name}}
   });
 
   if (result.error) {
     errorEl.textContent = result.error.message;
     errorEl.style.display = "block";
     successEl.style.display = "none";
+  } else if (result.data.session) {
+    window.location.href = getRedirectUrl();
   } else {
-    successEl.textContent = "Account created! Check your email to verify, then sign in.";
+    successEl.textContent = "Account created! Signing you in...";
     successEl.style.display = "block";
-    errorEl.style.display = "none";
-    setTimeout(function() { window.location.href = "login.html"; }, 3000);
+    var signInResult = await sb.auth.signInWithPassword({email: email, password: password});
+    if (signInResult.data.session) {
+      window.location.href = getRedirectUrl();
+    }
   }
 }
 
 async function signInGoogle() {
+  var redirectTo = "https://indiadronefootage.com/" + getRedirectUrl();
   await sb.auth.signInWithOAuth({
     provider: "google",
-    options: { redirectTo: "https://indiadronefootage.com/account.html" }
+    options: {redirectTo: redirectTo}
   });
 }
+
+init();
 </script>
 </body>
 </html>
