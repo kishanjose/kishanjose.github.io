@@ -7,10 +7,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:100vh;display:flex;flex-direction:column;}
-.nav{background:#0a0a0a;padding:0;border-bottom:2px solid #ff6b00;position:sticky;top:0;z-index:1000;}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;}
-.nav a{color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;}
-.nav a:hover{color:#ff6b00;border-bottom-color:#ff6b00;}
 .container{max-width:500px;margin:60px auto;padding:0 20px;flex:1;}
 .card{background:#1a1a1a;border-radius:12px;padding:35px;border:1px solid #333;}
 .card h2{color:#ff6b00;font-size:1.4em;margin-bottom:8px;}
@@ -18,40 +14,35 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 .clip-info p{margin-bottom:6px;font-size:0.9em;color:#ccc;}
 .clip-info p strong{color:#fff;}
 .price{font-size:1.8em;font-weight:bold;color:#ff6b00;margin:15px 0;}
-.form-group{margin-bottom:20px;}
-.form-group label{display:block;margin-bottom:8px;font-size:0.9em;color:#aaa;}
-.form-group input{width:100%;padding:12px 16px;background:#111;border:1px solid #333;border-radius:8px;color:#fff;font-size:1em;outline:none;}
-.form-group input:focus{border-color:#ff6b00;}
-.form-group input::placeholder{color:#555;}
+.user-bar{background:#111;border-radius:8px;padding:12px 15px;margin:15px 0;display:flex;align-items:center;justify-content:space-between;border:1px solid #333;}
+.user-bar span{color:#aaa;font-size:0.88em;}
+.user-bar strong{color:#ff6b00;}
 .btn{width:100%;padding:14px;background:#ff6b00;color:#fff;border:none;border-radius:8px;font-size:1em;font-weight:bold;cursor:pointer;}
 .btn:hover{background:#e55900;}
 .btn:disabled{background:#555;cursor:not-allowed;}
 .note{font-size:0.8em;color:#666;text-align:center;margin-top:15px;}
-.error{color:#ff4444;font-size:0.85em;margin-top:8px;display:none;}
-.loading{display:none;text-align:center;color:#aaa;margin-top:15px;}
+.loading{text-align:center;padding:40px;color:#555;}
 footer{background:#111;border-top:1px solid #222;padding:20px;text-align:center;color:#555;font-size:0.8em;}
 </style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-const supabase = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
-</script>
 </head>
 <body>
-<nav class="nav">
-<div class="nav-inner">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="license.html">License</a>
-<a href="faq.html">FAQ</a>
-<a href="terms.html">Terms</a>
-<a href="mailto:hello@indiadronefootage.com">Contact</a>
+<header style="background:#0a0a0a;padding:0;border-bottom:2px solid #ff6b00;position:sticky;top:0;z-index:1000;">
+<div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0;">
+<a href="index.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">Home</a>
+<a href="about.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">About</a>
+<a href="license.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">License</a>
+<a href="faq.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">FAQ</a>
+<a href="terms.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">Terms</a>
+<a href="mailto:hello@indiadronefootage.com" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;">Contact</a>
+<a href="account.html" style="color:#ff6b00;text-decoration:none;padding:16px 18px;font-size:0.88em;font-weight:bold;">My Account</a>
 </div>
-</nav>
+</header>
 
 <div class="container">
-<div class="card">
+<div class="loading" id="loading">Checking your account...</div>
+<div class="card" id="main-card" style="display:none;">
 <h2>Complete Your Purchase</h2>
-<p style="color:#aaa;font-size:0.9em;">Enter your email to receive your download link after payment.</p>
+<p style="color:#aaa;font-size:0.9em;">Review your order and proceed to payment.</p>
 
 <div class="clip-info" id="clip-info">
 <p><strong id="clip-name">Loading...</strong></p>
@@ -60,26 +51,18 @@ const supabase = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supa
 <p>Format: <strong>4K MP4</strong></p>
 </div>
 
-<div class="price" id="price-display">₹-</div>
+<div class="price" id="price-display">Rs -</div>
 
-<div class="form-group">
-<label for="email">Your Email Address *</label>
-<input type="email" id="email" placeholder="you@example.com" required>
-<div class="error" id="email-error">Please enter a valid email address</div>
-</div>
-
-<div class="form-group">
-<label for="name">Your Name (optional)</label>
-<input type="text" id="name" placeholder="Your name">
+<div class="user-bar">
+<span>Purchasing as: <strong id="user-email">-</strong></span>
+<a href="account.html" style="color:#aaa;font-size:0.8em;text-decoration:none;">My Account</a>
 </div>
 
 <button class="btn" id="pay-btn" onclick="proceedToPayment()">
 Proceed to Payment
 </button>
 
-<div class="loading" id="loading">Saving your details... please wait</div>
-
-<p class="note">Your email will only be used to send your download link and occasional updates about new footage. We never spam.</p>
+<p class="note">Your download link will be sent to your email and saved in My Account after payment.</p>
 </div>
 </div>
 
@@ -87,89 +70,72 @@ Proceed to Payment
 2026 INDIA DRONE FOOTAGE by Kishan Rahul | <a href="terms.html" style="color:#ff6b00;">Terms</a>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const RAILWAY_URL = "https://web-production-553ab.up.railway.app";
+var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+var RAILWAY_URL = "https://web-production-553ab.up.railway.app";
+var currentUser = null;
 
 function getParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-        clip: params.get("clip") || "",
-        city: params.get("city") || "",
-        license: params.get("license") || "Standard",
-        drive: params.get("drive") || "",
-        amount: params.get("amount") || "1500",
-        rzp: params.get("rzp") || ""
-    };
+  var params = new URLSearchParams(window.location.search);
+  return {
+    clip: params.get("clip") || "",
+    city: params.get("city") || "",
+    license: params.get("license") || "Standard",
+    drive: params.get("drive") || "",
+    amount: params.get("amount") || "1500",
+    rzp: params.get("rzp") || ""
+  };
 }
 
 function init() {
-    const p = getParams();
+  sb.auth.getSession().then(function(result) {
+    var session = result.data.session;
+    if (!session) {
+      var currentUrl = window.location.href;
+      window.location.href = "login.html?redirect=" + encodeURIComponent(currentUrl);
+      return;
+    }
+    currentUser = session.user;
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("main-card").style.display = "block";
+    var p = getParams();
     document.getElementById("clip-name").textContent = p.clip || "Unknown Clip";
     document.getElementById("license-type").textContent = p.license;
     document.getElementById("city-name").textContent = p.city;
     document.getElementById("price-display").textContent = "Rs " + parseInt(p.amount).toLocaleString("en-IN");
+    document.getElementById("user-email").textContent = currentUser.email;
     if (!p.rzp) {
-        document.getElementById("pay-btn").disabled = true;
-        document.getElementById("pay-btn").textContent = "Invalid payment link";
+      document.getElementById("pay-btn").disabled = true;
+      document.getElementById("pay-btn").textContent = "Invalid payment link";
     }
-}
-
-function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  });
 }
 
 async function proceedToPayment() {
-    // Check if user is logged in
-    const { data: { session } } = await supabase.auth.getSession();
-    if (session) {
-      // Pre-fill email from account
-      document.getElementById("email").value = session.user.email;
-      document.getElementById("email").readOnly = true;
-      document.getElementById("email").style.background = "#1a1a1a";
-      document.getElementById("email").style.color = "#aaa";
-    }
-
-    const p = getParams();
-    const email = document.getElementById("email").value.trim();
-    const name = document.getElementById("name").value.trim();
-    const errorEl = document.getElementById("email-error");
-    const btn = document.getElementById("pay-btn");
-    const loading = document.getElementById("loading");
-
-    if (!validateEmail(email)) {
-        errorEl.style.display = "block";
-        return;
-    }
-    errorEl.style.display = "none";
-
-    btn.disabled = true;
-    btn.textContent = "Please wait...";
-    loading.style.display = "block";
-
-    try {
-        const response = await fetch(RAILWAY_URL + "/collect-email", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({
-                email: email,
-                name: name,
-                clip: p.clip,
-                city: p.city,
-                license: p.license,
-                drive: p.drive,
-                amount: parseInt(p.amount),
-                razorpay_url: p.rzp
-            })
-        });
-        const data = await response.json();
-        if (data.status === "ok") {
-            window.location.href = p.rzp;
-        } else {
-            window.location.href = p.rzp;
-        }
-    } catch (e) {
-        window.location.href = p.rzp;
-    }
+  var p = getParams();
+  var btn = document.getElementById("pay-btn");
+  btn.disabled = true;
+  btn.textContent = "Please wait...";
+  try {
+    var response = await fetch(RAILWAY_URL + "/collect-email", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        email: currentUser.email,
+        clip: p.clip,
+        city: p.city,
+        license: p.license,
+        drive: p.drive,
+        amount: parseInt(p.amount),
+        razorpay_url: p.rzp
+      })
+    });
+    var data = await response.json();
+    window.location.href = p.rzp;
+  } catch(e) {
+    window.location.href = p.rzp;
+  }
 }
 
 init();
