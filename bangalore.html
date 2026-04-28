@@ -19,8 +19,25 @@
 <a href="faq.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">FAQ</a>
 <a href="terms.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">Terms</a>
 <a href="mailto:hello@indiadronefootage.com" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">Contact</a>
+<a href="account.html" id="nav-account" style="color:#ff6b00;text-decoration:none;padding:16px 18px;font-size:0.88em;font-weight:bold;border-bottom:2px solid transparent;">My Account</a>
 </div>
 </header>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function() {
+  var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+  sb.auth.getSession().then(function(result) {
+    var navAccount = document.getElementById("nav-account");
+    if (result.data.session) {
+      navAccount.textContent = "My Account";
+      navAccount.href = "account.html";
+    } else {
+      navAccount.textContent = "Sign In";
+      navAccount.href = "login.html";
+    }
+  });
+})();
+</script>
 <div style="background:#111;padding:20px 30px;border-bottom:2px solid #ff6b00;">
 <a href="index.html" style="color:#ff6b00;text-decoration:none;font-size:0.85em;display:block;margin-bottom:8px;">← Back to all cities</a>
 <h1 style="font-size:1.9em;">🎬 Bangalore Aerial Drone Footage</h1>
