@@ -77,9 +77,15 @@ const sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.c
 const params = new URLSearchParams(window.location.search);
 const redirect = params.get("redirect") || "account.html";
 
+sb.auth.onAuthStateChange(function(event, session) {
+  if (event === "SIGNED_IN" && session) {
+    window.location.href = "account.html";
+  }
+});
+
 sb.auth.getSession().then(function(result) {
   if (result.data.session) {
-    window.location.href = redirect;
+    window.location.href = "account.html";
   }
 });
 
@@ -99,7 +105,7 @@ async function signIn() {
 async function signInGoogle() {
   await sb.auth.signInWithOAuth({
     provider: "google",
-    options: { redirectTo: "https://indiadronefootage.com/account.html", queryParams: { access_type: "offline", prompt: "consent" } }
+    options: { redirectTo: "https://indiadronefootage.com/account.html" }
   });
 }
 
