@@ -31,6 +31,10 @@ body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:
 .loading{display:none;text-align:center;color:#aaa;margin-top:15px;}
 footer{background:#111;border-top:1px solid #222;padding:20px;text-align:center;color:#555;font-size:0.8em;}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const supabase = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+</script>
 </head>
 <body>
 <nav class="nav">
@@ -115,6 +119,16 @@ function validateEmail(email) {
 }
 
 async function proceedToPayment() {
+    // Check if user is logged in
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      // Pre-fill email from account
+      document.getElementById("email").value = session.user.email;
+      document.getElementById("email").readOnly = true;
+      document.getElementById("email").style.background = "#1a1a1a";
+      document.getElementById("email").style.color = "#aaa";
+    }
+
     const p = getParams();
     const email = document.getElementById("email").value.trim();
     const name = document.getElementById("name").value.trim();

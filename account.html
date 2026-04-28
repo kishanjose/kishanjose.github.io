@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Account | INDIA DRONE FOOTAGE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Segoe UI",sans-serif;background:#0a0a0a;color:#fff;min-height:100vh;}
+.container{max-width:900px;margin:40px auto;padding:0 20px;}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:15px;}
+.header h1{color:#ff6b00;font-size:1.6em;}
+.btn-signout{background:transparent;color:#aaa;border:1px solid #333;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:0.88em;}
+.btn-signout:hover{color:#ff6b00;border-color:#ff6b00;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-bottom:30px;}
+.stat{background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:20px;text-align:center;}
+.stat .num{font-size:2em;font-weight:bold;color:#ff6b00;}
+.stat .label{color:#aaa;font-size:0.85em;margin-top:5px;}
+.section-title{color:#fff;font-size:1.1em;margin-bottom:15px;border-bottom:1px solid #333;padding-bottom:10px;}
+.purchase-card{background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:20px;margin-bottom:15px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;}
+.purchase-info h3{color:#fff;font-size:0.95em;margin-bottom:5px;}
+.purchase-info p{color:#aaa;font-size:0.82em;}
+.badge{background:rgba(255,107,0,0.15);border:1px solid #ff6b00;color:#ff6b00;padding:3px 10px;border-radius:20px;font-size:0.75em;}
+.btn-download{background:#ff6b00;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:0.88em;font-weight:bold;white-space:nowrap;}
+.btn-download:hover{background:#e55900;}
+.empty{text-align:center;padding:60px 20px;color:#555;}
+.empty p{margin-bottom:15px;}
+.empty a{color:#ff6b00;text-decoration:none;}
+.loading{text-align:center;padding:40px;color:#555;}
+</style>
+</head>
+<body>
+<header style="background:#0a0a0a;padding:0;border-bottom:2px solid #ff6b00;position:sticky;top:0;z-index:1000;">
+<div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0;">
+<a href="index.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">Home</a>
+<a href="about.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">About</a>
+<a href="license.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">License</a>
+<a href="faq.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">FAQ</a>
+<a href="terms.html" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">Terms</a>
+<a href="mailto:hello@indiadronefootage.com" style="color:#ccc;text-decoration:none;padding:16px 18px;font-size:0.88em;border-bottom:2px solid transparent;" onmouseover="this.style.color='#ff6b00';this.style.borderBottomColor='#ff6b00'" onmouseout="this.style.color='#ccc';this.style.borderBottomColor='transparent'">Contact</a>
+<a href="account.html" id="nav-account" style="color:#ff6b00;text-decoration:none;padding:16px 18px;font-size:0.88em;font-weight:bold;border-bottom:2px solid transparent;display:none;">My Account</a>
+<a href="login.html" id="nav-login" style="color:#ff6b00;text-decoration:none;padding:16px 18px;font-size:0.88em;font-weight:bold;border-bottom:2px solid transparent;">Sign In</a>
+</div>
+</header>
+<div class="container">
+<div class="header">
+<div>
+<h1>My Account</h1>
+<p id="user-email" style="color:#aaa;font-size:0.88em;margin-top:4px;"></p>
+</div>
+<button class="btn-signout" onclick="signOut()">Sign Out</button>
+</div>
+
+<div class="stats">
+<div class="stat">
+<div class="num" id="total-purchases">-</div>
+<div class="label">Total Purchases</div>
+</div>
+<div class="stat">
+<div class="num" id="total-spent">-</div>
+<div class="label">Total Spent</div>
+</div>
+</div>
+
+<div class="section-title">Your Purchases</div>
+<div id="purchases-list"><div class="loading">Loading your purchases...</div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://pdlvwpsgqnqwrmymqksn.supabase.co";
+const SUPABASE_ANON = "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa";
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+async function checkAuth() {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session) {
+    document.getElementById("nav-login").style.display = "none";
+    document.getElementById("nav-account").style.display = "block";
+  }
+  return session;
+}
+
+async function signOut() {
+  await supabase.auth.signOut();
+  window.location.href = "index.html";
+}
+
+checkAuth();
+</script>
+<script>
+async function loadAccount() {
+  const session = await checkAuth();
+  if (!session) {
+    window.location.href = "login.html?redirect=account.html";
+    return;
+  }
+
+  document.getElementById("user-email").textContent = session.user.email;
+
+  const { data: purchases, error } = await supabase
+    .from("purchases")
+    .select("*")
+    .eq("email", session.user.email)
+    .order("purchased_at", { ascending: false });
+
+  if (error) {
+    document.getElementById("purchases-list").innerHTML = "<div class='empty'><p>Error loading purchases. Please refresh.</p></div>";
+    return;
+  }
+
+  document.getElementById("total-purchases").textContent = purchases.length;
+  const total = purchases.reduce((sum, p) => sum + p.amount, 0);
+  document.getElementById("total-spent").textContent = "Rs " + total.toLocaleString("en-IN");
+
+  const list = document.getElementById("purchases-list");
+  if (purchases.length === 0) {
+    list.innerHTML = `<div class="empty">
+      <p>No purchases yet</p>
+      <a href="index.html">Browse footage →</a>
+    </div>`;
+    return;
+  }
+
+  list.innerHTML = purchases.map(p => `
+    <div class="purchase-card">
+      <div class="purchase-info">
+        <h3>${p.clip_name}</h3>
+        <p>${p.city} &nbsp;|&nbsp; ${new Date(p.purchased_at).toLocaleDateString("en-IN", {day:"numeric",month:"short",year:"numeric"})} &nbsp;|&nbsp; Rs ${p.amount.toLocaleString("en-IN")}</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="badge">${p.license_type}</span>
+        <a href="${p.drive_link}" target="_blank" class="btn-download">Download</a>
+      </div>
+    </div>
+  `).join("");
+}
+
+loadAccount();
+</script>
+</body>
+</html>
