@@ -61,8 +61,12 @@
 <div style="padding:5px 30px 15px;max-width:1400px;margin:0 auto;">
 <h2 style="color:#aaa;font-size:1.1em;">Individual Clips — 24 available</h2>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
-<div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+<div style="padding:0 30px 20px;max-width:1400px;margin:0 auto;">
+<input type="text" id="clip-search" placeholder="🔍 Search clips... (e.g. beach, temple, highway, river)" oninput="filterClips(this.value)" style="width:100%;padding:14px 18px;background:#1a1a1a;border:1px solid #555;border-radius:10px;color:#fff;font-size:0.95em;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b00'" onblur="this.style.borderColor='#555'">
+<div id="search-count" style="color:#aaa;font-size:0.82em;margin-top:8px;display:none;"></div>
+</div>
+<div id="clips-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
+<div class="clip-card" data-description="coastal chennai suburb with lush greenery, villas, pool, and ocean" data-clip="pondy_clip_001.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_001.jpg" alt="Pondicherry drone clip 001" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 001</div>
@@ -77,7 +81,7 @@
 <a href="buy.html?clip=Pondy_Clip_001.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/15eBcv0WegBLq40H5i5lF-yylnO4FNPCq/view&amount=4500&rzp=https%3A//rzp.io/rzp/tu5cBFU" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal town with colorful buildings, sandy beach, rocky shoreline, ocean waves" data-clip="pondy_clip_002.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_002.jpg" alt="Pondicherry drone clip 002" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 002</div>
@@ -92,7 +96,7 @@
 <a href="buy.html?clip=Pondy_Clip_002.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1PxByZ_7OGxHX9EfxpCy_9H2kIWIzRC99/view&amount=4500&rzp=https%3A//rzp.io/rzp/dv3ZuXYj" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="long sandy beach with waves, coastal homes, green vegetation, city skyline" data-clip="pondy_clip_003.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_003.jpg" alt="Pondicherry drone clip 003" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 003</div>
@@ -107,7 +111,7 @@
 <a href="buy.html?clip=Pondy_Clip_003.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1u8noc57mM-QmQU7nW3cdPYazMNx6Mqgv/view&amount=4500&rzp=https%3A//rzp.io/rzp/OqHJ4Z7" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="pondicherry promenade with rocky seawall, colonial buildings, and bay of bengal" data-clip="pondy_clip_004.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_004.jpg" alt="Pondicherry drone clip 004" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 004</div>
@@ -122,7 +126,7 @@
 <a href="buy.html?clip=Pondy_Clip_004.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1jVr4oizb00GgqhfqerBLyMjqgUNnWTte/view&amount=4500&rzp=https%3A//rzp.io/rzp/aNKlVfKg" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal beach town with waves, sandy shore, green vegetation, buildings" data-clip="pondy_clip_005.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_005.jpg" alt="Pondicherry drone clip 005" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 005</div>
@@ -137,7 +141,7 @@
 <a href="buy.html?clip=Pondy_Clip_005.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1mUmTq6UcbLMrxjjcZxRpBZXU2FQ2E6VH/view&amount=4500&rzp=https%3A//rzp.io/rzp/3Yuokdkz" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="pondicherry promenade beach with rocky seawall and french colonial buildings" data-clip="pondy_clip_006.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_006.jpg" alt="Pondicherry drone clip 006" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 006</div>
@@ -152,7 +156,7 @@
 <a href="buy.html?clip=Pondy_Clip_006.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1w7DtC8wKid4oEdGWmO2jcW_h6Zb_HCWi/view&amount=4500&rzp=https%3A//rzp.io/rzp/Py9qZhV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="lush green suburban neighborhood with white villas and construction site" data-clip="pondy_clip_007.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_007.jpg" alt="Pondicherry drone clip 007" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 007</div>
@@ -167,7 +171,7 @@
 <a href="buy.html?clip=Pondy_Clip_007.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1bgFVfOnDGk8cuJj2X3y3FMpNrqCVxXmR/view&amount=4500&rzp=https%3A//rzp.io/rzp/v1rbTtA" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="pondicherry coastline with pier, promenade, colonial buildings, lighthouse, bay of bengal" data-clip="pondy_clip_008.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_008.jpg" alt="Pondicherry drone clip 008" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 008</div>
@@ -182,7 +186,7 @@
 <a href="buy.html?clip=Pondy_Clip_008.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1qfl7hUlZd3EwEFXHe5Pj1R_Jz-wnDFiu/view&amount=4500&rzp=https%3A//rzp.io/rzp/wMM7BYMD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal promenade along bay of bengal with french quarter buildings" data-clip="pondy_clip_009.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_009.jpg" alt="Pondicherry drone clip 009" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 009</div>
@@ -197,7 +201,7 @@
 <a href="buy.html?clip=Pondy_Clip_009.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1W_mitRjSglHF57mCmVKbuPg8KzhPZ5s1/view&amount=4500&rzp=https%3A//rzp.io/rzp/wQEahOl" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal indian city with beach, pier, stadium, river and dense buildings" data-clip="pondy_clip_010.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_010.jpg" alt="Pondicherry drone clip 010" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 010</div>
@@ -212,7 +216,7 @@
 <a href="buy.html?clip=Pondy_Clip_010.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1HY2jTDvfuMfB50M2uLRPO7QrJTIKfkfY/view&amount=4500&rzp=https%3A//rzp.io/rzp/bsu7yVEY" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal pondicherry with beach promenade, stadium, river, dense colorful buildings" data-clip="pondy_clip_011.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_011.jpg" alt="Pondicherry drone clip 011" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 011</div>
@@ -227,7 +231,7 @@
 <a href="buy.html?clip=Pondy_Clip_011.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/108f8jXVEF8qzDOvZ1yiRZorzirswJxtl/view&amount=4500&rzp=https%3A//rzp.io/rzp/5v4TC1V" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal indian city with dense buildings, tree-lined streets, beach promenade" data-clip="pondy_clip_012.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_012.jpg" alt="Pondicherry drone clip 012" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 012</div>
@@ -242,7 +246,7 @@
 <a href="buy.html?clip=Pondy_Clip_012.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1xfGAE7HZrmhIDYBYvp-8OR54bwIT3F21/view&amount=4500&rzp=https%3A//rzp.io/rzp/q5RfmMCe" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal indian city with dense white buildings along sandy beach" data-clip="pondy_clip_013.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_013.jpg" alt="Pondicherry drone clip 013" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 013</div>
@@ -257,7 +261,7 @@
 <a href="buy.html?clip=Pondy_Clip_013.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1ypUMIjj--FUFC5a4j2dnAPFd_yeszHMv/view&amount=4500&rzp=https%3A//rzp.io/rzp/hzvtjUO" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal city with dense buildings, beach, waves, tennis courts, promenade" data-clip="pondy_clip_014.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_014.jpg" alt="Pondicherry drone clip 014" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 014</div>
@@ -272,7 +276,7 @@
 <a href="buy.html?clip=Pondy_Clip_014.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1u4c3xlW-XR_hrBY9dGOZRWxLgbDgc2HV/view&amount=4500&rzp=https%3A//rzp.io/rzp/jMFM0f1s" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal pondicherry with raj nivas, tennis courts, beach, and dense cityscape" data-clip="pondy_clip_015.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_015.jpg" alt="Pondicherry drone clip 015" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 015</div>
@@ -287,7 +291,7 @@
 <a href="buy.html?clip=Pondy_Clip_015.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1ry0i9liAY4PZSRJn6uLxuCRIS7XHfNQi/view&amount=4500&rzp=https%3A//rzp.io/rzp/wKVoFbTf" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal white colonial building with tennis court, beach, fishing boats, dense city" data-clip="pondy_clip_016.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_016.jpg" alt="Pondicherry drone clip 016" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 016</div>
@@ -302,7 +306,7 @@
 <a href="buy.html?clip=Pondy_Clip_016.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1SOOOK_Wk4J8BycOPe29vSXiy7tAbOXuO/view&amount=4500&rzp=https%3A//rzp.io/rzp/v0a0TVUM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal city with white colonial building, beach, fishing boats, waves" data-clip="pondy_clip_017.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_017.jpg" alt="Pondicherry drone clip 017" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 017</div>
@@ -317,7 +321,7 @@
 <a href="buy.html?clip=Pondy_Clip_017.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1HYmD7segkwuZStg7lroMhjKWoH8TrQtS/view&amount=4500&rzp=https%3A//rzp.io/rzp/KsuWRuM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense indian cityscape with low-rise buildings, green trees, temple spire visible" data-clip="pondy_clip_018.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_018.jpg" alt="Pondicherry drone clip 018" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 018</div>
@@ -332,7 +336,7 @@
 <a href="buy.html?clip=Pondy_Clip_018.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1_f57s9z08vLKHd9ATQYPnxnQGeKrumNf/view&amount=4500&rzp=https%3A//rzp.io/rzp/AiFvFSs" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="colorful dense urban buildings with scattered trees and temple gopuram" data-clip="pondy_clip_019.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_019.jpg" alt="Pondicherry drone clip 019" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 019</div>
@@ -347,7 +351,7 @@
 <a href="buy.html?clip=Pondy_Clip_019.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1xS1tqMI94y9UVrH_W4HAPFykeUm_1sDr/view&amount=4500&rzp=https%3A//rzp.io/rzp/YV6BOnB" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal indian city with dense buildings, trees, and sunlit ocean" data-clip="pondy_clip_020.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_020.jpg" alt="Pondicherry drone clip 020" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 020</div>
@@ -362,7 +366,7 @@
 <a href="buy.html?clip=Pondy_Clip_020.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1PYv4TPr7wqK9aNJcjzSMjTSQ91EHW0y9/view&amount=4500&rzp=https%3A//rzp.io/rzp/xoufqGb" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="colorful coastal town with church, rocky seawall, beach and waves" data-clip="pondy_clip_021.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_021.jpg" alt="Pondicherry drone clip 021" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 021</div>
@@ -377,7 +381,7 @@
 <a href="buy.html?clip=Pondy_Clip_021.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1w4yXltrFXKUWlC-vEIj55NpJd1Ed1V1k/view&amount=4500&rzp=https%3A//rzp.io/rzp/3g2YpO3i" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="colorful fishing boats lined on sandy beach near coastal town" data-clip="pondy_clip_022.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_022.jpg" alt="Pondicherry drone clip 022" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 022</div>
@@ -392,7 +396,7 @@
 <a href="buy.html?clip=Pondy_Clip_022.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1_Z6LE_CLZ9GNbGU1JJITafL2S1EywqV3/view&amount=4500&rzp=https%3A//rzp.io/rzp/MCVmIBh" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="colorful fishing boats lined on sandy beach near coastal town" data-clip="pondy_clip_023.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_023.jpg" alt="Pondicherry drone clip 023" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 023</div>
@@ -407,7 +411,7 @@
 <a href="buy.html?clip=Pondy_Clip_023.mp4&city=PONDY&license=Professional&drive=https%3A//drive.google.com/file/d/1Ekx4W4bUm4Q9TIMrWabT6RJOQVNekjWN/view&amount=4500&rzp=https%3A//rzp.io/rzp/NlFf4DS" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="coastal pondicherry cityscape with sandy beach, colorful buildings, and calm sea" data-clip="pondy_clip_024.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Pondy_Clip_024.jpg" alt="Pondicherry drone clip 024" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Pondicherry — Clip 024</div>
@@ -423,7 +427,28 @@
 </div>
 </div>
 </div>
-</div><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
+</div>
+<script>
+function filterClips(query) {
+  var q = query.toLowerCase().trim();
+  var cards = document.querySelectorAll(".clip-card");
+  var visible = 0;
+  cards.forEach(function(card) {
+    var desc = card.getAttribute("data-description") || "";
+    var clip = card.getAttribute("data-clip") || "";
+    var match = !q || desc.includes(q) || clip.includes(q);
+    card.style.display = match ? "" : "none";
+    if (match) visible++;
+  });
+  var countEl = document.getElementById("search-count");
+  if (q) {
+    countEl.style.display = "block";
+    countEl.textContent = visible + " clip" + (visible !== 1 ? "s" : "") + " found for "" + query + """;
+  } else {
+    countEl.style.display = "none";
+  }
+}
+</script><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:1100px;margin:0 auto 25px;">
 <div><h4 style="color:#ff6b00;margin-bottom:10px;letter-spacing:1px;">INDIA DRONE FOOTAGE</h4>
 <p style="color:#aaa;font-size:0.85em;line-height:1.6;">Professional 4K aerial drone footage from across India. Shot by Kishan Rahul since 2018.</p></div>

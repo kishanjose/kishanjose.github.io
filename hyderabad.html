@@ -61,8 +61,12 @@
 <div style="padding:5px 30px 15px;max-width:1400px;margin:0 auto;">
 <h2 style="color:#aaa;font-size:1.1em;">Individual Clips — 134 available</h2>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
-<div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+<div style="padding:0 30px 20px;max-width:1400px;margin:0 auto;">
+<input type="text" id="clip-search" placeholder="🔍 Search clips... (e.g. beach, temple, highway, river)" oninput="filterClips(this.value)" style="width:100%;padding:14px 18px;background:#1a1a1a;border:1px solid #555;border-radius:10px;color:#fff;font-size:0.95em;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b00'" onblur="this.style.borderColor='#555'">
+<div id="search-count" style="color:#aaa;font-size:0.82em;margin-top:8px;display:none;"></div>
+</div>
+<div id="clips-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
+<div class="clip-card" data-description="dense urban cityscape with high-rise apartments and crowded low-rise residential buildings" data-clip="hyderabad_clip_001.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_001.jpg" alt="Hyderabad drone clip 001" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 001</div>
@@ -77,7 +81,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_001.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1GcUERuAirxwcbqGKzqBRif8hFKpSVUp9/view&amount=4500&rzp=https%3A//rzp.io/rzp/B7bfDn8Z" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated railway track curving over busy roundabout with green trees" data-clip="hyderabad_clip_002.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_002.jpg" alt="Hyderabad drone clip 002" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 002</div>
@@ -92,7 +96,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_002.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1NMi1GI9CDjH61194HXTxghPQ32xNf2aw/view&amount=4500&rzp=https%3A//rzp.io/rzp/Gdu9M5C" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city skyline with itc kohenur hotel and curved roadways" data-clip="hyderabad_clip_003.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_003.jpg" alt="Hyderabad drone clip 003" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 003</div>
@@ -107,7 +111,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_003.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1Gst8-oGTnEBKmP9DhKVFuIO_dJK-i5Xv/view&amount=4500&rzp=https%3A//rzp.io/rzp/O2ZNCGD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated flyover intersection with circular park, rocky hillside, modern buildings" data-clip="hyderabad_clip_004.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_004.jpg" alt="Hyderabad drone clip 004" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 004</div>
@@ -122,7 +126,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_004.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/12D3sUpylppQcwh10bnlaMSj98_rsLDDr/view&amount=4500&rzp=https%3A//rzp.io/rzp/kp9qfVm" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with colorful mid-rise buildings and hazy sunset sky" data-clip="hyderabad_clip_005.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_005.jpg" alt="Hyderabad drone clip 005" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 005</div>
@@ -137,7 +141,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_005.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1OjGIq-aO1ZSazgV6UiQKYko_xG52IFHH/view&amount=4500&rzp=https%3A//rzp.io/rzp/3V4neCdD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="nighttime cityscape with illuminated high-rises and blue-lit buildings" data-clip="hyderabad_clip_006.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_006.jpg" alt="Hyderabad drone clip 006" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 006</div>
@@ -152,7 +156,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_006.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1ai7t2m9GP1gXkrakTmxq_u4LvDxSrnDT/view&amount=4500&rzp=https%3A//rzp.io/rzp/oxYmBl8L" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise buildings with rooftop solar panels along busy highway" data-clip="hyderabad_clip_007.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_007.jpg" alt="Hyderabad drone clip 007" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 007</div>
@@ -167,7 +171,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_007.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1VT-hriX6u23sx8SDRCJ5nwur5n4Dw3Ms/view&amount=4500&rzp=https%3A//rzp.io/rzp/UKoaknp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern highrise buildings and commercial towers in hitec city hyderabad" data-clip="hyderabad_clip_008.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_008.jpg" alt="Hyderabad drone clip 008" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 008</div>
@@ -182,7 +186,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_008.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1CKn0e-L7QsKE5_dIv0BIv8cgH4K719c8/view&amount=4500&rzp=https%3A//rzp.io/rzp/MtmpXfq" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="cyber towers rooftop with hvac units, hitec city office buildings, tree-lined roads" data-clip="hyderabad_clip_009.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_009.jpg" alt="Hyderabad drone clip 009" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 009</div>
@@ -197,7 +201,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_009.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1LfMfD2NLBMu-FDGhkDQiNMkEM4Vrytlo/view&amount=4500&rzp=https%3A//rzp.io/rzp/eXqVqDL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="illuminated office buildings and it parks in hitec city at night" data-clip="hyderabad_clip_010.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_010.jpg" alt="Hyderabad drone clip 010" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 010</div>
@@ -212,7 +216,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_010.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/15f6y9_qv9hheg_H3QhwNyrkt-Hif1QKl/view&amount=4500&rzp=https%3A//rzp.io/rzp/mbJsKjV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city skyline with durgam cheruvu lake and cable-stayed bridge" data-clip="hyderabad_clip_011.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_011.jpg" alt="Hyderabad drone clip 011" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 011</div>
@@ -227,7 +231,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_011.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1vt41EHUz8-9HW8LFN41u3hAtp3o0ez4E/view&amount=4500&rzp=https%3A//rzp.io/rzp/qHK1OMc" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise buildings, ikea store, t-works, urban development area" data-clip="hyderabad_clip_012.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_012.jpg" alt="Hyderabad drone clip 012" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 012</div>
@@ -242,7 +246,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_012.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1oOlUlC0hbyjNV2u75L9iK6c8cdf2RA9L/view&amount=4500&rzp=https%3A//rzp.io/rzp/hPVCqlF" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail, circular plaza, flyover intersection, urban buildings, hazy skyline" data-clip="hyderabad_clip_013.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_013.jpg" alt="Hyderabad drone clip 013" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 013</div>
@@ -257,7 +261,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_013.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1epga3Gi0bKTimhfx7VSqLky8O3XCJyaT/view&amount=4500&rzp=https%3A//rzp.io/rzp/xx3ZQ7hl" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="telecommunications tower rising above dense urban residential buildings with hazy skyline" data-clip="hyderabad_clip_014.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_014.jpg" alt="Hyderabad drone clip 014" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 014</div>
@@ -272,7 +276,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_014.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1ZyGnelaIqrdEJvOVwd9XnwTfDrwAWBen/view&amount=4500&rzp=https%3A//rzp.io/rzp/ollYm80d" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city skyline with jpmorgan chase building and construction cranes" data-clip="hyderabad_clip_015.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_015.jpg" alt="Hyderabad drone clip 015" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 015</div>
@@ -287,7 +291,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_015.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1X-BVKwiztaR8IjbsWFGtVa5bytcitQqy/view&amount=4500&rzp=https%3A//rzp.io/rzp/iVFGbDZ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="cable-stayed bridge crossing hussain sagar lake with curved highway interchange" data-clip="hyderabad_clip_016.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_016.jpg" alt="Hyderabad drone clip 016" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 016</div>
@@ -302,7 +306,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_016.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/13ldS5o_NAlnKIwmdXXy_ZZ_23APAn4Zd/view&amount=4500&rzp=https%3A//rzp.io/rzp/u0TpCx4" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated flyover, distinctive latticed cylindrical building, urban park, metro rail track" data-clip="hyderabad_clip_017.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_017.jpg" alt="Hyderabad drone clip 017" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 017</div>
@@ -317,7 +321,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_017.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1Zh-bRChnpGrebGSiHtXRjz2gzYmzhsEm/view&amount=4500&rzp=https%3A//rzp.io/rzp/lLvK8XOz" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="cable-stayed bridge crossing lake with modern buildings and green parkland" data-clip="hyderabad_clip_018.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_018.jpg" alt="Hyderabad drone clip 018" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 018</div>
@@ -332,7 +336,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_018.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/10GcCDloHs1eCX3ODp-Fo6jNyOM6POdsP/view&amount=4500&rzp=https%3A//rzp.io/rzp/Tk5oHa3x" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway interchange curving around cylindrical building in dense urban cityscape" data-clip="hyderabad_clip_019.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_019.jpg" alt="Hyderabad drone clip 019" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 019</div>
@@ -347,7 +351,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_019.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1ydF9dTt5VMj4n4AH9sHOXNLd8fYQjLbt/view&amount=4500&rzp=https%3A//rzp.io/rzp/AkIjhOhv" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="illuminated ambedkar statue, prasads imax, ferris wheel, ntr gardens at night" data-clip="hyderabad_clip_020.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_020.jpg" alt="Hyderabad drone clip 020" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 020</div>
@@ -362,7 +366,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_020.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/16tgyaiGPG441EPKpmz8XP9reNWfdlttA/view&amount=4500&rzp=https%3A//rzp.io/rzp/PSQQvGY" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise office buildings, jp morgan chase tower, construction sites, green spaces" data-clip="hyderabad_clip_021.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_021.jpg" alt="Hyderabad drone clip 021" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 021</div>
@@ -377,7 +381,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_021.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1iL-piwUPhEmN6EM2JIUMI-QqTxfFm-AJ/view&amount=4500&rzp=https%3A//rzp.io/rzp/XsLA9iVX" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of durgam cheruvu lake with cable-stayed bridge and hitec city buildings" data-clip="hyderabad_clip_022.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_022.jpg" alt="Hyderabad drone clip 022" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 022</div>
@@ -392,7 +396,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_022.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1lwdnblgfMmW3GkoTqMD4_BqmLkS2NbDP/view&amount=4500&rzp=https%3A//rzp.io/rzp/h3rq7hf" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="nighttime cityscape showing inorbit mall, ncc building, illuminated high-rises in hitec city" data-clip="hyderabad_clip_023.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_023.jpg" alt="Hyderabad drone clip 023" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 023</div>
@@ -407,7 +411,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_023.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1jehghPVTONaWl1-c7fsY2N91tc1QZ_xH/view&amount=4500&rzp=https%3A//rzp.io/rzp/YwFQQdPP" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise buildings with solar panels, t-works facility, wide roads" data-clip="hyderabad_clip_024.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_024.jpg" alt="Hyderabad drone clip 024" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 024</div>
@@ -422,7 +426,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_024.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1gBfqO73ALWDrNd5bl0SvB07TnQBxIRyY/view&amount=4500&rzp=https%3A//rzp.io/rzp/wzeC1Bx" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="cable-stayed bridge over durgam cheruvu lake near hitec city buildings" data-clip="hyderabad_clip_025.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_025.jpg" alt="Hyderabad drone clip 025" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 025</div>
@@ -437,7 +441,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_025.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1a28hNRVIfJcV8m2ndVv6hOGgsMt05PTG/view&amount=4500&rzp=https%3A//rzp.io/rzp/a7YZMLLb" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="nighttime cityscape with illuminated buildings, busy highway traffic, construction site" data-clip="hyderabad_clip_026.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_026.jpg" alt="Hyderabad drone clip 026" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 026</div>
@@ -452,7 +456,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_026.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1jYKKjBeONlbbbFmDHoz4_MbQ6yc-g1E-/view&amount=4500&rzp=https%3A//rzp.io/rzp/8XJnMbfe" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="itc kohenur hotel, hitec city office towers, roads, green spaces" data-clip="hyderabad_clip_027.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_027.jpg" alt="Hyderabad drone clip 027" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 027</div>
@@ -467,7 +471,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_027.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1PcMKO2-szkoXe_8gCwCAeyGNrfvmvdpU/view&amount=4500&rzp=https%3A//rzp.io/rzp/VLagAu8w" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise apartments, curved glass office building, lake, green spaces" data-clip="hyderabad_clip_028.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_028.jpg" alt="Hyderabad drone clip 028" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 028</div>
@@ -482,7 +486,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_028.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1AsJFD0NoTLVM_6ILJunnxxsBQzZizuOP/view&amount=4500&rzp=https%3A//rzp.io/rzp/aq6BZAuE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with high-rises, construction cranes, and hazy skyline" data-clip="hyderabad_clip_029.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_029.jpg" alt="Hyderabad drone clip 029" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 029</div>
@@ -497,7 +501,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_029.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/18-qBUOEUd7DsESoKqtH7-CipMk1vL1DF/view&amount=4500&rzp=https%3A//rzp.io/rzp/aSR3AwT" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="nighttime aerial view of illuminated hitec city intersection with high-rises" data-clip="hyderabad_clip_030.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_030.jpg" alt="Hyderabad drone clip 030" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 030</div>
@@ -512,7 +516,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_030.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/19ycxeUAqfRKi1US45_KBuo_szpJOOsSG/view&amount=4500&rzp=https%3A//rzp.io/rzp/dJVoaiPx" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city skyline with amd building, lake, and cable-stayed bridge" data-clip="hyderabad_clip_031.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_031.jpg" alt="Hyderabad drone clip 031" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 031</div>
@@ -527,7 +531,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_031.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1QDFWiS40uLtagZ7DdgoVz9ifrTAPhG1P/view&amount=4500&rzp=https%3A//rzp.io/rzp/DyeW7rho" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city office towers with construction site and urban sprawl" data-clip="hyderabad_clip_032.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_032.jpg" alt="Hyderabad drone clip 032" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 032</div>
@@ -542,7 +546,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_032.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1PgLOPvmQ7Lhu2R-ELFw-h_LsuDZdcujr/view&amount=4500&rzp=https%3A//rzp.io/rzp/gzj1p3Ni" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="circular elevated walkway, construction site, modern office buildings, ikea store visible" data-clip="hyderabad_clip_033.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_033.jpg" alt="Hyderabad drone clip 033" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 033</div>
@@ -557,7 +561,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_033.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1HpHenPmYLoCcihiwmRtS_XI1rswMSB4c/view&amount=4500&rzp=https%3A//rzp.io/rzp/mV8ci5bj" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="illuminated telangana secretariat building with tricolor lights and manicured lawns at night" data-clip="hyderabad_clip_034.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_034.jpg" alt="Hyderabad drone clip 034" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 034</div>
@@ -572,7 +576,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_034.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1zMksFA4C-b5HD6XHTHN8-TPOiVJEYExk/view&amount=4500&rzp=https%3A//rzp.io/rzp/FacJKqz" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="nighttime aerial view of hitec city with orbit and galaxy towers" data-clip="hyderabad_clip_035.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_035.jpg" alt="Hyderabad drone clip 035" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 035</div>
@@ -587,7 +591,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_035.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/19GJ_eeGB7XXlMXQ6iu4sEF7C-Qt0prcm/view&amount=4500&rzp=https%3A//rzp.io/rzp/wBGLaDK" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rises, durgam cheruvu lake, cable-stayed bridge, dense urban development" data-clip="hyderabad_clip_036.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_036.jpg" alt="Hyderabad drone clip 036" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 036</div>
@@ -602,7 +606,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_036.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1ojHC5pJXKLQ0TZQuCCUGxxhjG4XnIUmt/view&amount=4500&rzp=https%3A//rzp.io/rzp/XUNPdzD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern it office buildings, shopping mall, construction site, tree-lined roads" data-clip="hyderabad_clip_037.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_037.jpg" alt="Hyderabad drone clip 037" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 037</div>
@@ -617,7 +621,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_037.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1JHHJyYJA9AynYO5mIJLZBPZt1cYpNGBH/view&amount=4500&rzp=https%3A//rzp.io/rzp/uA8JbSPh" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="mindspace social building, elevated pink skywalk, construction cranes, modern office towers" data-clip="hyderabad_clip_038.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_038.jpg" alt="Hyderabad drone clip 038" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 038</div>
@@ -632,7 +636,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_038.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1fK0kXBQJVCuaIYRTtu2aguL7FZnO1Tjl/view&amount=4500&rzp=https%3A//rzp.io/rzp/DwQP66C" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern office building with hdfc bank amid dense urban hyderabad cityscape" data-clip="hyderabad_clip_039.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_039.jpg" alt="Hyderabad drone clip 039" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 039</div>
@@ -647,7 +651,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_039.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1tTi4SHHEcojRyO6nDp9CWN5dV8QoIvqH/view&amount=4500&rzp=https%3A//rzp.io/rzp/oJ7a6Qay" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="telangana secretariat building illuminated in tricolor with manicured lawns at night" data-clip="hyderabad_clip_040.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_040.jpg" alt="Hyderabad drone clip 040" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 040</div>
@@ -662,7 +666,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_040.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1vt5yrB4jV-2i_abqIuHssssYx-YWv3Ht/view&amount=4500&rzp=https%3A//rzp.io/rzp/2tkSDeCE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern office towers including qualcomm building amid developing urban landscape" data-clip="hyderabad_clip_041.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_041.jpg" alt="Hyderabad drone clip 041" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 041</div>
@@ -677,7 +681,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_041.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1822uh-Oaior1nQWm6jkDaSdjsm1qsIc3/view&amount=4500&rzp=https%3A//rzp.io/rzp/WMq6lVW7" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise office buildings and tech parks in hitec city" data-clip="hyderabad_clip_042.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_042.jpg" alt="Hyderabad drone clip 042" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 042</div>
@@ -692,7 +696,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_042.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1XHwitO-tTfqv2fBlhxJ3pMylmzh_6AtF/view&amount=4500&rzp=https%3A//rzp.io/rzp/QvrY0lH" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of hitec city with ikea store, elevated highway, undeveloped land" data-clip="hyderabad_clip_043.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_043.jpg" alt="Hyderabad drone clip 043" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 043</div>
@@ -707,7 +711,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_043.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1E_mKiW_GJ5utJYwVAkEAKEV_ucOHhmnw/view&amount=4500&rzp=https%3A//rzp.io/rzp/8HttJGwa" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="qualcomm office building with glass facade in hitec city hyderabad" data-clip="hyderabad_clip_044.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_044.jpg" alt="Hyderabad drone clip 044" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 044</div>
@@ -722,7 +726,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_044.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1YJuhA1IKu3ZBW4pKMkxM_oj8PRmUHuMu/view&amount=4500&rzp=https%3A//rzp.io/rzp/x25D8Vc" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of hitec city showing modern office buildings and construction sites" data-clip="hyderabad_clip_045.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_045.jpg" alt="Hyderabad drone clip 045" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 045</div>
@@ -737,7 +741,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_045.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/15YeXMKN4fo4U1VHvF9KAebY4fUxcbcGZ/view&amount=4500&rzp=https%3A//rzp.io/rzp/HTGpK6vw" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass office buildings with galaxy sign in hitec city business district" data-clip="hyderabad_clip_046.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_046.jpg" alt="Hyderabad drone clip 046" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 046</div>
@@ -752,7 +756,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_046.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1Z8beq5rMbSD3Uryc9yjRMG-FLslw8_6K/view&amount=4500&rzp=https%3A//rzp.io/rzp/h3j0baj" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern cable-stayed bridge crossing green durgam cheruvu lake in hyderabad" data-clip="hyderabad_clip_047.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_047.jpg" alt="Hyderabad drone clip 047" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 047</div>
@@ -767,7 +771,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_047.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/188dK2xHJfpQ3yL30e-SD0EoFbJi47--C/view&amount=4500&rzp=https%3A//rzp.io/rzp/2coeaQL1" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="commercial buildings with rooftop solar panels in dense urban area" data-clip="hyderabad_clip_048.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_048.jpg" alt="Hyderabad drone clip 048" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 048</div>
@@ -782,7 +786,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_048.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1nokYqTO2GKMOhFcYBYQ-GCdrSjkgJrSS/view&amount=4500&rzp=https%3A//rzp.io/rzp/IYvlZvKk" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="telangana secretariat building illuminated in indian tricolor overlooking hussain sagar lake" data-clip="hyderabad_clip_049.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_049.jpg" alt="Hyderabad drone clip 049" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 049</div>
@@ -797,7 +801,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_049.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1MdM--k5SSZvFyBUhK_CQf5fxWomil5-b/view&amount=4500&rzp=https%3A//rzp.io/rzp/QGzYJcf" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of hitec city highrise apartments, roads, electrical substation" data-clip="hyderabad_clip_050.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_050.jpg" alt="Hyderabad drone clip 050" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 050</div>
@@ -812,7 +816,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_050.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/13P9_kZ0Qkks3DXirFPkeMwhcpzdCTO4B/view&amount=4500&rzp=https%3A//rzp.io/rzp/ap2mZsR" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential area with low-rise buildings and ongoing construction" data-clip="hyderabad_clip_051.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_051.jpg" alt="Hyderabad drone clip 051" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 051</div>
@@ -827,7 +831,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_051.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1yuWlePd7eNjtgZjNCEYjITwfgHpahj33/view&amount=4500&rzp=https%3A//rzp.io/rzp/JYYSCnG" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="durgam cheruvu lake surrounded by green hills and jubilee hills buildings" data-clip="hyderabad_clip_052.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_052.jpg" alt="Hyderabad drone clip 052" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 052</div>
@@ -842,7 +846,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_052.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1lDP5LG8K74jeN6NK9iJWRyZTGqe7IRA-/view&amount=4500&rzp=https%3A//rzp.io/rzp/jQgNrYGs" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with modern glass towers and colorful residential buildings" data-clip="hyderabad_clip_053.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_053.jpg" alt="Hyderabad drone clip 053" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 053</div>
@@ -857,7 +861,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_053.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1xQzq3Y29hMOptPUKn3rK1FDQxA0PzR2Z/view&amount=4500&rzp=https%3A//rzp.io/rzp/w7n74Et" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass office buildings with deloitte signage in hitec city" data-clip="hyderabad_clip_054.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_054.jpg" alt="Hyderabad drone clip 054" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 054</div>
@@ -872,7 +876,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_054.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1AZWJ5oUPARQ_Spsn5aYEJ0YHJC8xtf9l/view&amount=4500&rzp=https%3A//rzp.io/rzp/VIYw4eHV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line curving through dense urban hyderabad cityscape" data-clip="hyderabad_clip_055.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_055.jpg" alt="Hyderabad drone clip 055" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 055</div>
@@ -887,7 +891,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_055.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1e3sWt4D5vMFSyEj_u8r1AogPEd77BMT9/view&amount=4500&rzp=https%3A//rzp.io/rzp/qDzDkVSV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern cityscape with deloitte building, construction crane, high-rises, and green spaces" data-clip="hyderabad_clip_056.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_056.jpg" alt="Hyderabad drone clip 056" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 056</div>
@@ -902,7 +906,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_056.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1OiRBdp-jVNoOMhuuZXMT3qGshvwBWKkG/view&amount=4500&rzp=https%3A//rzp.io/rzp/rMgO7n8" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of hitec city hyderabad with ikea store and construction" data-clip="hyderabad_clip_057.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_057.jpg" alt="Hyderabad drone clip 057" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 057</div>
@@ -917,7 +921,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_057.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/10W_uD6bcnohXfkM1_GsEOxj1CT3Fdi5i/view&amount=4500&rzp=https%3A//rzp.io/rzp/4iPMG4V" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line cutting through dense urban residential neighborhood" data-clip="hyderabad_clip_058.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_058.jpg" alt="Hyderabad drone clip 058" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 058</div>
@@ -932,7 +936,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_058.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1Un9lOCCRlLdMVZINKuT4zBGMhsEf7juA/view&amount=4500&rzp=https%3A//rzp.io/rzp/FcgGxXY" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise buildings flanking wide tree-lined boulevard in hitec city" data-clip="hyderabad_clip_059.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_059.jpg" alt="Hyderabad drone clip 059" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 059</div>
@@ -947,7 +951,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_059.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1w05WiN41WFrHWC3XXgir93aWOCSBmYjk/view&amount=4500&rzp=https%3A//rzp.io/rzp/5Gsdl7JD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with highrise buildings, lake, and hazy skyline" data-clip="hyderabad_clip_060.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_060.jpg" alt="Hyderabad drone clip 060" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 060</div>
@@ -962,7 +966,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_060.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1Wx9us51Ukb9c650BSkCm3D-Tsr7IWCDJ/view&amount=4500&rzp=https%3A//rzp.io/rzp/TGK2mkO6" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern tech district with qualcomm building, green spaces, elevated highway, high-rises" data-clip="hyderabad_clip_061.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_061.jpg" alt="Hyderabad drone clip 061" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 061</div>
@@ -977,7 +981,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_061.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1N60zT5FUf2sTD3bSeAhTJvQIYgY8xf9Q/view&amount=4500&rzp=https%3A//rzp.io/rzp/4ssGuwW" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with mixed residential commercial buildings and main road" data-clip="hyderabad_clip_062.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_062.jpg" alt="Hyderabad drone clip 062" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 062</div>
@@ -992,7 +996,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_062.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1wUIXoHTPoD2uv-CvQW-i9s3Jbmba93Pt/view&amount=4500&rzp=https%3A//rzp.io/rzp/GeHeex5E" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern highrise buildings, wide roads, lake, hazy skyline, commercial district" data-clip="hyderabad_clip_063.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_063.jpg" alt="Hyderabad drone clip 063" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 063</div>
@@ -1007,7 +1011,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_063.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1V_MYevemRfBd25XSQszkKljRvCv6nHGg/view&amount=4500&rzp=https%3A//rzp.io/rzp/Y1o3gYeX" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hyderabad hitec city skyline with modern office towers and residential buildings" data-clip="hyderabad_clip_064.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_064.jpg" alt="Hyderabad drone clip 064" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 064</div>
@@ -1022,7 +1026,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_064.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1eCSOtr2B-BsiMUdeRq5q2LscnY7YVH_-/view&amount=4500&rzp=https%3A//rzp.io/rzp/A4NhRIR" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise buildings under construction near forested hillside in hitec city" data-clip="hyderabad_clip_065.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_065.jpg" alt="Hyderabad drone clip 065" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 065</div>
@@ -1037,7 +1041,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_065.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1qFnLmjUHPJd5ntiEeeBspOd4TqAhcak_/view&amount=4500&rzp=https%3A//rzp.io/rzp/uTlRecYc" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="telangana secretariat building illuminated in tricolor with green lawns at night" data-clip="hyderabad_clip_066.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_066.jpg" alt="Hyderabad drone clip 066" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 066</div>
@@ -1052,7 +1056,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_066.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1VyXBucu6bFZ6M5AFtodW3wiYymg3MbEp/view&amount=4500&rzp=https%3A//rzp.io/rzp/IA9lnKU" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city skyline with deloitte buildings and elevated metro rail" data-clip="hyderabad_clip_067.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_067.jpg" alt="Hyderabad drone clip 067" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 067</div>
@@ -1067,7 +1071,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_067.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1YoaXTFTvlQtosjs91mIsFjdh7ZKD5nnw/view&amount=4500&rzp=https%3A//rzp.io/rzp/harQ59G" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="curved highway, dome building, modern offices, hussain sagar lake, bridge" data-clip="hyderabad_clip_068.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_068.jpg" alt="Hyderabad drone clip 068" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 068</div>
@@ -1082,7 +1086,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_068.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1BjIslt3i5mb8g4uJlkjjgLLzOwkDRkAJ/view&amount=4500&rzp=https%3A//rzp.io/rzp/Udqfw93t" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with pink apartments, metro line, and office buildings" data-clip="hyderabad_clip_069.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_069.jpg" alt="Hyderabad drone clip 069" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 069</div>
@@ -1097,7 +1101,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_069.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1WmjVgks-cdsfkP6t9PwD1xMnEGBewUNF/view&amount=4500&rzp=https%3A//rzp.io/rzp/LmfU04E" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="ikea store, elevated highway, high-rise buildings, construction sites, urban sprawl" data-clip="hyderabad_clip_070.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_070.jpg" alt="Hyderabad drone clip 070" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 070</div>
@@ -1112,7 +1116,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_070.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1NQLoNHeKihmEA7EDvvFvZQDjHUucrnZI/view&amount=4500&rzp=https%3A//rzp.io/rzp/rHnT2h8b" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail track curves past distinctive latticed circular building" data-clip="hyderabad_clip_071.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_071.jpg" alt="Hyderabad drone clip 071" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 071</div>
@@ -1127,7 +1131,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_071.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/14qyfHnFxKHlAzRKPi31Top1YuBuE1gWd/view&amount=4500&rzp=https%3A//rzp.io/rzp/fSsKmKgJ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway interchange with flyovers, it buildings, and green spaces" data-clip="hyderabad_clip_072.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_072.jpg" alt="Hyderabad drone clip 072" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 072</div>
@@ -1142,7 +1146,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_072.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1P5L4FA3rENCtm77qeJyYZZE_Q-xepY_R/view&amount=4500&rzp=https%3A//rzp.io/rzp/DUQraFfE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="highrise apartments, rocky terrain, construction sites, hazy skyline, urban sprawl" data-clip="hyderabad_clip_073.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_073.jpg" alt="Hyderabad drone clip 073" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 073</div>
@@ -1157,7 +1161,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_073.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1cqqeQHORfVXDcmR9td7C7gLgsFgegA5a/view&amount=4500&rzp=https%3A//rzp.io/rzp/ezUqjkA" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="ikea store near multi-level highway interchange with flyovers and greenery" data-clip="hyderabad_clip_074.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_074.jpg" alt="Hyderabad drone clip 074" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 074</div>
@@ -1172,7 +1176,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_074.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1bHlAo8Dll9SxrQwQTUHRRoszxvXs_tnT/view&amount=4500&rzp=https%3A//rzp.io/rzp/YFEATHRv" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="cable-stayed bridge, hitec city office towers, durgam cheruvu lake, highways" data-clip="hyderabad_clip_075.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_075.jpg" alt="Hyderabad drone clip 075" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 075</div>
@@ -1187,7 +1191,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_075.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1C4gbIn1iKOY_rc10AOAeWwMHQj8TmrpT/view&amount=4500&rzp=https%3A//rzp.io/rzp/YNkRjU4" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line cutting through dense urban hyderabad neighborhood" data-clip="hyderabad_clip_076.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_076.jpg" alt="Hyderabad drone clip 076" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 076</div>
@@ -1202,7 +1206,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_076.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1kGbA3U2Su4PHYN7qf8fZhxFP9ThkDIUT/view&amount=4500&rzp=https%3A//rzp.io/rzp/CGNKrgP" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="busy intersection with lush green trees and white multi-story hotel" data-clip="hyderabad_clip_077.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_077.jpg" alt="Hyderabad drone clip 077" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 077</div>
@@ -1217,7 +1221,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_077.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1yhRNjUoLmQb8C6orvmAX2rhNUcABEM6D/view&amount=4500&rzp=https%3A//rzp.io/rzp/nO7t0gg" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="indian flag flying over colorful buildings near hussain sagar lake" data-clip="hyderabad_clip_078.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_078.jpg" alt="Hyderabad drone clip 078" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 078</div>
@@ -1232,7 +1236,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_078.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1d-_XVdN5hrPwLy3nRHd9MjV5xms8NZJg/view&amount=4500&rzp=https%3A//rzp.io/rzp/uWvWuN2o" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern cable-stayed bridge over lake with it buildings and greenery" data-clip="hyderabad_clip_079.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_079.jpg" alt="Hyderabad drone clip 079" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 079</div>
@@ -1247,7 +1251,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_079.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/17UzBPVEK3I9ZbBLNxw6TtZ-ji34Vxhyx/view&amount=4500&rzp=https%3A//rzp.io/rzp/AIUIYGFL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass towers, dense urban sprawl, green patches, distant hussain sagar lake" data-clip="hyderabad_clip_080.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_080.jpg" alt="Hyderabad drone clip 080" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 080</div>
@@ -1262,7 +1266,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_080.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1Y5WRjvOYeIU7R5wVb3piTrHpNATs_WDf/view&amount=4500&rzp=https%3A//rzp.io/rzp/pZa28Juh" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with high-rises, metro rail line, construction cranes, hazy sky" data-clip="hyderabad_clip_081.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_081.jpg" alt="Hyderabad drone clip 081" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 081</div>
@@ -1277,7 +1281,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_081.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1NSCcbC_3criTV8lb2xc5U-COja3V6vaE/view&amount=4500&rzp=https%3A//rzp.io/rzp/Mfvv37nL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of gvk one mall, curved building, roads, dense urban area" data-clip="hyderabad_clip_082.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_082.jpg" alt="Hyderabad drone clip 082" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 082</div>
@@ -1292,7 +1296,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_082.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1GaGxyqqqO3AoWYC-R09RSG-_-Okc1_mY/view&amount=4500&rzp=https%3A//rzp.io/rzp/5UKrard" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="large indian flag on island in hussain sagar lake surrounded by city" data-clip="hyderabad_clip_083.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_083.jpg" alt="Hyderabad drone clip 083" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 083</div>
@@ -1307,7 +1311,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_083.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1q0n4qX7O0N3on_hN-wd0cySQ36MjufX8/view&amount=4500&rzp=https%3A//rzp.io/rzp/ptOxuTxW" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide multi-lane road, modern glass office building, residential high-rises, electrical substation" data-clip="hyderabad_clip_084.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_084.jpg" alt="Hyderabad drone clip 084" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 084</div>
@@ -1322,7 +1326,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_084.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1KQXH3Di8MTggzGUDvjiYViCUlT3cynZf/view&amount=4500&rzp=https%3A//rzp.io/rzp/JEeBzth7" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="giant indian flag on tall pole beside hussain sagar lake" data-clip="hyderabad_clip_085.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_085.jpg" alt="Hyderabad drone clip 085" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 085</div>
@@ -1337,7 +1341,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_085.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1WMJuD6MfvS2Y7fLqdWC75UWMcXEOfntr/view&amount=4500&rzp=https%3A//rzp.io/rzp/59AnFou" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rises, curved elevated highway, lake, green rooftops, urban development" data-clip="hyderabad_clip_086.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_086.jpg" alt="Hyderabad drone clip 086" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 086</div>
@@ -1352,7 +1356,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_086.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1c35SHYLZohnA8vVigYpgJrdu3ZhrGV0l/view&amount=4500&rzp=https%3A//rzp.io/rzp/0fIU2fvl" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern cable-stayed bridge over lake with hitec city skyline" data-clip="hyderabad_clip_087.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_087.jpg" alt="Hyderabad drone clip 087" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 087</div>
@@ -1367,7 +1371,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_087.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1uFIMEvevUoiIkQ6IVAwPymSdEVSKxU8-/view&amount=4500&rzp=https%3A//rzp.io/rzp/NN6PtTY" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="giant indian flag on tall pole beside hussain sagar lake, hyderabad" data-clip="hyderabad_clip_088.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_088.jpg" alt="Hyderabad drone clip 088" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 088</div>
@@ -1382,7 +1386,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_088.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1I9THswIFzR0S1CmcWF60mFEZpsZTD57W/view&amount=4500&rzp=https%3A//rzp.io/rzp/1PfTyqE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="green lake with algae beside curved road and dense urban buildings" data-clip="hyderabad_clip_089.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_089.jpg" alt="Hyderabad drone clip 089" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 089</div>
@@ -1397,7 +1401,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_089.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1aEGHrtzYrmPQ2R99_IaMf1TopMiJZG6z/view&amount=4500&rzp=https%3A//rzp.io/rzp/tLfNGxOG" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway curves past durgam cheruvu lake toward hitec city skyline" data-clip="hyderabad_clip_090.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_090.jpg" alt="Hyderabad drone clip 090" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 090</div>
@@ -1412,7 +1416,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_090.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1MmymgfmmkpbOVVw7aEez0P_DRi2qXvQ_/view&amount=4500&rzp=https%3A//rzp.io/rzp/oI4vcpuo" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail track curving through green tree-covered urban area" data-clip="hyderabad_clip_091.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_091.jpg" alt="Hyderabad drone clip 091" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 091</div>
@@ -1427,7 +1431,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_091.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1eQhn03jdVCG7Op0JepvYfvLzoH-HqTHu/view&amount=4500&rzp=https%3A//rzp.io/rzp/Aj1MvYRa" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail, hsel glass tower, dense urban buildings, green patches" data-clip="hyderabad_clip_092.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_092.jpg" alt="Hyderabad drone clip 092" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 092</div>
@@ -1442,7 +1446,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_092.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/124dshsIRaPM24nKRG0fUUuDT60z6c1Wk/view&amount=4500&rzp=https%3A//rzp.io/rzp/SEjKZsUw" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway, modern high-rises, mixed urban development, green patches, traffic" data-clip="hyderabad_clip_093.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_093.jpg" alt="Hyderabad drone clip 093" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 093</div>
@@ -1457,7 +1461,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_093.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1P2CYrGmniZHVverxeWfhzIclAjDhrgb_/view&amount=4500&rzp=https%3A//rzp.io/rzp/nRxKK0jI" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line curves through dense urban area with greenery" data-clip="hyderabad_clip_094.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_094.jpg" alt="Hyderabad drone clip 094" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 094</div>
@@ -1472,7 +1476,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_094.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1-qjrzuULuKzLQ3ppPKriCnmqiQy5hU7p/view&amount=4500&rzp=https%3A//rzp.io/rzp/fgDIEDoc" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hussain sagar lake with buddha statue, city skyline, sunset reflection" data-clip="hyderabad_clip_095.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_095.jpg" alt="Hyderabad drone clip 095" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 095</div>
@@ -1487,7 +1491,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_095.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1jKLwtKqr8NPly9V8VDxDZnOmwCl7gxgW/view&amount=4500&rzp=https%3A//rzp.io/rzp/kxMxu0DW" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="giant buddha statue on island in hussain sagar lake with tourist boats" data-clip="hyderabad_clip_096.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_096.jpg" alt="Hyderabad drone clip 096" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 096</div>
@@ -1502,7 +1506,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_096.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/12R4cBrskIzmzavEKv-OtLUDuN0gFMUKI/view&amount=4500&rzp=https%3A//rzp.io/rzp/YCbq7z3" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with curved tracks amid dense colorful urban buildings" data-clip="hyderabad_clip_097.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_097.jpg" alt="Hyderabad drone clip 097" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 097</div>
@@ -1517,7 +1521,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_097.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1SL8j53LNC5w33n1UBanT-7InN2OvF-AS/view&amount=4500&rzp=https%3A//rzp.io/rzp/HBA02bt" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated flyover with yellow barriers crossing major highway near metro station" data-clip="hyderabad_clip_098.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_098.jpg" alt="Hyderabad drone clip 098" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 098</div>
@@ -1532,7 +1536,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_098.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1utFIVJb_2Cto3C91qcUVkTgxWQuyDBZm/view&amount=4500&rzp=https%3A//rzp.io/rzp/wc5xrRyF" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="telangana secretariat building with white domes near hussain sagar lake" data-clip="hyderabad_clip_099.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_099.jpg" alt="Hyderabad drone clip 099" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 099</div>
@@ -1547,7 +1551,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_099.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/11Ct9Ya8Juvl1SxCdYIcyV40vXpbvI28n/view&amount=4500&rzp=https%3A//rzp.io/rzp/76sjLFa" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city skyline with glass towers, roads, and qualcomm building" data-clip="hyderabad_clip_100.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_100.jpg" alt="Hyderabad drone clip 100" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 100</div>
@@ -1562,7 +1566,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_100.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1ZJk_VG95D2wI8mHr_mOsko1f69SgUWH0/view&amount=4500&rzp=https%3A//rzp.io/rzp/8zq7j9u" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hussain sagar lake with buddha statue, city skyline, sunset reflection" data-clip="hyderabad_clip_101.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_101.jpg" alt="Hyderabad drone clip 101" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 101</div>
@@ -1577,7 +1581,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_101.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1hgfJ5HPcr6GQDiYKq3U9u1vADPPOjWRl/view&amount=4500&rzp=https%3A//rzp.io/rzp/4zsQKTD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hussain sagar lake, white domed building, ntr gardens, dense cityscape" data-clip="hyderabad_clip_102.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_102.jpg" alt="Hyderabad drone clip 102" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 102</div>
@@ -1592,7 +1596,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_102.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/16PIiyNIatIdPWcxiVkyfx2bFBiFZQWlw/view&amount=4500&rzp=https%3A//rzp.io/rzp/h1ZgoKv" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern it office buildings, wide roads, and itc kohenur hotel visible" data-clip="hyderabad_clip_103.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_103.jpg" alt="Hyderabad drone clip 103" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 103</div>
@@ -1607,7 +1611,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_103.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1NftGrYGVfwSMKRMv4NvSdty7UAdJ2jb1/view&amount=4500&rzp=https%3A//rzp.io/rzp/FqToCuOw" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with white buildings, green tree patches, hotel complex" data-clip="hyderabad_clip_104.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_104.jpg" alt="Hyderabad drone clip 104" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 104</div>
@@ -1622,7 +1626,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_104.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1wiPCUBb0AscibbDLrhWEoIVtbn268xHi/view&amount=4500&rzp=https%3A//rzp.io/rzp/7ZiF6qAC" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="massive bronze statue of ambedkar on circular pedestal with surrounding gardens" data-clip="hyderabad_clip_105.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_105.jpg" alt="Hyderabad drone clip 105" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 105</div>
@@ -1637,7 +1641,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_105.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1jbMRK3TE_8CKR9FBOiaciy17R2Sq7j87/view&amount=4500&rzp=https%3A//rzp.io/rzp/nPOFouMU" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass office towers, wide roads, construction sites, dense urban development" data-clip="hyderabad_clip_106.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_106.jpg" alt="Hyderabad drone clip 106" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 106</div>
@@ -1652,7 +1656,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_106.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1zudNq_BvE8vPovR2qGEG7dM26kD4XFwP/view&amount=4500&rzp=https%3A//rzp.io/rzp/XK6I0Ie" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern highrise buildings along busy highway near lake in hyderabad" data-clip="hyderabad_clip_107.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_107.jpg" alt="Hyderabad drone clip 107" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 107</div>
@@ -1667,7 +1671,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_107.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1vHOfxuD9t0QNoZ6JtAGlOTevmfleOZqE/view&amount=4500&rzp=https%3A//rzp.io/rzp/6HCskkL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="large statue with outstretched arm overlooking hussain sagar lake and parkland" data-clip="hyderabad_clip_108.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_108.jpg" alt="Hyderabad drone clip 108" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 108</div>
@@ -1682,7 +1686,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_108.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1NvtIoM0bjCguYO-d_lXCPygFiyGWA5db/view&amount=4500&rzp=https%3A//rzp.io/rzp/JIyajLQ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line crossing dense urban residential neighborhood with trees" data-clip="hyderabad_clip_109.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_109.jpg" alt="Hyderabad drone clip 109" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 109</div>
@@ -1697,7 +1701,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_109.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1TZtIwLxwMNy-6K6g4e4vguU6nC8oahuP/view&amount=4500&rzp=https%3A//rzp.io/rzp/MzqBrmqo" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="large statue of dr br ambedkar surrounded by gardens and circular plaza" data-clip="hyderabad_clip_110.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_110.jpg" alt="Hyderabad drone clip 110" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 110</div>
@@ -1712,7 +1716,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_110.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1DF9fTcSNUns65G7Qrj0s_-qq71-Ji0ak/view&amount=4500&rzp=https%3A//rzp.io/rzp/NhL83He8" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern highrise buildings surrounding green parkland and lake in hyderabad" data-clip="hyderabad_clip_111.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_111.jpg" alt="Hyderabad drone clip 111" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 111</div>
@@ -1727,7 +1731,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_111.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1HPInqLdTb4dIi5Y2GPYfCthWM4rqIuJq/view&amount=4500&rzp=https%3A//rzp.io/rzp/fU0zTFP" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with colorful buildings, green parks, and distinctive white auditorium" data-clip="hyderabad_clip_112.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_112.jpg" alt="Hyderabad drone clip 112" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 112</div>
@@ -1742,7 +1746,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_112.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1ag49AXh5kIm3vyj2-EF2wSaC2ABvFDTz/view&amount=4500&rzp=https%3A//rzp.io/rzp/YVDxmCoX" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hussain sagar lake, telangana assembly building, ntr gardens, ferris wheel, cityscape" data-clip="hyderabad_clip_113.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_113.jpg" alt="Hyderabad drone clip 113" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 113</div>
@@ -1757,7 +1761,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_113.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/176nqTSxN6kRfVLDjYVFDh72wW0rlKtx9/view&amount=4500&rzp=https%3A//rzp.io/rzp/93P7e0V" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern hitec city skyline with distinctive red-brown office buildings and highway interchange" data-clip="hyderabad_clip_114.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_114.jpg" alt="Hyderabad drone clip 114" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 114</div>
@@ -1772,7 +1776,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_114.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1xLJrboao6WXgVvzl7E4kAcu63ERDuHsb/view&amount=4500&rzp=https%3A//rzp.io/rzp/MnhkAfo" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern tech district with distinctive red-brown buildings and highway interchange" data-clip="hyderabad_clip_115.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_115.jpg" alt="Hyderabad drone clip 115" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 115</div>
@@ -1787,7 +1791,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_115.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1dLI2KOIzkZ_4SxO5uoT1kKRCJ7JlEJiJ/view&amount=4500&rzp=https%3A//rzp.io/rzp/M7dErWn" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="white birla mandir temple on hilltop surrounded by green trees" data-clip="hyderabad_clip_116.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_116.jpg" alt="Hyderabad drone clip 116" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 116</div>
@@ -1802,7 +1806,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_116.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1eahwgmknrBXl5aRbrz755QhsMXioVKqi/view&amount=4500&rzp=https%3A//rzp.io/rzp/oHcFon7S" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="mosque with minarets, hilltop temple, dense urban sprawl, green trees" data-clip="hyderabad_clip_117.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_117.jpg" alt="Hyderabad drone clip 117" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 117</div>
@@ -1817,7 +1821,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_117.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1oCWJmUp-WydGZWEf_ITM1NWpTklgeOBx/view&amount=4500&rzp=https%3A//rzp.io/rzp/Rub7l2K" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line curving through dense urban residential buildings" data-clip="hyderabad_clip_118.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_118.jpg" alt="Hyderabad drone clip 118" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 118</div>
@@ -1832,7 +1836,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_118.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1UnxSBgxytYEgvizHutfr4RjXPu1QQLvP/view&amount=4500&rzp=https%3A//rzp.io/rzp/w0y7Fgx" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of hitec city showing deloitte building, highway, and mixed-rise development" data-clip="hyderabad_clip_119.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_119.jpg" alt="Hyderabad drone clip 119" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 119</div>
@@ -1847,7 +1851,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_119.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1MfDHbnc6OI59fzNUX3S1womV23v6CHWD/view&amount=4500&rzp=https%3A//rzp.io/rzp/RRKbQWxO" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="white domed telangana secretariat building with green lawns near hussain sagar" data-clip="hyderabad_clip_120.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_120.jpg" alt="Hyderabad drone clip 120" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 120</div>
@@ -1862,7 +1866,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_120.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1IqYj4ocEZJZXkmjlcZoVZko5fXDKUvvC/view&amount=4500&rzp=https%3A//rzp.io/rzp/xRf9YkL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise tech office buildings surrounding green lake in hazy cityscape" data-clip="hyderabad_clip_121.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_121.jpg" alt="Hyderabad drone clip 121" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 121</div>
@@ -1877,7 +1881,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_121.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1RvBrJwkG_EWnkU_ZE8kNPbAdJwd3R14R/view&amount=4500&rzp=https%3A//rzp.io/rzp/4ScFuJg" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of urban hyderabad showing roads, commercial buildings, and green spaces" data-clip="hyderabad_clip_122.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_122.jpg" alt="Hyderabad drone clip 122" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 122</div>
@@ -1892,7 +1896,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_122.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1qEf8YGIUHWncA-x5176729JakqrlKCJO/view&amount=4500&rzp=https%3A//rzp.io/rzp/sH48PTko" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern corporate towers, residential high-rises, construction cranes, qualcomm and jpmorgan buildings visible" data-clip="hyderabad_clip_123.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_123.jpg" alt="Hyderabad drone clip 123" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 123</div>
@@ -1907,7 +1911,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_123.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1uaxu4dnD3s4wEmilaRetJE0GQ5b-X75L/view&amount=4500&rzp=https%3A//rzp.io/rzp/9kt4RGUE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with modern office buildings and residential apartments" data-clip="hyderabad_clip_124.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_124.jpg" alt="Hyderabad drone clip 124" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 124</div>
@@ -1922,7 +1926,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_124.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1wq14GJFqxiWm1jX_DKHRYcbHt8BX7BPM/view&amount=4500&rzp=https%3A//rzp.io/rzp/RRdLF6q4" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban cityscape with high-rise buildings, elevated highway, and scattered greenery" data-clip="hyderabad_clip_125.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_125.jpg" alt="Hyderabad drone clip 125" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 125</div>
@@ -1937,7 +1941,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_125.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1dsF5SjdcdRDrFMEn0MZ_J9irvtpE7XXW/view&amount=4500&rzp=https%3A//rzp.io/rzp/JTKzPcm" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="illuminated hitec city skyscrapers and busy roads at night" data-clip="hyderabad_clip_126.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_126.jpg" alt="Hyderabad drone clip 126" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 126</div>
@@ -1952,7 +1956,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_126.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1HC2cLCRFd8W0RKEhP84QHkNh6VMsmOSz/view&amount=4500&rzp=https%3A//rzp.io/rzp/WqdHlct8" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line passing through dense urban cityscape" data-clip="hyderabad_clip_127.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_127.jpg" alt="Hyderabad drone clip 127" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 127</div>
@@ -1967,7 +1971,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_127.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1EsXY1TF9poENqDo6T5LciKVGv_S6JAnW/view&amount=4500&rzp=https%3A//rzp.io/rzp/Uwa6elE6" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line curves through dense urban neighborhood with green trees" data-clip="hyderabad_clip_128.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_128.jpg" alt="Hyderabad drone clip 128" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 128</div>
@@ -1982,7 +1986,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_128.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1vRMKCGCdZlkHIJNmLj3ejL3sghb5pK8H/view&amount=4500&rzp=https%3A//rzp.io/rzp/ttrDgk1W" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="nighttime ikea store, illuminated high-rises, hitec city commercial district, highways" data-clip="hyderabad_clip_129.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_129.jpg" alt="Hyderabad drone clip 129" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 129</div>
@@ -1997,7 +2001,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_129.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1CIN19AYc2ULBInXJogqR8x7LTi6WIkOt/view&amount=4500&rzp=https%3A//rzp.io/rzp/Nq0VQvA6" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="illuminated hitec city skyline with major roads and dark durgam cheruvu lake" data-clip="hyderabad_clip_130.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_130.jpg" alt="Hyderabad drone clip 130" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 130</div>
@@ -2012,7 +2016,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_130.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1i7wcyw_JLkT9SHHevWyOZErRdP5D0e_P/view&amount=4500&rzp=https%3A//rzp.io/rzp/kx22uOA" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="nighttime aerial view of hitec city with ikea store and traffic" data-clip="hyderabad_clip_131.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_131.jpg" alt="Hyderabad drone clip 131" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 131</div>
@@ -2027,7 +2031,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_131.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1w7YwnhzAF9E201k_9cucPIn2o0jCOrOq/view&amount=4500&rzp=https%3A//rzp.io/rzp/uM6dur2" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="cable-stayed bridge crossing lake with cityscape, green parks, modern buildings" data-clip="hyderabad_clip_132.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_132.jpg" alt="Hyderabad drone clip 132" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 132</div>
@@ -2042,7 +2046,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_132.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1RGCiap7eV_MuUi5h4bO5Hp_aOPsXel1z/view&amount=4500&rzp=https%3A//rzp.io/rzp/abZ6NsUT" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern cable-stayed bridge crossing hussain sagar lake near hitec city" data-clip="hyderabad_clip_133.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_133.jpg" alt="Hyderabad drone clip 133" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 133</div>
@@ -2057,7 +2061,7 @@
 <a href="buy.html?clip=Hyderabad_Clip_133.mp4&city=HYDERABAD&license=Professional&drive=https%3A//drive.google.com/file/d/1iGuO0vw20GENHRW05G5rHHbOTmbgcw7C/view&amount=4500&rzp=https%3A//rzp.io/rzp/VBIuJwg" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern cable-stayed bridge crossing green lake with forested island" data-clip="hyderabad_clip_134.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Hyderabad_Clip_134.jpg" alt="Hyderabad drone clip 134" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Hyderabad — Clip 134</div>
@@ -2073,7 +2077,28 @@
 </div>
 </div>
 </div>
-</div><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
+</div>
+<script>
+function filterClips(query) {
+  var q = query.toLowerCase().trim();
+  var cards = document.querySelectorAll(".clip-card");
+  var visible = 0;
+  cards.forEach(function(card) {
+    var desc = card.getAttribute("data-description") || "";
+    var clip = card.getAttribute("data-clip") || "";
+    var match = !q || desc.includes(q) || clip.includes(q);
+    card.style.display = match ? "" : "none";
+    if (match) visible++;
+  });
+  var countEl = document.getElementById("search-count");
+  if (q) {
+    countEl.style.display = "block";
+    countEl.textContent = visible + " clip" + (visible !== 1 ? "s" : "") + " found for "" + query + """;
+  } else {
+    countEl.style.display = "none";
+  }
+}
+</script><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:1100px;margin:0 auto 25px;">
 <div><h4 style="color:#ff6b00;margin-bottom:10px;letter-spacing:1px;">INDIA DRONE FOOTAGE</h4>
 <p style="color:#aaa;font-size:0.85em;line-height:1.6;">Professional 4K aerial drone footage from across India. Shot by Kishan Rahul since 2018.</p></div>

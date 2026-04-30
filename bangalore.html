@@ -61,8 +61,12 @@
 <div style="padding:5px 30px 15px;max-width:1400px;margin:0 auto;">
 <h2 style="color:#aaa;font-size:1.1em;">Individual Clips — 58 available</h2>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
-<div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+<div style="padding:0 30px 20px;max-width:1400px;margin:0 auto;">
+<input type="text" id="clip-search" placeholder="🔍 Search clips... (e.g. beach, temple, highway, river)" oninput="filterClips(this.value)" style="width:100%;padding:14px 18px;background:#1a1a1a;border:1px solid #555;border-radius:10px;color:#fff;font-size:0.95em;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b00'" onblur="this.style.borderColor='#555'">
+<div id="search-count" style="color:#aaa;font-size:0.82em;margin-top:8px;display:none;"></div>
+</div>
+<div id="clips-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
+<div class="clip-card" data-description="dense residential buildings with construction scaffolding, scattered trees, hazy overcast sky" data-clip="bangalore_clip_001.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_001.jpg" alt="Bangalore drone clip 001" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 001</div>
@@ -77,7 +81,7 @@
 <a href="buy.html?clip=Bangalore_Clip_001.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1dXOAoqt54BPqbFGTLvpI99det9as0wbL/view&amount=4500&rzp=https%3A//rzp.io/rzp/gChEHs9k" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with high-rises, green patches, construction and hazy skyline" data-clip="bangalore_clip_002.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_002.jpg" alt="Bangalore drone clip 002" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 002</div>
@@ -92,7 +96,7 @@
 <a href="buy.html?clip=Bangalore_Clip_002.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/124EhjUsxDtMTfjxDMJYl2URz2urqH86o/view&amount=4500&rzp=https%3A//rzp.io/rzp/OytxVWLC" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense residential buildings, water body, scattered trees, overcast sky, urban sprawl" data-clip="bangalore_clip_003.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_003.jpg" alt="Bangalore drone clip 003" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 003</div>
@@ -107,7 +111,7 @@
 <a href="buy.html?clip=Bangalore_Clip_003.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1sQQqqWV_wWAp8rQRHeCWEosVQ7DvRb2n/view&amount=4500&rzp=https%3A//rzp.io/rzp/z5dScejM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense residential neighborhood with flat-roofed buildings, scattered trees, hazy skyline" data-clip="bangalore_clip_004.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_004.jpg" alt="Bangalore drone clip 004" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 004</div>
@@ -122,7 +126,7 @@
 <a href="buy.html?clip=Bangalore_Clip_004.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1LDWkRIv8J56-Y67O4vOGACxAzgHobA61/view&amount=4500&rzp=https%3A//rzp.io/rzp/FIduDSay" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="industrial waste recycling area with white debris piles near residential buildings" data-clip="bangalore_clip_005.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_005.jpg" alt="Bangalore drone clip 005" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 005</div>
@@ -137,7 +141,7 @@
 <a href="buy.html?clip=Bangalore_Clip_005.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1D1Il119yuXgM11Idng8H7d0IqvhFaY8C/view&amount=4500&rzp=https%3A//rzp.io/rzp/rmxJwuk" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of bangalore showing high-rise apartments and hazy cityscape" data-clip="bangalore_clip_006.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_006.jpg" alt="Bangalore drone clip 006" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 006</div>
@@ -152,7 +156,7 @@
 <a href="buy.html?clip=Bangalore_Clip_006.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1FxgeA1YibeFOd_dg_XPtzR220HtDFa_3/view&amount=4500&rzp=https%3A//rzp.io/rzp/uZ0SL2l" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wastewater treatment plant with circular clarifiers near urban bangalore cityscape" data-clip="bangalore_clip_007.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_007.jpg" alt="Bangalore drone clip 007" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 007</div>
@@ -167,7 +171,7 @@
 <a href="buy.html?clip=Bangalore_Clip_007.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1TkLtTRChdu0wO1AviBBR49tbN0pZ_oxG/view&amount=4500&rzp=https%3A//rzp.io/rzp/XNAqHJV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential area with high-rises, low-rises, swimming pools, green spaces" data-clip="bangalore_clip_008.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_008.jpg" alt="Bangalore drone clip 008" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 008</div>
@@ -182,7 +186,7 @@
 <a href="buy.html?clip=Bangalore_Clip_008.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1FuJqR3mQGQJ2LMm3j0mk-KRBK7Xue3AC/view&amount=4500&rzp=https%3A//rzp.io/rzp/AZQpjqj7" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="large water treatment plant with circular clarifier tanks and sedimentation basins" data-clip="bangalore_clip_009.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_009.jpg" alt="Bangalore drone clip 009" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 009</div>
@@ -197,7 +201,7 @@
 <a href="buy.html?clip=Bangalore_Clip_009.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1hwDlCXikh-0P3N36HVsGUfXgsZs8wml9/view&amount=4500&rzp=https%3A//rzp.io/rzp/DPRNTY2R" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with highway interchange near green lake" data-clip="bangalore_clip_010.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_010.jpg" alt="Bangalore drone clip 010" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 010</div>
@@ -212,7 +216,7 @@
 <a href="buy.html?clip=Bangalore_Clip_010.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1ZnEa6LQk9DKfWdQZqIsboMBb3n0HwG3y/view&amount=4500&rzp=https%3A//rzp.io/rzp/plLVf8eM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with mid-rise apartments, scattered greenery, hazy skyline" data-clip="bangalore_clip_011.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_011.jpg" alt="Bangalore drone clip 011" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 011</div>
@@ -227,7 +231,7 @@
 <a href="buy.html?clip=Bangalore_Clip_011.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/11ftKqZ09TJN9PMRW7atJ8qBY2KjfLWWq/view&amount=4500&rzp=https%3A//rzp.io/rzp/yg7HGIej" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with flyover, lake, urban buildings, green spaces" data-clip="bangalore_clip_012.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_012.jpg" alt="Bangalore drone clip 012" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 012</div>
@@ -242,7 +246,7 @@
 <a href="buy.html?clip=Bangalore_Clip_012.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/157YGoQKLc8C8pyPx2zNTdEGIpNkaGV_5/view&amount=4500&rzp=https%3A//rzp.io/rzp/quvbYdVV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="highrise apartments, dense green tree cover, low-rise houses, hazy skyline" data-clip="bangalore_clip_013.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_013.jpg" alt="Bangalore drone clip 013" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 013</div>
@@ -257,7 +261,7 @@
 <a href="buy.html?clip=Bangalore_Clip_013.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1dBGYLnoeJ5Bhygr_lQwkz8M6eQcDE7Qc/view&amount=4500&rzp=https%3A//rzp.io/rzp/6uwMhe8z" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of dense residential apartments with green spaces nearby" data-clip="bangalore_clip_014.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_014.jpg" alt="Bangalore drone clip 014" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 014</div>
@@ -272,7 +276,7 @@
 <a href="buy.html?clip=Bangalore_Clip_014.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1QT_rp_OzYFZmKOahilk6tBuVxikK2PVs/view&amount=4500&rzp=https%3A//rzp.io/rzp/hIMAAJ2" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with highway interchange near lake and urban buildings" data-clip="bangalore_clip_015.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_015.jpg" alt="Bangalore drone clip 015" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 015</div>
@@ -287,7 +291,7 @@
 <a href="buy.html?clip=Bangalore_Clip_015.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1djFfxa2cws4-oT-w8ftPKf_igIUNXOjz/view&amount=4500&rzp=https%3A//rzp.io/rzp/MpPAcHs" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="tall high-rise towers under construction amid sprawling urban development" data-clip="bangalore_clip_016.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_016.jpg" alt="Bangalore drone clip 016" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 016</div>
@@ -302,7 +306,7 @@
 <a href="buy.html?clip=Bangalore_Clip_016.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1VDfL27Y_NzUXpW3b43yf93JVRKBgzXdK/view&amount=4500&rzp=https%3A//rzp.io/rzp/L0X7DNu" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="tall modern high-rise towers under construction amid sprawling urban development" data-clip="bangalore_clip_017.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_017.jpg" alt="Bangalore drone clip 017" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 017</div>
@@ -317,7 +321,7 @@
 <a href="buy.html?clip=Bangalore_Clip_017.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/136RW3d87fZFTSwWexo5Zi2Jq2ZdIHvC-/view&amount=4500&rzp=https%3A//rzp.io/rzp/kymtzaWu" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with flyovers, lake, dense urban development, hazy" data-clip="bangalore_clip_018.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_018.jpg" alt="Bangalore drone clip 018" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 018</div>
@@ -332,7 +336,7 @@
 <a href="buy.html?clip=Bangalore_Clip_018.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1QA3HVm3Bt_lddqtNgFCWV32iD-PtkKBC/view&amount=4500&rzp=https%3A//rzp.io/rzp/6qtFxKl" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="highrise apartments, green parks, dense urban sprawl, hazy polluted sky" data-clip="bangalore_clip_019.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_019.jpg" alt="Bangalore drone clip 019" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 019</div>
@@ -347,7 +351,7 @@
 <a href="buy.html?clip=Bangalore_Clip_019.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1zFS0rfJ9GSV4me24h6Rc2re6Rmo5f1o2/view&amount=4500&rzp=https%3A//rzp.io/rzp/zA5ekqM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential area with high-rise apartments and construction sites" data-clip="bangalore_clip_020.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_020.jpg" alt="Bangalore drone clip 020" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 020</div>
@@ -362,7 +366,7 @@
 <a href="buy.html?clip=Bangalore_Clip_020.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/15GdMSLLDvSZOz0NzrbmcZfBeRfCXXRW8/view&amount=4500&rzp=https%3A//rzp.io/rzp/RCfJ2i1" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="railway tracks cutting through urban residential neighborhoods with scattered greenery" data-clip="bangalore_clip_021.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_021.jpg" alt="Bangalore drone clip 021" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 021</div>
@@ -377,7 +381,7 @@
 <a href="buy.html?clip=Bangalore_Clip_021.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/11PL9A5GcyN6-BValiyVum4LoGvbWXwfZ/view&amount=4500&rzp=https%3A//rzp.io/rzp/0OoiVGy" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with low-rise buildings, scattered trees, hazy skyline" data-clip="bangalore_clip_022.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_022.jpg" alt="Bangalore drone clip 022" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 022</div>
@@ -392,7 +396,7 @@
 <a href="buy.html?clip=Bangalore_Clip_022.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1SWwyfKHOsewy40Pm2xgnsYou5JTxtXep/view&amount=4500&rzp=https%3A//rzp.io/rzp/dbxbXXt" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view showing construction site, apartment buildings, commercial area, urban development" data-clip="bangalore_clip_023.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_023.jpg" alt="Bangalore drone clip 023" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 023</div>
@@ -407,7 +411,7 @@
 <a href="buy.html?clip=Bangalore_Clip_023.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1vnerJdG-4Bw401li2a2snHRre32yZNU4/view&amount=4500&rzp=https%3A//rzp.io/rzp/0Zjlp3k" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="large construction site with red tower cranes amid dense urban residential area" data-clip="bangalore_clip_024.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_024.jpg" alt="Bangalore drone clip 024" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 024</div>
@@ -422,7 +426,7 @@
 <a href="buy.html?clip=Bangalore_Clip_024.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1R0EZ_6p7w-lkX1PTzipgZ8NRuxlfK8Tq/view&amount=4500&rzp=https%3A//rzp.io/rzp/xi9DHTe7" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="busy road with palm trees, colorful buildings, and urban sprawl" data-clip="bangalore_clip_025.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_025.jpg" alt="Bangalore drone clip 025" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 025</div>
@@ -437,7 +441,7 @@
 <a href="buy.html?clip=Bangalore_Clip_025.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1Fx44VkwbHwKBrP0Hgaft5TZzS1yYsIcp/view&amount=4500&rzp=https%3A//rzp.io/rzp/k45rqDZb" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of high-rise apartments with swimming pool and greenery" data-clip="bangalore_clip_026.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_026.jpg" alt="Bangalore drone clip 026" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 026</div>
@@ -452,7 +456,7 @@
 <a href="buy.html?clip=Bangalore_Clip_026.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1SP6mfgd-5h41YDkVT0iGU0iNlXza4YhY/view&amount=4500&rzp=https%3A//rzp.io/rzp/5Onot8qC" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="water treatment plant with circular tanks and rectangular basins, urban cityscape" data-clip="bangalore_clip_027.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_027.jpg" alt="Bangalore drone clip 027" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 027</div>
@@ -467,7 +471,7 @@
 <a href="buy.html?clip=Bangalore_Clip_027.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1j8ZR64SQjdSSPxrmBIM78Pb_sYVQEKc9/view&amount=4500&rzp=https%3A//rzp.io/rzp/E4yBQjzT" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential neighborhood with low-rise buildings and green tree coverage" data-clip="bangalore_clip_028.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_028.jpg" alt="Bangalore drone clip 028" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 028</div>
@@ -482,7 +486,7 @@
 <a href="buy.html?clip=Bangalore_Clip_028.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1pLAr1RADUtkTDFQoIl50ebuugx7KEJig/view&amount=4500&rzp=https%3A//rzp.io/rzp/EDVrZWLU" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="densely packed residential buildings with colorful rooftops and scattered trees" data-clip="bangalore_clip_029.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_029.jpg" alt="Bangalore drone clip 029" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 029</div>
@@ -497,7 +501,7 @@
 <a href="buy.html?clip=Bangalore_Clip_029.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1xvi6FNHbMuaMzicqZLwVyQy-zQdBU0uA/view&amount=4500&rzp=https%3A//rzp.io/rzp/vi6BqkDB" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential area with green fields and hazy skyline" data-clip="bangalore_clip_030.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_030.jpg" alt="Bangalore drone clip 030" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 030</div>
@@ -512,7 +516,7 @@
 <a href="buy.html?clip=Bangalore_Clip_030.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/11jxi0ZI5Q2Xpg8iRCDCLRUcs_hM1dKYn/view&amount=4500&rzp=https%3A//rzp.io/rzp/U8u6CFI" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway flyover cutting through dense urban bangalore cityscape" data-clip="bangalore_clip_031.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_031.jpg" alt="Bangalore drone clip 031" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 031</div>
@@ -527,7 +531,7 @@
 <a href="buy.html?clip=Bangalore_Clip_031.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1DWEbXX3ILEQRj7U4GlZJftwExyWgn2Lt/view&amount=4500&rzp=https%3A//rzp.io/rzp/g9wM4JgV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="major highway with flyover construction, urban sprawl, green patches" data-clip="bangalore_clip_032.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_032.jpg" alt="Bangalore drone clip 032" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 032</div>
@@ -542,7 +546,7 @@
 <a href="buy.html?clip=Bangalore_Clip_032.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1bazx9ZjKAdqDLojApmxa_jrYFav2whjy/view&amount=4500&rzp=https%3A//rzp.io/rzp/m7dWURe" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane highway with traffic, construction site, urban buildings, temple" data-clip="bangalore_clip_033.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_033.jpg" alt="Bangalore drone clip 033" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 033</div>
@@ -557,7 +561,7 @@
 <a href="buy.html?clip=Bangalore_Clip_033.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1-A6zgR1Xi_Wvvj5muWOXLkFlWD5aFUwU/view&amount=4500&rzp=https%3A//rzp.io/rzp/S5wNTb8q" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway flyover with ongoing metro construction in bangalore" data-clip="bangalore_clip_034.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_034.jpg" alt="Bangalore drone clip 034" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 034</div>
@@ -572,7 +576,7 @@
 <a href="buy.html?clip=Bangalore_Clip_034.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1TUA7L3ooUfKXlAcccsF_YQMb9vAjzIlW/view&amount=4500&rzp=https%3A//rzp.io/rzp/nljOqhL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane elevated highway flyover with palm trees and urban development" data-clip="bangalore_clip_035.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_035.jpg" alt="Bangalore drone clip 035" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 035</div>
@@ -587,7 +591,7 @@
 <a href="buy.html?clip=Bangalore_Clip_035.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/12KsYIAk0y9amSnD8M78vjrt9NeG4OnwN/view&amount=4500&rzp=https%3A//rzp.io/rzp/Xic5mWkU" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane highway with elevated metro track through bangalore suburbs" data-clip="bangalore_clip_036.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_036.jpg" alt="Bangalore drone clip 036" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 036</div>
@@ -602,7 +606,7 @@
 <a href="buy.html?clip=Bangalore_Clip_036.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1NyDh-r2aghmKwmH-FPup3mWo9PYDUHU1/view&amount=4500&rzp=https%3A//rzp.io/rzp/Be9NRGD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway flyover cutting through dense urban bangalore neighborhood" data-clip="bangalore_clip_037.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_037.jpg" alt="Bangalore drone clip 037" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 037</div>
@@ -617,7 +621,7 @@
 <a href="buy.html?clip=Bangalore_Clip_037.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1CzWT_f4nG3Dw8u395FHzb4T2FTgXZVIO/view&amount=4500&rzp=https%3A//rzp.io/rzp/a7CvgxX" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise building alongside elevated highway in urban bangalore" data-clip="bangalore_clip_038.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_038.jpg" alt="Bangalore drone clip 038" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 038</div>
@@ -632,7 +636,7 @@
 <a href="buy.html?clip=Bangalore_Clip_038.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/11MbdbZxQm0KsHdBK-cmJRBm6yNOXFMV4/view&amount=4500&rzp=https%3A//rzp.io/rzp/iT0ikDWv" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway flyover with vehicles amid urban sprawl and greenery" data-clip="bangalore_clip_039.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_039.jpg" alt="Bangalore drone clip 039" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 039</div>
@@ -647,7 +651,7 @@
 <a href="buy.html?clip=Bangalore_Clip_039.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1TpxEGfTZomG-Me87FgU-vqZmX0sugcR-/view&amount=4500&rzp=https%3A//rzp.io/rzp/Hfh4NRgB" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway flyover with palm trees and urban sprawl" data-clip="bangalore_clip_040.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_040.jpg" alt="Bangalore drone clip 040" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 040</div>
@@ -662,7 +666,7 @@
 <a href="buy.html?clip=Bangalore_Clip_040.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1G0V2qE6H2KuKFQrjXbUnFe_5UMZ_cIcA/view&amount=4500&rzp=https%3A//rzp.io/rzp/6VAqH6d" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway with pillars cutting through urban bangalore cityscape" data-clip="bangalore_clip_041.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_041.jpg" alt="Bangalore drone clip 041" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 041</div>
@@ -677,7 +681,7 @@
 <a href="buy.html?clip=Bangalore_Clip_041.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1d_ZqLmyXJvoKpuTV0hB0COm5cJTZLRNs/view&amount=4500&rzp=https%3A//rzp.io/rzp/aTo9zRn" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane elevated highway with modern office buildings and green spaces" data-clip="bangalore_clip_042.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_042.jpg" alt="Bangalore drone clip 042" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 042</div>
@@ -692,7 +696,7 @@
 <a href="buy.html?clip=Bangalore_Clip_042.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1HbLBpzGbXlYVcLewmFqswjnHcA3gm2eV/view&amount=4500&rzp=https%3A//rzp.io/rzp/YUpUA7Ti" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line under construction along major highway with cityscape" data-clip="bangalore_clip_043.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_043.jpg" alt="Bangalore drone clip 043" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 043</div>
@@ -707,7 +711,7 @@
 <a href="buy.html?clip=Bangalore_Clip_043.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1QrRhwHuXVmZx8IECoaC1CqvOhk_odt77/view&amount=4500&rzp=https%3A//rzp.io/rzp/xsmbAPR7" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane highway with elevated metro rail line under construction" data-clip="bangalore_clip_044.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_044.jpg" alt="Bangalore drone clip 044" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 044</div>
@@ -722,7 +726,7 @@
 <a href="buy.html?clip=Bangalore_Clip_044.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/16ofSmDObcmEPOcjwqVim-RdCybHTPnPq/view&amount=4500&rzp=https%3A//rzp.io/rzp/1OqPvzP5" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern elevated highway cutting through dense urban bangalore cityscape" data-clip="bangalore_clip_045.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_045.jpg" alt="Bangalore drone clip 045" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 045</div>
@@ -737,7 +741,7 @@
 <a href="buy.html?clip=Bangalore_Clip_045.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1Fw85xFVZtbljJQ-53WwP2mdxP_yiPGoW/view&amount=4500&rzp=https%3A//rzp.io/rzp/VAzSuQjs" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide highway with metro line flanked by it parks" data-clip="bangalore_clip_046.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_046.jpg" alt="Bangalore drone clip 046" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 046</div>
@@ -752,7 +756,7 @@
 <a href="buy.html?clip=Bangalore_Clip_046.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1l7R43wgkULPPkuOlhfo2j7HGQBQ4ylxN/view&amount=4500&rzp=https%3A//rzp.io/rzp/KEh3X1AG" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane highway with metro construction, commercial buildings, green patches" data-clip="bangalore_clip_047.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_047.jpg" alt="Bangalore drone clip 047" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 047</div>
@@ -767,7 +771,7 @@
 <a href="buy.html?clip=Bangalore_Clip_047.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1b69BESfMDpKs3New1edwPKS02E86KQ23/view&amount=4500&rzp=https%3A//rzp.io/rzp/t0Xqy4l" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway flyover cutting through dense urban bangalore cityscape" data-clip="bangalore_clip_048.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_048.jpg" alt="Bangalore drone clip 048" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 048</div>
@@ -782,7 +786,7 @@
 <a href="buy.html?clip=Bangalore_Clip_048.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1tLT4V2wma1MjN8cP9wZmoygia2wuiQ2i/view&amount=4500&rzp=https%3A//rzp.io/rzp/SDXXg66C" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway interchange with metro rail lines under construction" data-clip="bangalore_clip_049.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_049.jpg" alt="Bangalore drone clip 049" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 049</div>
@@ -797,7 +801,7 @@
 <a href="buy.html?clip=Bangalore_Clip_049.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1eWLIZ78KXIK6tM3j-DIyeZNZUru32vYw/view&amount=4500&rzp=https%3A//rzp.io/rzp/OZZU6oGW" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail flyover, highway interchange, bus depot, construction site" data-clip="bangalore_clip_050.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_050.jpg" alt="Bangalore drone clip 050" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 050</div>
@@ -812,7 +816,7 @@
 <a href="buy.html?clip=Bangalore_Clip_050.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/15wXFz8QI6v99VuNXb8qZrE3Vx6JFOs6d/view&amount=4500&rzp=https%3A//rzp.io/rzp/tLlHfTF4" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line with yellow station amid dense urban sprawl" data-clip="bangalore_clip_051.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_051.jpg" alt="Bangalore drone clip 051" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 051</div>
@@ -827,7 +831,7 @@
 <a href="buy.html?clip=Bangalore_Clip_051.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1bBP6TGc94eNhQZfj5nWePktKFn_2Oncf/view&amount=4500&rzp=https%3A//rzp.io/rzp/ahoad9w" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential buildings with colorful rooftops and scattered green trees" data-clip="bangalore_clip_052.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_052.jpg" alt="Bangalore drone clip 052" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 052</div>
@@ -842,7 +846,7 @@
 <a href="buy.html?clip=Bangalore_Clip_052.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1vas75LW0BOweRdwW5RjXpAmTJSzh79ks/view&amount=4500&rzp=https%3A//rzp.io/rzp/IsaR0D5t" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense residential neighborhood with colorful low-rise buildings and rooftop water tanks" data-clip="bangalore_clip_053.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_053.jpg" alt="Bangalore drone clip 053" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 053</div>
@@ -857,7 +861,7 @@
 <a href="buy.html?clip=Bangalore_Clip_053.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1eXTE7MdKbRoN9GtDEKctQb8ZDeIIurHr/view&amount=4500&rzp=https%3A//rzp.io/rzp/C9zd9Rc" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential area with colorful buildings and elevated metro line" data-clip="bangalore_clip_054.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_054.jpg" alt="Bangalore drone clip 054" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 054</div>
@@ -872,7 +876,7 @@
 <a href="buy.html?clip=Bangalore_Clip_054.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1SO85E09O3yPT4hwlpcb6iArMZIo3lI-i/view&amount=4500&rzp=https%3A//rzp.io/rzp/q9yZpvn" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line curves over highway near bus terminal" data-clip="bangalore_clip_055.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_055.jpg" alt="Bangalore drone clip 055" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 055</div>
@@ -887,7 +891,7 @@
 <a href="buy.html?clip=Bangalore_Clip_055.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1wHUl4IwjuYor-It70UivyrmcWQO9CDey/view&amount=4500&rzp=https%3A//rzp.io/rzp/MkOJP47" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with colorful rooftops, narrow streets, scattered trees" data-clip="bangalore_clip_056.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_056.jpg" alt="Bangalore drone clip 056" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 056</div>
@@ -902,7 +906,7 @@
 <a href="buy.html?clip=Bangalore_Clip_056.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/1wCOBxBogD7HgoMPZDtvWvQYeHbB0jveA/view&amount=4500&rzp=https%3A//rzp.io/rzp/0AfKfZn" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line cuts through dense urban neighborhood near lake" data-clip="bangalore_clip_057.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_057.jpg" alt="Bangalore drone clip 057" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 057</div>
@@ -917,7 +921,7 @@
 <a href="buy.html?clip=Bangalore_Clip_057.mp4&city=BANGALORE&license=Professional&drive=https%3A//drive.google.com/file/d/11wWIfVgEicRPUGavg2io__R522hi5R32/view&amount=4500&rzp=https%3A//rzp.io/rzp/LdxeQ4a" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban neighborhood alongside large lake with curved shoreline road" data-clip="bangalore_clip_058.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Bangalore_Clip_058.jpg" alt="Bangalore drone clip 058" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Bangalore — Clip 058</div>
@@ -933,7 +937,28 @@
 </div>
 </div>
 </div>
-</div><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
+</div>
+<script>
+function filterClips(query) {
+  var q = query.toLowerCase().trim();
+  var cards = document.querySelectorAll(".clip-card");
+  var visible = 0;
+  cards.forEach(function(card) {
+    var desc = card.getAttribute("data-description") || "";
+    var clip = card.getAttribute("data-clip") || "";
+    var match = !q || desc.includes(q) || clip.includes(q);
+    card.style.display = match ? "" : "none";
+    if (match) visible++;
+  });
+  var countEl = document.getElementById("search-count");
+  if (q) {
+    countEl.style.display = "block";
+    countEl.textContent = visible + " clip" + (visible !== 1 ? "s" : "") + " found for "" + query + """;
+  } else {
+    countEl.style.display = "none";
+  }
+}
+</script><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:1100px;margin:0 auto 25px;">
 <div><h4 style="color:#ff6b00;margin-bottom:10px;letter-spacing:1px;">INDIA DRONE FOOTAGE</h4>
 <p style="color:#aaa;font-size:0.85em;line-height:1.6;">Professional 4K aerial drone footage from across India. Shot by Kishan Rahul since 2018.</p></div>

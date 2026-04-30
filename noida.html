@@ -61,8 +61,12 @@
 <div style="padding:5px 30px 15px;max-width:1400px;margin:0 auto;">
 <h2 style="color:#aaa;font-size:1.1em;">Individual Clips — 63 available</h2>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
-<div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+<div style="padding:0 30px 20px;max-width:1400px;margin:0 auto;">
+<input type="text" id="clip-search" placeholder="🔍 Search clips... (e.g. beach, temple, highway, river)" oninput="filterClips(this.value)" style="width:100%;padding:14px 18px;background:#1a1a1a;border:1px solid #555;border-radius:10px;color:#fff;font-size:0.95em;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b00'" onblur="this.style.borderColor='#555'">
+<div id="search-count" style="color:#aaa;font-size:0.82em;margin-top:8px;display:none;"></div>
+</div>
+<div id="clips-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
+<div class="clip-card" data-description="elevated metro rail line crossing urban intersection with roundabout" data-clip="noida_clip_001.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_001.jpg" alt="Noida drone clip 001" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 001</div>
@@ -77,7 +81,7 @@
 <a href="buy.html?clip=Noida_Clip_001.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1RuYut9divubn9iaovLQP8PmFsP_uXqm0/view&amount=4500&rzp=https%3A//rzp.io/rzp/RS99vcL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line crossing busy urban intersection with buildings" data-clip="noida_clip_002.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_002.jpg" alt="Noida drone clip 002" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 002</div>
@@ -92,7 +96,7 @@
 <a href="buy.html?clip=Noida_Clip_002.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1VOlEuUD4lfCxHtigI89DeKpPWEa8VT1k/view&amount=4500&rzp=https%3A//rzp.io/rzp/9Gbpbjn" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass tower above colorful mall with hazy delhi ncr skyline" data-clip="noida_clip_003.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_003.jpg" alt="Noida drone clip 003" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 003</div>
@@ -107,7 +111,7 @@
 <a href="buy.html?clip=Noida_Clip_003.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1N9u-XCmxB8OD9rLeQe_rp7ngzhKXAcCw/view&amount=4500&rzp=https%3A//rzp.io/rzp/wUNsYWor" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="tall twin towers, river, elevated metro line, dense cityscape" data-clip="noida_clip_004.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_004.jpg" alt="Noida drone clip 004" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 004</div>
@@ -122,7 +126,7 @@
 <a href="buy.html?clip=Noida_Clip_004.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/13S8RfoaUaOUrSIk0aMnoXTCZ2czAB1bx/view&amount=4500&rzp=https%3A//rzp.io/rzp/SMEM2eKi" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with blue roof, highway overpass, dense cityscape" data-clip="noida_clip_005.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_005.jpg" alt="Noida drone clip 005" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 005</div>
@@ -137,7 +141,7 @@
 <a href="buy.html?clip=Noida_Clip_005.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1N16Pm52qKTUqOjver8o6bzUfHpV8kkwt/view&amount=4500&rzp=https%3A//rzp.io/rzp/bxCwrPX" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with blue roof crossing busy intersection" data-clip="noida_clip_006.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_006.jpg" alt="Noida drone clip 006" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 006</div>
@@ -152,7 +156,7 @@
 <a href="buy.html?clip=Noida_Clip_006.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1fImMKz4eHogpxcXJ639ofZyn1Eb8vasp/view&amount=4500&rzp=https%3A//rzp.io/rzp/UJjin9l" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide tree-lined boulevard cutting through dense urban noida cityscape" data-clip="noida_clip_007.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_007.jpg" alt="Noida drone clip 007" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 007</div>
@@ -167,7 +171,7 @@
 <a href="buy.html?clip=Noida_Clip_007.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1EHKHq_RPrfhVDn4OIQJZnrwObolS4o-P/view&amount=4500&rzp=https%3A//rzp.io/rzp/C8x9hgHM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide tree-lined boulevard cutting through dense urban indian cityscape" data-clip="noida_clip_008.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_008.jpg" alt="Noida drone clip 008" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 008</div>
@@ -182,7 +186,7 @@
 <a href="buy.html?clip=Noida_Clip_008.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1ros5Urv09lO3npPA2aIxEikg1_YG501-/view&amount=4500&rzp=https%3A//rzp.io/rzp/o1EstrO" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential area with flat-roofed buildings and scattered trees" data-clip="noida_clip_009.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_009.jpg" alt="Noida drone clip 009" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 009</div>
@@ -197,7 +201,7 @@
 <a href="buy.html?clip=Noida_Clip_009.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1qC29G7i4wFFCFk95pYjgXrRr7jNIYwy8/view&amount=4500&rzp=https%3A//rzp.io/rzp/9OS0RQVo" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with brown brick buildings and hazy polluted sky" data-clip="noida_clip_010.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_010.jpg" alt="Noida drone clip 010" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 010</div>
@@ -212,7 +216,7 @@
 <a href="buy.html?clip=Noida_Clip_010.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1L5Gj0ZnwXvvlWXrRbvvFFkf4IBoVuKfN/view&amount=4500&rzp=https%3A//rzp.io/rzp/bdGbVuy" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy smoggy cityscape with dense residential buildings and scattered trees" data-clip="noida_clip_011.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_011.jpg" alt="Noida drone clip 011" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 011</div>
@@ -227,7 +231,7 @@
 <a href="buy.html?clip=Noida_Clip_011.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1NimP_ERRFOvCbLRKMwF_Pm-mNAgH5wpe/view&amount=4500&rzp=https%3A//rzp.io/rzp/rn702Jy" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy urban skyline with dense low-rise buildings and scattered high-rises" data-clip="noida_clip_012.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_012.jpg" alt="Noida drone clip 012" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 012</div>
@@ -242,7 +246,7 @@
 <a href="buy.html?clip=Noida_Clip_012.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1pMagU94nguI5vxzukxoM5o88SSzp84vy/view&amount=4500&rzp=https%3A//rzp.io/rzp/0oP7DDVq" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line, glass office towers, dense residential neighborhoods, hazy sky" data-clip="noida_clip_013.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_013.jpg" alt="Noida drone clip 013" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 013</div>
@@ -257,7 +261,7 @@
 <a href="buy.html?clip=Noida_Clip_013.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1TIv-_ZizxDZrJwVj5gVLY6zgakxbQJRi/view&amount=4500&rzp=https%3A//rzp.io/rzp/gA1uDw1g" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy skyline with distinctive spiral tower, residential complexes, green parks" data-clip="noida_clip_014.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_014.jpg" alt="Noida drone clip 014" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 014</div>
@@ -272,7 +276,7 @@
 <a href="buy.html?clip=Noida_Clip_014.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/177aGrS-uibEASJnDrdZ4INmeJu9g4oKy/view&amount=4500&rzp=https%3A//rzp.io/rzp/VQOOP84" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="cylindrical bhel building, high-rises under construction, green parks, hazy river" data-clip="noida_clip_015.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_015.jpg" alt="Noida drone clip 015" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 015</div>
@@ -287,7 +291,7 @@
 <a href="buy.html?clip=Noida_Clip_015.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/154W2Y86ENmuX48Z0NgBSw0fIGLSiivOQ/view&amount=4500&rzp=https%3A//rzp.io/rzp/zh9BBfnv" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="bhel corporate office building with distinctive curved architecture in noida" data-clip="noida_clip_016.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_016.jpg" alt="Noida drone clip 016" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 016</div>
@@ -302,7 +306,7 @@
 <a href="buy.html?clip=Noida_Clip_016.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1-9X89WTEWl-fJgcCrBawkv9yY3ch5o-l/view&amount=4500&rzp=https%3A//rzp.io/rzp/ynTYmIx" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of noida showing thales building, river, elevated highway, construction" data-clip="noida_clip_017.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_017.jpg" alt="Noida drone clip 017" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 017</div>
@@ -317,7 +321,7 @@
 <a href="buy.html?clip=Noida_Clip_017.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1wYotpHQ7FK3Ef-kFSGgyDc11H3REeKU3/view&amount=4500&rzp=https%3A//rzp.io/rzp/vmIu15tr" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass towers alongside elevated highway and dense residential neighborhoods" data-clip="noida_clip_018.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_018.jpg" alt="Noida drone clip 018" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 018</div>
@@ -332,7 +336,7 @@
 <a href="buy.html?clip=Noida_Clip_018.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/11p5AgvB2PNKcHoUvl8ibP5_pawqAZFAF/view&amount=4500&rzp=https%3A//rzp.io/rzp/B1NlORlS" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, glass towers, dense residential areas, green parks, lake" data-clip="noida_clip_019.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_019.jpg" alt="Noida drone clip 019" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 019</div>
@@ -347,7 +351,7 @@
 <a href="buy.html?clip=Noida_Clip_019.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1Y2H7QYazXETA92KnkvcEnonzsCQnzoZj/view&amount=4500&rzp=https%3A//rzp.io/rzp/TN8PLkCZ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, glass tower, dense residential areas, hazy skyline" data-clip="noida_clip_020.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_020.jpg" alt="Noida drone clip 020" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 020</div>
@@ -362,7 +366,7 @@
 <a href="buy.html?clip=Noida_Clip_020.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1nkIKSuKlOPDkt6m1P6vJwwpFX-Gm_HCp/view&amount=4500&rzp=https%3A//rzp.io/rzp/IOz8bADa" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, glass tower, wave mall, dense urban sprawl" data-clip="noida_clip_021.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_021.jpg" alt="Noida drone clip 021" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 021</div>
@@ -377,7 +381,7 @@
 <a href="buy.html?clip=Noida_Clip_021.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1Ulswd_hiZ4-YjQcbkC9TunqB2Z3iEQm-/view&amount=4500&rzp=https%3A//rzp.io/rzp/GF8dq2UB" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line with turquoise stations cutting through dense urban sprawl" data-clip="noida_clip_022.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_022.jpg" alt="Noida drone clip 022" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 022</div>
@@ -392,7 +396,7 @@
 <a href="buy.html?clip=Noida_Clip_022.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1eMw-rkwpRAFjnNVJKdylZTJ_Wr3KYniV/view&amount=4500&rzp=https%3A//rzp.io/rzp/rnGRqiY6" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line running through dense urban noida cityscape" data-clip="noida_clip_023.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_023.jpg" alt="Noida drone clip 023" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 023</div>
@@ -407,7 +411,7 @@
 <a href="buy.html?clip=Noida_Clip_023.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1wpfRARp9e0Rke2Z5Bx8dXQ3RwPU5xetd/view&amount=4500&rzp=https%3A//rzp.io/rzp/xleezZp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with tracks, highway, dense residential buildings, hazy skyline" data-clip="noida_clip_024.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_024.jpg" alt="Noida drone clip 024" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 024</div>
@@ -422,7 +426,7 @@
 <a href="buy.html?clip=Noida_Clip_024.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1igi4vuBfKae8wtpKwhz7ZaL1FUrtziQD/view&amount=4500&rzp=https%3A//rzp.io/rzp/yr0aJcf" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, high-rise towers, dense urban sprawl, green parks" data-clip="noida_clip_025.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_025.jpg" alt="Noida drone clip 025" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 025</div>
@@ -437,7 +441,7 @@
 <a href="buy.html?clip=Noida_Clip_025.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1OC5flJ8pkb3Dv2cjAo-_HPS5EXFTpvo0/view&amount=4500&rzp=https%3A//rzp.io/rzp/mJG9WgI4" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="curved highway separating golf course from dense urban development" data-clip="noida_clip_026.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_026.jpg" alt="Noida drone clip 026" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 026</div>
@@ -452,7 +456,7 @@
 <a href="buy.html?clip=Noida_Clip_026.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1NnVxWXBXZrV2ZL7oQYtka6lzvJf7mL32/view&amount=4500&rzp=https%3A//rzp.io/rzp/HcF9fbcw" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with high-rise apartments, low-rise buildings, hazy smog" data-clip="noida_clip_027.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_027.jpg" alt="Noida drone clip 027" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 027</div>
@@ -467,7 +471,7 @@
 <a href="buy.html?clip=Noida_Clip_027.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1EA6qAbdpYcZFtNmcQZf0x5xJMNTSL1-y/view&amount=4500&rzp=https%3A//rzp.io/rzp/vOpcyhf" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line and highway flyover intersection with residential neighborhoods" data-clip="noida_clip_028.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_028.jpg" alt="Noida drone clip 028" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 028</div>
@@ -482,7 +486,7 @@
 <a href="buy.html?clip=Noida_Clip_028.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1-ili3kuDBqqzwLuHoaZutZHtEeOHguAE/view&amount=4500&rzp=https%3A//rzp.io/rzp/Yaeioqp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail tracks crossing highway with high-rise apartments and greenery" data-clip="noida_clip_029.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_029.jpg" alt="Noida drone clip 029" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 029</div>
@@ -497,7 +501,7 @@
 <a href="buy.html?clip=Noida_Clip_029.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1UMdCnxqaQp9sBUr-z7-ecjz7FoDydBor/view&amount=4500&rzp=https%3A//rzp.io/rzp/JKoroJT" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, tech park buildings, dense residential areas, hazy skyline" data-clip="noida_clip_030.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_030.jpg" alt="Noida drone clip 030" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 030</div>
@@ -512,7 +516,7 @@
 <a href="buy.html?clip=Noida_Clip_030.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1d9xlXd1ueGJYxCRJb_wEp_a8Xi-fuXbv/view&amount=4500&rzp=https%3A//rzp.io/rzp/C25UEcAJ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line through noida with distinctive arch-shaped building" data-clip="noida_clip_031.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_031.jpg" alt="Noida drone clip 031" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 031</div>
@@ -527,7 +531,7 @@
 <a href="buy.html?clip=Noida_Clip_031.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1QSDlZ8xJnv8r_s_ReQqYQouOEBFD6uLi/view&amount=4500&rzp=https%3A//rzp.io/rzp/6oFNjbS" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="sprawling indian cityscape with dense low-rise buildings, tree-lined roads, hazy sky" data-clip="noida_clip_032.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_032.jpg" alt="Noida drone clip 032" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 032</div>
@@ -542,7 +546,7 @@
 <a href="buy.html?clip=Noida_Clip_032.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1lgigwVAQo40W-KI6lsx4RhkrVxw-kutI/view&amount=4500&rzp=https%3A//rzp.io/rzp/9Y1bn32" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway cutting through dense urban sprawl with hazy skyline" data-clip="noida_clip_033.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_033.jpg" alt="Noida drone clip 033" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 033</div>
@@ -557,7 +561,7 @@
 <a href="buy.html?clip=Noida_Clip_033.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1hfaFlSceq1cwzIW4eIQrx47LSWHw1IUL/view&amount=4500&rzp=https%3A//rzp.io/rzp/uWvsPca" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide highway cutting through dense urban noida cityscape with haze" data-clip="noida_clip_034.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_034.jpg" alt="Noida drone clip 034" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 034</div>
@@ -572,7 +576,7 @@
 <a href="buy.html?clip=Noida_Clip_034.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1acIgJhjc3R3_JZRIOPLJYEe9gd9383F-/view&amount=4500&rzp=https%3A//rzp.io/rzp/8pujc17x" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide elevated highway cutting through dense urban noida cityscape" data-clip="noida_clip_035.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_035.jpg" alt="Noida drone clip 035" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 035</div>
@@ -587,7 +591,7 @@
 <a href="buy.html?clip=Noida_Clip_035.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1q_JIJO5gIUbC18moD_uEYcD_Dn-sWmMe/view&amount=4500&rzp=https%3A//rzp.io/rzp/gJi1bd2k" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy aerial view of noida showing elevated highway and dense urban sprawl" data-clip="noida_clip_036.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_036.jpg" alt="Noida drone clip 036" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 036</div>
@@ -602,7 +606,7 @@
 <a href="buy.html?clip=Noida_Clip_036.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1kk8j6yKF24QgWcIWZbFs4MkM4RbzZGtL/view&amount=4500&rzp=https%3A//rzp.io/rzp/HA913wi" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy smog-filled skyline with high-rises over dense low-rise residential neighborhoods" data-clip="noida_clip_037.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_037.jpg" alt="Noida drone clip 037" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 037</div>
@@ -617,7 +621,7 @@
 <a href="buy.html?clip=Noida_Clip_037.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1tFIdeJngOdFO2nZuDZjAJXJACFLFLnZQ/view&amount=4500&rzp=https%3A//rzp.io/rzp/g1rdqEIA" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy smoggy cityscape with tall skyscrapers and dense residential buildings" data-clip="noida_clip_038.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_038.jpg" alt="Noida drone clip 038" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 038</div>
@@ -632,7 +636,7 @@
 <a href="buy.html?clip=Noida_Clip_038.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/12xWwd3Z-ZjMPX9RVtNh6ms9w_QO3kzZI/view&amount=4500&rzp=https%3A//rzp.io/rzp/9HZh1Z8" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line through dense urban noida cityscape with haze" data-clip="noida_clip_039.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_039.jpg" alt="Noida drone clip 039" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 039</div>
@@ -647,7 +651,7 @@
 <a href="buy.html?clip=Noida_Clip_039.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1fKvI3-q3-kw025-yalP9qSf8WAr-Db2X/view&amount=4500&rzp=https%3A//rzp.io/rzp/FtWRv5qM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line cutting through dense urban noida cityscape" data-clip="noida_clip_040.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_040.jpg" alt="Noida drone clip 040" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 040</div>
@@ -662,7 +666,7 @@
 <a href="buy.html?clip=Noida_Clip_040.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/19XwGtKs_t0fPIVg6-sCyAxfb4p3CQ6_U/view&amount=4500&rzp=https%3A//rzp.io/rzp/zY5hXga" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro rail line cutting through dense urban noida cityscape" data-clip="noida_clip_041.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_041.jpg" alt="Noida drone clip 041" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 041</div>
@@ -677,7 +681,7 @@
 <a href="buy.html?clip=Noida_Clip_041.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1_vsaGhTN5wpEYxH1abYwJootLW0OKL4z/view&amount=4500&rzp=https%3A//rzp.io/rzp/6T3wYDb" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line cutting through dense urban noida cityscape" data-clip="noida_clip_042.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_042.jpg" alt="Noida drone clip 042" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 042</div>
@@ -692,7 +696,7 @@
 <a href="buy.html?clip=Noida_Clip_042.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1ZXx1V3YyRDL2GHRf1tWLuxtD7Oem1ysq/view&amount=4500&rzp=https%3A//rzp.io/rzp/oMd5Xrcn" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy cityscape with metro station, high-rises, dense residential buildings, elevated track" data-clip="noida_clip_043.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_043.jpg" alt="Noida drone clip 043" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 043</div>
@@ -707,7 +711,7 @@
 <a href="buy.html?clip=Noida_Clip_043.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/15RU9kKNPOaC7cMOUySpWYFiXKePRSC7x/view&amount=4500&rzp=https%3A//rzp.io/rzp/PxPw6mmd" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line running through dense urban residential area" data-clip="noida_clip_044.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_044.jpg" alt="Noida drone clip 044" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 044</div>
@@ -722,7 +726,7 @@
 <a href="buy.html?clip=Noida_Clip_044.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1tb0xU59erirotoN3vuP5Watrh_tfTBBE/view&amount=4500&rzp=https%3A//rzp.io/rzp/imGauc5b" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide highway with vehicles, commercial buildings, hazy smoggy sky" data-clip="noida_clip_045.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_045.jpg" alt="Noida drone clip 045" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 045</div>
@@ -737,7 +741,7 @@
 <a href="buy.html?clip=Noida_Clip_045.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1u_zYtBXPfj9-_fdATioKlLI7DKExnH26/view&amount=4500&rzp=https%3A//rzp.io/rzp/TcoQ1S0g" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, high-rise buildings, green parks, hazy urban skyline" data-clip="noida_clip_046.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_046.jpg" alt="Noida drone clip 046" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 046</div>
@@ -752,7 +756,7 @@
 <a href="buy.html?clip=Noida_Clip_046.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1IbmzT6yVmvzZ8BlbqyLkVq2fU55mwkp2/view&amount=4500&rzp=https%3A//rzp.io/rzp/ZHHAPMr" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass tower with square cutout overlooking hazy dense cityscape" data-clip="noida_clip_047.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_047.jpg" alt="Noida drone clip 047" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 047</div>
@@ -767,7 +771,7 @@
 <a href="buy.html?clip=Noida_Clip_047.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1iYNDJriBxieflxhePeAhnI8voByJGORJ/view&amount=4500&rzp=https%3A//rzp.io/rzp/kMb9cvK" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, glass tower, dense urban sprawl, shopping mall" data-clip="noida_clip_048.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_048.jpg" alt="Noida drone clip 048" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 048</div>
@@ -782,7 +786,7 @@
 <a href="buy.html?clip=Noida_Clip_048.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1tOVcU6WPBRoaEOmkPr0KYKG5G1nRpzTL/view&amount=4500&rzp=https%3A//rzp.io/rzp/dlS658uK" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern gate-shaped tower, metro station, dense urban sprawl, hazy sky" data-clip="noida_clip_049.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_049.jpg" alt="Noida drone clip 049" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 049</div>
@@ -797,7 +801,7 @@
 <a href="buy.html?clip=Noida_Clip_049.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1T8L_-23Cp19DbCH6qT_k0ywxKnipxVor/view&amount=4500&rzp=https%3A//rzp.io/rzp/DMbIsxg" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line curves through hazy urban sprawl with construction site" data-clip="noida_clip_050.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_050.jpg" alt="Noida drone clip 050" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 050</div>
@@ -812,7 +816,7 @@
 <a href="buy.html?clip=Noida_Clip_050.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1hHcS0RtWePrVXgzQGU_DNf6RxQVpAmGD/view&amount=4500&rzp=https%3A//rzp.io/rzp/btABuhkP" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line curves past high-rise apartments amid hazy cityscape" data-clip="noida_clip_051.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_051.jpg" alt="Noida drone clip 051" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 051</div>
@@ -827,7 +831,7 @@
 <a href="buy.html?clip=Noida_Clip_051.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1cuQrrTCR2LmVBlkHunxzgU-FZdKSIsh7/view&amount=4500&rzp=https%3A//rzp.io/rzp/H8mEgwV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, modern highrise towers, dense residential areas, hazy sky" data-clip="noida_clip_052.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_052.jpg" alt="Noida drone clip 052" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 052</div>
@@ -842,7 +846,7 @@
 <a href="buy.html?clip=Noida_Clip_052.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1cOK6MCVU8momMRUCHCm-aXxqKUzJVO1F/view&amount=4500&rzp=https%3A//rzp.io/rzp/FZFyYKfV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="sprawling urban grid with tree-lined streets, low-rise buildings, distant highrise towers" data-clip="noida_clip_053.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_053.jpg" alt="Noida drone clip 053" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 053</div>
@@ -857,7 +861,7 @@
 <a href="buy.html?clip=Noida_Clip_053.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/15hE9xjjU8YV4qqH_emrk1uUHXL4XmbtP/view&amount=4500&rzp=https%3A//rzp.io/rzp/MCiCoIE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="sprawling residential grid with tree-lined streets, high-rises, hazy skyline" data-clip="noida_clip_054.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_054.jpg" alt="Noida drone clip 054" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 054</div>
@@ -872,7 +876,7 @@
 <a href="buy.html?clip=Noida_Clip_054.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1vy_YyXW7qfM4B6jz2jTNToTo85TjFwUV/view&amount=4500&rzp=https%3A//rzp.io/rzp/kClPVqD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="sprawling urban landscape with high-rises, dense housing, tree-lined streets, hazy sky" data-clip="noida_clip_055.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_055.jpg" alt="Noida drone clip 055" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 055</div>
@@ -887,7 +891,7 @@
 <a href="buy.html?clip=Noida_Clip_055.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1-XBBERF3wFbP9RKVi908zQxiasUpcGyg/view&amount=4500&rzp=https%3A//rzp.io/rzp/bdEeSEMX" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="sprawling urban landscape with high-rises, residential areas, green patches, hazy skyline" data-clip="noida_clip_056.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_056.jpg" alt="Noida drone clip 056" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 056</div>
@@ -902,7 +906,7 @@
 <a href="buy.html?clip=Noida_Clip_056.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1N5m2Vrs7ScBqtT7jLZKDM-ja08F-DYw2/view&amount=4500&rzp=https%3A//rzp.io/rzp/z5QdcJ2a" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="highrise apartments under construction surrounded by green areas and hazy cityscape" data-clip="noida_clip_057.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_057.jpg" alt="Noida drone clip 057" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 057</div>
@@ -917,7 +921,7 @@
 <a href="buy.html?clip=Noida_Clip_057.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1JFOhGBaQFXKUkzZjnFZDwTOP10xrjOz_/view&amount=4500&rzp=https%3A//rzp.io/rzp/cvcf2XE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="smoggy aerial view of dense urban sprawl with elevated highway" data-clip="noida_clip_058.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_058.jpg" alt="Noida drone clip 058" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 058</div>
@@ -932,7 +936,7 @@
 <a href="buy.html?clip=Noida_Clip_058.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1VxFsC9iMaDMd29kTcxYNDP3F953m2-LS/view&amount=4500&rzp=https%3A//rzp.io/rzp/Rm1pPW0P" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway cutting through smoggy cityscape with high-rise buildings" data-clip="noida_clip_059.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_059.jpg" alt="Noida drone clip 059" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 059</div>
@@ -947,7 +951,7 @@
 <a href="buy.html?clip=Noida_Clip_059.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/16nZc_oe5xLqvulPozhkSCWAlE70i1cvS/view&amount=4500&rzp=https%3A//rzp.io/rzp/NTJzj2C" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway cutting through hazy smog-covered noida cityscape" data-clip="noida_clip_060.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_060.jpg" alt="Noida drone clip 060" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 060</div>
@@ -962,7 +966,7 @@
 <a href="buy.html?clip=Noida_Clip_060.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1qJZBgQr54eYNwMGDbOtxz_Xvdr3P2Vwg/view&amount=4500&rzp=https%3A//rzp.io/rzp/nQh9HK7" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="wide multi-lane highway cutting through dense urban residential neighborhood" data-clip="noida_clip_061.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_061.jpg" alt="Noida drone clip 061" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 061</div>
@@ -977,7 +981,7 @@
 <a href="buy.html?clip=Noida_Clip_061.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/17hGv28or2YEgQRnCkOaIIIT-5Ka_Wr7y/view&amount=4500&rzp=https%3A//rzp.io/rzp/IY5XPcWv" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of dense residential neighborhood with highway, trees, temple" data-clip="noida_clip_062.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_062.jpg" alt="Noida drone clip 062" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 062</div>
@@ -992,7 +996,7 @@
 <a href="buy.html?clip=Noida_Clip_062.mp4&city=NOIDA&license=Professional&drive=https%3A//drive.google.com/file/d/1temGcTRMVzty_-J9XyhhFTANQdGng84F/view&amount=4500&rzp=https%3A//rzp.io/rzp/NNr5Nqpp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line cutting through dense residential area toward highrise district" data-clip="noida_clip_063.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Noida_Clip_063.jpg" alt="Noida drone clip 063" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Noida — Clip 063</div>
@@ -1008,7 +1012,28 @@
 </div>
 </div>
 </div>
-</div><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
+</div>
+<script>
+function filterClips(query) {
+  var q = query.toLowerCase().trim();
+  var cards = document.querySelectorAll(".clip-card");
+  var visible = 0;
+  cards.forEach(function(card) {
+    var desc = card.getAttribute("data-description") || "";
+    var clip = card.getAttribute("data-clip") || "";
+    var match = !q || desc.includes(q) || clip.includes(q);
+    card.style.display = match ? "" : "none";
+    if (match) visible++;
+  });
+  var countEl = document.getElementById("search-count");
+  if (q) {
+    countEl.style.display = "block";
+    countEl.textContent = visible + " clip" + (visible !== 1 ? "s" : "") + " found for "" + query + """;
+  } else {
+    countEl.style.display = "none";
+  }
+}
+</script><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:1100px;margin:0 auto 25px;">
 <div><h4 style="color:#ff6b00;margin-bottom:10px;letter-spacing:1px;">INDIA DRONE FOOTAGE</h4>
 <p style="color:#aaa;font-size:0.85em;line-height:1.6;">Professional 4K aerial drone footage from across India. Shot by Kishan Rahul since 2018.</p></div>

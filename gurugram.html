@@ -61,8 +61,12 @@
 <div style="padding:5px 30px 15px;max-width:1400px;margin:0 auto;">
 <h2 style="color:#aaa;font-size:1.1em;">Individual Clips — 60 available</h2>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
-<div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+<div style="padding:0 30px 20px;max-width:1400px;margin:0 auto;">
+<input type="text" id="clip-search" placeholder="🔍 Search clips... (e.g. beach, temple, highway, river)" oninput="filterClips(this.value)" style="width:100%;padding:14px 18px;background:#1a1a1a;border:1px solid #555;border-radius:10px;color:#fff;font-size:0.95em;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b00'" onblur="this.style.borderColor='#555'">
+<div id="search-count" style="color:#aaa;font-size:0.82em;margin-top:8px;display:none;"></div>
+</div>
+<div id="clips-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding:10px 30px 40px;max-width:1400px;margin:0 auto;">
+<div class="clip-card" data-description="hazy cityscape with modern glass towers, dense low-rise buildings, elevated metro" data-clip="gurugram_clip_001.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_001.jpg" alt="Gurugram drone clip 001" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 001</div>
@@ -77,7 +81,7 @@
 <a href="buy.html?clip=Gurugram_Clip_001.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/18rXhV3QwOTjC-_4vBWoKaGaMfwWQV_cy/view&amount=4500&rzp=https%3A//rzp.io/rzp/xb6AjyS" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station, glass corporate towers, dense residential areas, hazy skyline" data-clip="gurugram_clip_002.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_002.jpg" alt="Gurugram drone clip 002" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 002</div>
@@ -92,7 +96,7 @@
 <a href="buy.html?clip=Gurugram_Clip_002.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1h36hIMMZnjwkgTVCn8g6bog_P4_20QzA/view&amount=4500&rzp=https%3A//rzp.io/rzp/ESjVVSfI" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line curves past cylindrical american express glass tower" data-clip="gurugram_clip_003.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_003.jpg" alt="Gurugram drone clip 003" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 003</div>
@@ -107,7 +111,7 @@
 <a href="buy.html?clip=Gurugram_Clip_003.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1YW70C0FIX9uZ2KO9QBT8reWWsmbWL-Lt/view&amount=4500&rzp=https%3A//rzp.io/rzp/iIxl9JJ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass towers alongside dense residential areas with metro line" data-clip="gurugram_clip_004.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_004.jpg" alt="Gurugram drone clip 004" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 004</div>
@@ -122,7 +126,7 @@
 <a href="buy.html?clip=Gurugram_Clip_004.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1y49CQ3Qm9BP53EKcCHs4H-AGW9eodiGy/view&amount=4500&rzp=https%3A//rzp.io/rzp/0xdASPJ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass corporate towers flanking wide multi-lane highway in gurugram" data-clip="gurugram_clip_005.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_005.jpg" alt="Gurugram drone clip 005" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 005</div>
@@ -137,7 +141,7 @@
 <a href="buy.html?clip=Gurugram_Clip_005.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1eQkBo70xAjOe9NMNDG2svjNp7qJYX14c/view&amount=4500&rzp=https%3A//rzp.io/rzp/CrJhFIOx" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated expressway with flyover, corporate glass towers, construction site, residential areas" data-clip="gurugram_clip_006.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_006.jpg" alt="Gurugram drone clip 006" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 006</div>
@@ -152,7 +156,7 @@
 <a href="buy.html?clip=Gurugram_Clip_006.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1xPi6eB-BZNdz-fjV3lfKvdNzztogCtma/view&amount=4500&rzp=https%3A//rzp.io/rzp/Zcp0kvp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy aerial view of multi-lane highway through gurugram corporate district" data-clip="gurugram_clip_007.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_007.jpg" alt="Gurugram drone clip 007" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 007</div>
@@ -167,7 +171,7 @@
 <a href="buy.html?clip=Gurugram_Clip_007.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1uOwskQPgeP4aM3jswF20CeZbV8NOVcbI/view&amount=4500&rzp=https%3A//rzp.io/rzp/ZjJQpAMD" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line and highway cutting through hazy gurugram corporate district" data-clip="gurugram_clip_008.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_008.jpg" alt="Gurugram drone clip 008" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 008</div>
@@ -182,7 +186,7 @@
 <a href="buy.html?clip=Gurugram_Clip_008.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/10PFUEG4lpJ09Wof2Oov9v7VjlAAvT1D4/view&amount=4500&rzp=https%3A//rzp.io/rzp/JG4YN1I" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station, highway, dlf cyber city glass towers, hazy skyline" data-clip="gurugram_clip_009.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_009.jpg" alt="Gurugram drone clip 009" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 009</div>
@@ -197,7 +201,7 @@
 <a href="buy.html?clip=Gurugram_Clip_009.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1kjD48VonWQ_a10f1PEUk48OEmripYTO2/view&amount=4500&rzp=https%3A//rzp.io/rzp/tl0NbEZ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern corporate towers alongside busy expressway with elevated metro track" data-clip="gurugram_clip_010.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_010.jpg" alt="Gurugram drone clip 010" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 010</div>
@@ -212,7 +216,7 @@
 <a href="buy.html?clip=Gurugram_Clip_010.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1vb41dXYH0iMumQyrR85B51fNA7E6nou5/view&amount=4500&rzp=https%3A//rzp.io/rzp/MNf36tsF" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, dlf cyber city towers, dense residential neighborhoods, hazy skyline" data-clip="gurugram_clip_011.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_011.jpg" alt="Gurugram drone clip 011" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 011</div>
@@ -227,7 +231,7 @@
 <a href="buy.html?clip=Gurugram_Clip_011.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1D8Yg7b4SQp-PlM1EEM5TZgHiC2HkJPxN/view&amount=4500&rzp=https%3A//rzp.io/rzp/WNkXFQhA" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern high-rise apartments, curved glass office towers, elevated metro line" data-clip="gurugram_clip_012.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_012.jpg" alt="Gurugram drone clip 012" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 012</div>
@@ -242,7 +246,7 @@
 <a href="buy.html?clip=Gurugram_Clip_012.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/18fYYvHeHODjmx5Vum1N9IKE1EzhXDQdE/view&amount=4500&rzp=https%3A//rzp.io/rzp/zNB3kUN" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, dlf cyber hub towers, highways, residential high-rises, urban sprawl" data-clip="gurugram_clip_013.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_013.jpg" alt="Gurugram drone clip 013" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 013</div>
@@ -257,7 +261,7 @@
 <a href="buy.html?clip=Gurugram_Clip_013.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1EePMP5cCBHBSGR_hytk_h4aHB7FlFPkf/view&amount=4500&rzp=https%3A//rzp.io/rzp/RpzI9T0" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line crossing dense residential neighborhoods with hazy smog-filled skyline" data-clip="gurugram_clip_014.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_014.jpg" alt="Gurugram drone clip 014" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 014</div>
@@ -272,7 +276,7 @@
 <a href="buy.html?clip=Gurugram_Clip_014.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1XRBIRuYU6iwcsKZG-Q3uVYZYcQmAy07w/view&amount=4500&rzp=https%3A//rzp.io/rzp/PPtrT1D" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line with station, dense residential area, hazy skyline" data-clip="gurugram_clip_015.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_015.jpg" alt="Gurugram drone clip 015" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 015</div>
@@ -287,7 +291,7 @@
 <a href="buy.html?clip=Gurugram_Clip_015.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1SeZMRu0St-GX1Vt6T-EkEuzQhNCCRpio/view&amount=4500&rzp=https%3A//rzp.io/rzp/7FmFOLT" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station intersection with glass corporate towers and dense urban neighborhood" data-clip="gurugram_clip_016.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_016.jpg" alt="Gurugram drone clip 016" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 016</div>
@@ -302,7 +306,7 @@
 <a href="buy.html?clip=Gurugram_Clip_016.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1tmTsnok1vyw6J0TWwOTustQP5t56dwK2/view&amount=4500&rzp=https%3A//rzp.io/rzp/RXi9ZSew" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro station with curved roof amid urban buildings" data-clip="gurugram_clip_017.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_017.jpg" alt="Gurugram drone clip 017" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 017</div>
@@ -317,7 +321,7 @@
 <a href="buy.html?clip=Gurugram_Clip_017.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1FFeEYCn1o_sj_6ZLRh6N54pubNW7Yc42/view&amount=4500&rzp=https%3A//rzp.io/rzp/w6Z3Q0pE" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, railway tracks, church with steeple, dense urban buildings" data-clip="gurugram_clip_018.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_018.jpg" alt="Gurugram drone clip 018" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 018</div>
@@ -332,7 +336,7 @@
 <a href="buy.html?clip=Gurugram_Clip_018.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1_hHRKSiFRAvp3PJjaOqfofabV0TZxWBj/view&amount=4500&rzp=https%3A//rzp.io/rzp/HxBckBM" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential area with mid-rise buildings and scattered green trees" data-clip="gurugram_clip_019.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_019.jpg" alt="Gurugram drone clip 019" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 019</div>
@@ -347,7 +351,7 @@
 <a href="buy.html?clip=Gurugram_Clip_019.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1fe0p-oJLlbW6SlTFaY2rU7Lue4drAhDD/view&amount=4500&rzp=https%3A//rzp.io/rzp/9QckawN" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line and highway interchange above dense urban neighborhood" data-clip="gurugram_clip_020.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_020.jpg" alt="Gurugram drone clip 020" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 020</div>
@@ -362,7 +366,7 @@
 <a href="buy.html?clip=Gurugram_Clip_020.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1S0OpWeW1F_PFbqEhzOv-GMut6MLXYjDo/view&amount=4500&rzp=https%3A//rzp.io/rzp/g4PcsJU" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, american express tower, multi-lane highway, dense urban sprawl" data-clip="gurugram_clip_021.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_021.jpg" alt="Gurugram drone clip 021" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 021</div>
@@ -377,7 +381,7 @@
 <a href="buy.html?clip=Gurugram_Clip_021.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/112hWwrx8SQXTa2gvLpLBDfEtcJfMn4jo/view&amount=4500&rzp=https%3A//rzp.io/rzp/mJtEJJPG" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of gurugram showing dlf tower, highways, residential areas, hazy skyline" data-clip="gurugram_clip_022.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_022.jpg" alt="Gurugram drone clip 022" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 022</div>
@@ -392,7 +396,7 @@
 <a href="buy.html?clip=Gurugram_Clip_022.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1Yi2HU6mjYzjSDilWePqpBqnX6ZCnoGo9/view&amount=4500&rzp=https%3A//rzp.io/rzp/RSEFupL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dlf corporate tower, curved highway overpass, dense urban cityscape, greenery" data-clip="gurugram_clip_023.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_023.jpg" alt="Gurugram drone clip 023" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 023</div>
@@ -407,7 +411,7 @@
 <a href="buy.html?clip=Gurugram_Clip_023.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1H7iMqQ3Uo2QP5zOsHr9Wv329M5mMKWgV/view&amount=4500&rzp=https%3A//rzp.io/rzp/liEYJyU5" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway interchange with dlf corporate towers and hazy urban sprawl" data-clip="gurugram_clip_024.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_024.jpg" alt="Gurugram drone clip 024" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 024</div>
@@ -422,7 +426,7 @@
 <a href="buy.html?clip=Gurugram_Clip_024.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1rEE9NwMGeek0ChfmtAIDgWQkH-ZUY4eT/view&amount=4500&rzp=https%3A//rzp.io/rzp/nL2rtyp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line curves through dlf cyber city corporate towers" data-clip="gurugram_clip_025.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_025.jpg" alt="Gurugram drone clip 025" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 025</div>
@@ -437,7 +441,7 @@
 <a href="buy.html?clip=Gurugram_Clip_025.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1uyA5Rw-oD_svvtEwMjJowy77PWXXq4d6/view&amount=4500&rzp=https%3A//rzp.io/rzp/y5Bixlnw" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass omnicom tower beside dense residential neighborhoods and elevated metro" data-clip="gurugram_clip_026.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_026.jpg" alt="Gurugram drone clip 026" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 026</div>
@@ -452,7 +456,7 @@
 <a href="buy.html?clip=Gurugram_Clip_026.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1ZyOhfP4nq0fdkYWJ0NMPiRk1jFOC7Rbv/view&amount=4500&rzp=https%3A//rzp.io/rzp/xplr3itv" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern omnicom glass tower overlooking dense urban residential neighborhood and highway" data-clip="gurugram_clip_027.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_027.jpg" alt="Gurugram drone clip 027" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 027</div>
@@ -467,7 +471,7 @@
 <a href="buy.html?clip=Gurugram_Clip_027.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1bePYxnwkm_ZhSByfK8yYZLT5B-92hWQG/view&amount=4500&rzp=https%3A//rzp.io/rzp/iqJj0Hk" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban residential buildings, stadium corner, hazy skyline, scattered greenery" data-clip="gurugram_clip_028.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_028.jpg" alt="Gurugram drone clip 028" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 028</div>
@@ -482,7 +486,7 @@
 <a href="buy.html?clip=Gurugram_Clip_028.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1NQm3N_ZqXDb_h7dqeAhiyM3HCCzA41a5/view&amount=4500&rzp=https%3A//rzp.io/rzp/fnssxQH8" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense residential buildings with rooftop water tanks near corporate towers" data-clip="gurugram_clip_029.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_029.jpg" alt="Gurugram drone clip 029" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 029</div>
@@ -497,7 +501,7 @@
 <a href="buy.html?clip=Gurugram_Clip_029.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1a3tM5Jt6byKCZDDdx-Hno0G19Jk52-OL/view&amount=4500&rzp=https%3A//rzp.io/rzp/FRCwIyGV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense residential buildings with modern corporate glass towers in background" data-clip="gurugram_clip_030.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_030.jpg" alt="Gurugram drone clip 030" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 030</div>
@@ -512,7 +516,7 @@
 <a href="buy.html?clip=Gurugram_Clip_030.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1D6UEVwHVVp0waFS184gM3xAq-27zW4H2/view&amount=4500&rzp=https%3A//rzp.io/rzp/Qzd4UJh" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with modern glass corporate towers and hazy sky" data-clip="gurugram_clip_031.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_031.jpg" alt="Gurugram drone clip 031" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 031</div>
@@ -527,7 +531,7 @@
 <a href="buy.html?clip=Gurugram_Clip_031.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1v0EIpbBgsfeose8npyGr6u94QIgF6Rrm/view&amount=4500&rzp=https%3A//rzp.io/rzp/wc6GcgG" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass office towers, metro line, green parks, hazy urban skyline" data-clip="gurugram_clip_032.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_032.jpg" alt="Gurugram drone clip 032" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 032</div>
@@ -542,7 +546,7 @@
 <a href="buy.html?clip=Gurugram_Clip_032.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1AeHZR1mWOTVjuT47HLfo4GA8i_SXILxr/view&amount=4500&rzp=https%3A//rzp.io/rzp/VeEDsUw" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway, corporate glass towers, residential area, construction site, hazy skyline" data-clip="gurugram_clip_033.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_033.jpg" alt="Gurugram drone clip 033" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 033</div>
@@ -557,7 +561,7 @@
 <a href="buy.html?clip=Gurugram_Clip_033.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1P5P7tzBOEqjZ2YDWerJzBp-a5yVa7__u/view&amount=4500&rzp=https%3A//rzp.io/rzp/zKxJcL63" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense residential buildings with green trees and distant corporate towers in haze" data-clip="gurugram_clip_034.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_034.jpg" alt="Gurugram drone clip 034" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 034</div>
@@ -572,7 +576,7 @@
 <a href="buy.html?clip=Gurugram_Clip_034.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1HnS6wGEn9adCvXh_SwF4KCufGrwlM_04/view&amount=4500&rzp=https%3A//rzp.io/rzp/bFssDhvT" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway curves through green cityscape with dlf corporate park towers" data-clip="gurugram_clip_035.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_035.jpg" alt="Gurugram drone clip 035" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 035</div>
@@ -587,7 +591,7 @@
 <a href="buy.html?clip=Gurugram_Clip_035.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1Oc2GixbrWu3LN3QdS5jbItXqVZ8-SXwe/view&amount=4500&rzp=https%3A//rzp.io/rzp/rrznKIO0" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line cutting through dense green forest toward city" data-clip="gurugram_clip_036.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_036.jpg" alt="Gurugram drone clip 036" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 036</div>
@@ -602,7 +606,7 @@
 <a href="buy.html?clip=Gurugram_Clip_036.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1wnAkA3bym2lpnQ7SBcu29Kp4mA09q1fO/view&amount=4500&rzp=https%3A//rzp.io/rzp/dtre5Sp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy aerial view of gurugram showing metro line, highway, dense urban sprawl" data-clip="gurugram_clip_037.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_037.jpg" alt="Gurugram drone clip 037" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 037</div>
@@ -617,7 +621,7 @@
 <a href="buy.html?clip=Gurugram_Clip_037.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1NMx1bjITsmqupP4suk1vyRIkYopTPMeH/view&amount=4500&rzp=https%3A//rzp.io/rzp/LoEZNB9r" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense residential buildings with distant corporate glass towers in hazy gurugram" data-clip="gurugram_clip_038.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_038.jpg" alt="Gurugram drone clip 038" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 038</div>
@@ -632,7 +636,7 @@
 <a href="buy.html?clip=Gurugram_Clip_038.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1m86bNkkumRUl7LGhF_ly5E4524RBMWbi/view&amount=4500&rzp=https%3A//rzp.io/rzp/JOwBCuC" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of gurugram showing dlf corporate towers, highways, and residential areas" data-clip="gurugram_clip_039.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_039.jpg" alt="Gurugram drone clip 039" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 039</div>
@@ -647,7 +651,7 @@
 <a href="buy.html?clip=Gurugram_Clip_039.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1U-zb-chn_WfdrL2c46-OK8coWYu0oHNW/view&amount=4500&rzp=https%3A//rzp.io/rzp/e14zRrC9" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated highway with metro station, glass towers, wework building, hazy skyline" data-clip="gurugram_clip_040.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_040.jpg" alt="Gurugram drone clip 040" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 040</div>
@@ -662,7 +666,7 @@
 <a href="buy.html?clip=Gurugram_Clip_040.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1_qhICmHSGjPsrBaNNFsAmRV2aCZwMrF6/view&amount=4500&rzp=https%3A//rzp.io/rzp/hw6BGlp" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass office building with rooftop solar panels alongside busy expressway" data-clip="gurugram_clip_041.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_041.jpg" alt="Gurugram drone clip 041" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 041</div>
@@ -677,7 +681,7 @@
 <a href="buy.html?clip=Gurugram_Clip_041.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1Cmf7cciBSFqayg44mk6SB16fx0HPp-fh/view&amount=4500&rzp=https%3A//rzp.io/rzp/PMRSmyw" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy aerial view of gurugram showing urban sprawl with tree-lined roads" data-clip="gurugram_clip_042.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_042.jpg" alt="Gurugram drone clip 042" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 042</div>
@@ -692,7 +696,7 @@
 <a href="buy.html?clip=Gurugram_Clip_042.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1PP5ETAxXbpjFDiX1WHd1k2v8UhCtocNb/view&amount=4500&rzp=https%3A//rzp.io/rzp/hjTuGO3" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="hazy cityscape with dense urban area beside large green park" data-clip="gurugram_clip_043.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_043.jpg" alt="Gurugram drone clip 043" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 043</div>
@@ -707,7 +711,7 @@
 <a href="buy.html?clip=Gurugram_Clip_043.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1W9w6xcPiXeYRBZFI2C-XpKf9ihVk7big/view&amount=4500&rzp=https%3A//rzp.io/rzp/tYn8AnV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass office tower with rooftop solar panels along tree-lined highway" data-clip="gurugram_clip_044.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_044.jpg" alt="Gurugram drone clip 044" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 044</div>
@@ -722,7 +726,7 @@
 <a href="buy.html?clip=Gurugram_Clip_044.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1ZMmQYtAKngMb4gI_Jk66KJ1uhXfLhOn-/view&amount=4500&rzp=https%3A//rzp.io/rzp/IfOYf6v" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="modern glass corporate tower with rooftop solar panels alongside elevated highway" data-clip="gurugram_clip_045.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_045.jpg" alt="Gurugram drone clip 045" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 045</div>
@@ -737,7 +741,7 @@
 <a href="buy.html?clip=Gurugram_Clip_045.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1Hjzgq87ixMUWHASeS-rt2dLFSZPZCdGa/view&amount=4500&rzp=https%3A//rzp.io/rzp/sYy28RWW" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="large building rooftop with solar panels near elevated highway and greenery" data-clip="gurugram_clip_046.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_046.jpg" alt="Gurugram drone clip 046" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 046</div>
@@ -752,7 +756,7 @@
 <a href="buy.html?clip=Gurugram_Clip_046.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1CIV7eTNzD7U8k1ba9JbrJ1v-ApVOkEDh/view&amount=4500&rzp=https%3A//rzp.io/rzp/LBqqKLWk" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, major highway, large construction site with cranes" data-clip="gurugram_clip_047.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_047.jpg" alt="Gurugram drone clip 047" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 047</div>
@@ -767,7 +771,7 @@
 <a href="buy.html?clip=Gurugram_Clip_047.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1RqOMiD-y1B0A156EGVuiJHuPHLcoZ_ar/view&amount=4500&rzp=https%3A//rzp.io/rzp/gerRkmWc" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane highway with metro line, construction site, corporate towers, residential area" data-clip="gurugram_clip_048.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_048.jpg" alt="Gurugram drone clip 048" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 048</div>
@@ -782,7 +786,7 @@
 <a href="buy.html?clip=Gurugram_Clip_048.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1F35249CGQYWJ14eoMkFY0hw07IULp0CR/view&amount=4500&rzp=https%3A//rzp.io/rzp/zidTiFv4" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="major highway interchange with large construction site and modern office buildings" data-clip="gurugram_clip_049.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_049.jpg" alt="Gurugram drone clip 049" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 049</div>
@@ -797,7 +801,7 @@
 <a href="buy.html?clip=Gurugram_Clip_049.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1XJYlFDEOcpZJ4Ik16qieRyiZEARtQJ3X/view&amount=4500&rzp=https%3A//rzp.io/rzp/sIbgAjJj" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="multi-lane highway curves past modern corporate towers and construction site" data-clip="gurugram_clip_050.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_050.jpg" alt="Gurugram drone clip 050" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 050</div>
@@ -812,7 +816,7 @@
 <a href="buy.html?clip=Gurugram_Clip_050.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1XKAspkVKpbMwuUA__QV-KR1u8Htht5vE/view&amount=4500&rzp=https%3A//rzp.io/rzp/AtBAvxF" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated expressway with metro line, corporate towers, hazy polluted skyline" data-clip="gurugram_clip_051.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_051.jpg" alt="Gurugram drone clip 051" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 051</div>
@@ -827,7 +831,7 @@
 <a href="buy.html?clip=Gurugram_Clip_051.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1DVhCPJ63QPlptM1PyEBNWacAVnlaiwn8/view&amount=4500&rzp=https%3A//rzp.io/rzp/f9jVMaWV" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of gurugram showing dlf cyber city towers and metro" data-clip="gurugram_clip_052.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_052.jpg" alt="Gurugram drone clip 052" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 052</div>
@@ -842,7 +846,7 @@
 <a href="buy.html?clip=Gurugram_Clip_052.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1kMcWyccuL2j9OkLdnFFlK1jW5XGkJ8kk/view&amount=4500&rzp=https%3A//rzp.io/rzp/cvMm83O" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of gurugram showing corporate glass towers, highway, and hazy skyline" data-clip="gurugram_clip_053.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_053.jpg" alt="Gurugram drone clip 053" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 053</div>
@@ -857,7 +861,7 @@
 <a href="buy.html?clip=Gurugram_Clip_053.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1UU2RW-34G513gDNobFBoW1c93AWFESPk/view&amount=4500&rzp=https%3A//rzp.io/rzp/0GRZU8R" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="aerial view of gurugram showing highways, high-rise apartments, metro line" data-clip="gurugram_clip_054.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_054.jpg" alt="Gurugram drone clip 054" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 054</div>
@@ -872,7 +876,7 @@
 <a href="buy.html?clip=Gurugram_Clip_054.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1IG_Vk0xhVJbgfZCnyfMciyUU6WiDsADN/view&amount=4500&rzp=https%3A//rzp.io/rzp/Mm2VpHin" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line alongside highway with corporate towers and residential areas" data-clip="gurugram_clip_055.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_055.jpg" alt="Gurugram drone clip 055" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 055</div>
@@ -887,7 +891,7 @@
 <a href="buy.html?clip=Gurugram_Clip_055.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/176XMb80gc-vs-fX9nlFv0TFxuriZRsFp/view&amount=4500&rzp=https%3A//rzp.io/rzp/QXZ6OgkL" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line over highway with corporate towers and residential buildings" data-clip="gurugram_clip_056.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_056.jpg" alt="Gurugram drone clip 056" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 056</div>
@@ -902,7 +906,7 @@
 <a href="buy.html?clip=Gurugram_Clip_056.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1U1EOGc8kdCN9Er44W4z3SsZAVX2cG-CC/view&amount=4500&rzp=https%3A//rzp.io/rzp/JpeAomZ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line and highway flyover through dense urban area" data-clip="gurugram_clip_057.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_057.jpg" alt="Gurugram drone clip 057" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 057</div>
@@ -917,7 +921,7 @@
 <a href="buy.html?clip=Gurugram_Clip_057.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1paILiVJav0gJfBHDrvhjU8WuzLZ7b92t/view&amount=4500&rzp=https%3A//rzp.io/rzp/OK1NBVB" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated metro line, dense urban buildings, major highway, residential colonies" data-clip="gurugram_clip_058.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_058.jpg" alt="Gurugram drone clip 058" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 058</div>
@@ -932,7 +936,7 @@
 <a href="buy.html?clip=Gurugram_Clip_058.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/18G95j9-K4Q2h-Zi4tmTJeaw6RDzrgg5b/view&amount=4500&rzp=https%3A//rzp.io/rzp/Rw6pCUQ" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="elevated railway bridge over congested roads with parked cars and residential buildings" data-clip="gurugram_clip_059.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_059.jpg" alt="Gurugram drone clip 059" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 059</div>
@@ -947,7 +951,7 @@
 <a href="buy.html?clip=Gurugram_Clip_059.mp4&city=GURUGRAM&license=Professional&drive=https%3A//drive.google.com/file/d/1epjG8fmQsbxTl8UHHGFnUKr7CNcimBiW/view&amount=4500&rzp=https%3A//rzp.io/rzp/bqxjsrwe" style="background:#ff6b00;color:#fff;padding:6px;border-radius:5px;text-decoration:none;font-size:0.75em;text-align:center;font-weight:bold;">Pro</a>
 </div>
 </div>
-</div><div style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
+</div><div class="clip-card" data-description="dense urban sprawl with low-rise buildings, green parks, and hazy skyline" data-clip="gurugram_clip_060.mp4" style="background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;">
 <img src="screenshots/Gurugram_Clip_060.jpg" alt="Gurugram drone clip 060" loading="lazy" style="width:100%;height:170px;object-fit:cover;">
 <div style="padding:14px;">
 <div style="font-weight:bold;margin-bottom:5px;font-size:0.9em;">Gurugram — Clip 060</div>
@@ -963,7 +967,28 @@
 </div>
 </div>
 </div>
-</div><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
+</div>
+<script>
+function filterClips(query) {
+  var q = query.toLowerCase().trim();
+  var cards = document.querySelectorAll(".clip-card");
+  var visible = 0;
+  cards.forEach(function(card) {
+    var desc = card.getAttribute("data-description") || "";
+    var clip = card.getAttribute("data-clip") || "";
+    var match = !q || desc.includes(q) || clip.includes(q);
+    card.style.display = match ? "" : "none";
+    if (match) visible++;
+  });
+  var countEl = document.getElementById("search-count");
+  if (q) {
+    countEl.style.display = "block";
+    countEl.textContent = visible + " clip" + (visible !== 1 ? "s" : "") + " found for "" + query + """;
+  } else {
+    countEl.style.display = "none";
+  }
+}
+</script><footer style="background:#111;border-top:1px solid #222;padding:40px 30px;margin-top:60px;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:1100px;margin:0 auto 25px;">
 <div><h4 style="color:#ff6b00;margin-bottom:10px;letter-spacing:1px;">INDIA DRONE FOOTAGE</h4>
 <p style="color:#aaa;font-size:0.85em;line-height:1.6;">Professional 4K aerial drone footage from across India. Shot by Kishan Rahul since 2018.</p></div>
