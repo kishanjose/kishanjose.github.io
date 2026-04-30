@@ -443,7 +443,7 @@ function filterClips(query) {
   var countEl = document.getElementById("search-count");
   if (q) {
     countEl.style.display = "block";
-    countEl.textContent = visible + " clip" + (visible !== 1 ? "s" : "") + " found for "" + query + """;
+    countEl.textContent = visible + " clip" + (visible !== 1 ? "s" : "") + " found for: " + query;
   } else {
     countEl.style.display = "none";
   }
