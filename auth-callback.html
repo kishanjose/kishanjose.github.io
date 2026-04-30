@@ -3,36 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <title>Signing you in...</title>
-<style>body{background:#0a0a0a;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}</style>
+<style>
+body{background:#0a0a0a;color:#fff;font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;margin:0;}
+.spinner{width:40px;height:40px;border:3px solid #333;border-top:3px solid #ff6b00;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
 </head>
 <body>
-<p style="color:#ff6b00;">Signing you in...</p>
+<div class="spinner"></div>
+<p style="color:#ff6b00;font-size:1.1em;">Signing you in...</p>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+var sb = window.supabase.createClient(
+  "https://pdlvwpsgqnqwrmymqksn.supabase.co",
+  "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa"
+);
 
-sb.auth.onAuthStateChange(function(event, session) {
-  if (event === "SIGNED_IN" && session) {
-    try {
-      var stored = sessionStorage.getItem("pending_purchase");
-      if (stored) {
-        var p = JSON.parse(stored);
-        if (p.clip && p.rzp) {
-          window.location.href = "buy.html?clip=" + encodeURIComponent(p.clip) + "&city=" + encodeURIComponent(p.city) + "&license=" + encodeURIComponent(p.license) + "&drive=" + encodeURIComponent(p.drive) + "&amount=" + p.amount + "&rzp=" + encodeURIComponent(p.rzp);
-          return;
-        }
+function getDestination() {
+  try {
+    var stored = sessionStorage.getItem("pending_purchase");
+    if (stored) {
+      var p = JSON.parse(stored);
+      if (p.clip && p.rzp) {
+        return "buy.html?clip=" + encodeURIComponent(p.clip) +
+          "&city=" + encodeURIComponent(p.city) +
+          "&license=" + encodeURIComponent(p.license) +
+          "&drive=" + encodeURIComponent(p.drive) +
+          "&amount=" + p.amount +
+          "&rzp=" + encodeURIComponent(p.rzp);
       }
-    } catch(e) {}
-    window.location.href = "account.html";
+    }
+  } catch(e) {}
+  return "account.html";
+}
+
+// Listen for auth state change - this fires when OAuth completes
+sb.auth.onAuthStateChange(function(event, session) {
+  if (session) {
+    window.location.href = getDestination();
   }
 });
 
-// Also check immediately
-sb.auth.getSession().then(function(r) {
-  if (r.data.session) {
-    window.location.href = "account.html";
+// Also check existing session
+sb.auth.getSession().then(function(result) {
+  if (result.data.session) {
+    window.location.href = getDestination();
   }
 });
+
+// Fallback - if nothing happens in 5 seconds go to login
+setTimeout(function() {
+  sb.auth.getSession().then(function(result) {
+    if (result.data.session) {
+      window.location.href = getDestination();
+    } else {
+      window.location.href = "login.html";
+    }
+  });
+}, 5000);
 </script>
 </body>
 </html>
