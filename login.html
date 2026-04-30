@@ -163,10 +163,9 @@ async function signIn() {
 }
 
 async function signInGoogle() {
-  var redirectTo = "https://indiadronefootage.com/" + getRedirectUrl();
   await sb.auth.signInWithOAuth({
     provider: "google",
-    options: {redirectTo: redirectTo}
+    options: {redirectTo: "https://indiadronefootage.com/account.html"}
   });
 }
 
