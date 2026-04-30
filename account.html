@@ -85,82 +85,64 @@ function loadAccount() {
     window.history.replaceState(null, "", window.location.pathname);
   }
 
-  // Small delay to allow OAuth session to establish
-  setTimeout(function() {
   sb.auth.getSession().then(function(result) {
     var session = result.data.session;
     if (!session) {
-      // Try once more after another delay
-      setTimeout(function() {
-        sb.auth.getSession().then(function(result2) {
-          if (!result2.data.session) {
-            window.location.href = "login.html?redirect=account.html";
-          } else {
-            loadAccountData(result2.data.session);
-          }
-        });
-      }, 1500);
+      window.location.href = "login.html?redirect=account.html";
       return;
     }
-
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
-
-    var user = session.user;
-    var meta = user.user_metadata || {};
-    var avatar = meta.avatar_url || "";
-    var name = meta.full_name || meta.name || user.email.split("@")[0];
-
-    var userInfoHtml = "";
-    if (avatar) {
-      userInfoHtml += '<img src="' + avatar + '" alt="Profile">';
-    }
-    userInfoHtml += '<div><div class="name">' + name + '</div><div class="email">' + user.email + '</div></div>';
-    document.getElementById("user-info").innerHTML = userInfoHtml;
-
-    sb.from("purchases")
-      .select("*")
-      .eq("email", user.email)
-      .order("purchased_at", { ascending: false })
-      .then(function(result) {
-        console.log("Purchases:", result.data, "Error:", result.error);
-        
-        var purchases = result.data;
-        var error = result.error;
-
-        if (error) {
-          console.error("Error:", error);
-          showNoPurchases();
-          return;
-        }
-
-        if (!purchases || purchases.length === 0) {
-          showNoPurchases();
-          return;
-        }
-
-        document.getElementById("total-purchases").textContent = purchases.length;
-        var total = 0;
-        for (var i = 0; i < purchases.length; i++) {
-          total += purchases[i].amount || 0;
-        }
-        document.getElementById("total-spent").textContent = "Rs " + total.toLocaleString("en-IN");
-
-        var html = "";
-        for (var i = 0; i < purchases.length; i++) {
-          var p = purchases[i];
-          var date = new Date(p.purchased_at).toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric"});
-          html += '<div class="purchase-card">';
-          html += '<div class="purchase-info"><h3>' + p.clip_name + '</h3>';
-          html += '<p>' + p.city + ' | ' + date + ' | Rs ' + (p.amount||0).toLocaleString("en-IN") + '</p></div>';
-          html += '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">';
-          html += '<span class="badge">' + p.license_type + '</span>';
-          html += '<a href="' + p.drive_link + '" target="_blank" class="btn-download">Download</a>';
-          html += '</div></div>';
-        }
-        document.getElementById("purchases-list").innerHTML = html;
-      });
+    showAccount(session);
   });
+}
+
+function showAccount(session) {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("main-content").style.display = "block";
+
+  var user = session.user;
+  var meta = user.user_metadata || {};
+  var avatar = meta.avatar_url || "";
+  var name = meta.full_name || meta.name || user.email.split("@")[0];
+
+  var userInfoHtml = "";
+  if (avatar) userInfoHtml += '<img src="' + avatar + '" alt="Profile">';
+  userInfoHtml += '<div><div class="name">' + name + '</div><div class="email">' + user.email + '</div></div>';
+  document.getElementById("user-info").innerHTML = userInfoHtml;
+
+  sb.from("purchases")
+    .select("*")
+    .eq("email", user.email)
+    .order("purchased_at", { ascending: false })
+    .then(function(result) {
+      var purchases = result.data;
+      var list = document.getElementById("purchases-list");
+
+      if (!purchases || purchases.length === 0) {
+        document.getElementById("total-purchases").textContent = "0";
+        document.getElementById("total-spent").textContent = "Rs 0";
+        list.innerHTML = '<div class="empty"><p style="margin-bottom:15px;">No purchases yet</p><a href="index.html" style="color:#ff6b00;">Browse footage</a></div>';
+        return;
+      }
+
+      document.getElementById("total-purchases").textContent = purchases.length;
+      var total = 0;
+      for (var i = 0; i < purchases.length; i++) total += purchases[i].amount || 0;
+      document.getElementById("total-spent").textContent = "Rs " + total.toLocaleString("en-IN");
+
+      var html = "";
+      for (var i = 0; i < purchases.length; i++) {
+        var p = purchases[i];
+        var date = new Date(p.purchased_at).toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric"});
+        html += '<div class="purchase-card">';
+        html += '<div class="purchase-info"><h3>' + p.clip_name + '</h3>';
+        html += '<p>' + p.city + ' | ' + date + ' | Rs ' + (p.amount||0).toLocaleString("en-IN") + '</p></div>';
+        html += '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">';
+        html += '<span class="badge">' + p.license_type + '</span>';
+        html += '<a href="' + p.drive_link + '" target="_blank" class="btn-download">Download</a>';
+        html += '</div></div>';
+      }
+      list.innerHTML = html;
+    });
 }
 
 loadAccount();
