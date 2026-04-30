@@ -85,10 +85,21 @@ function loadAccount() {
     window.history.replaceState(null, "", window.location.pathname);
   }
 
+  // Small delay to allow OAuth session to establish
+  setTimeout(function() {
   sb.auth.getSession().then(function(result) {
     var session = result.data.session;
     if (!session) {
-      window.location.href = "login.html?redirect=account.html";
+      // Try once more after another delay
+      setTimeout(function() {
+        sb.auth.getSession().then(function(result2) {
+          if (!result2.data.session) {
+            window.location.href = "login.html?redirect=account.html";
+          } else {
+            loadAccountData(result2.data.session);
+          }
+        });
+      }, 1500);
       return;
     }
 
