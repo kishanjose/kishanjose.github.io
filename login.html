@@ -100,7 +100,19 @@ function getRedirectUrl() {
 
 function init() {
   try {
+    // Only keep pending purchase if user came from a city page
     var stored = sessionStorage.getItem("pending_purchase");
+    var fromCityPage = document.referrer && document.referrer.includes("indiadronefootage.com") && 
+                       !document.referrer.includes("login") && !document.referrer.includes("account");
+    if (stored && !fromCityPage) {
+      // Check if pending purchase is older than 30 minutes
+      var pendingData = JSON.parse(stored);
+      var age = Date.now() - (pendingData.timestamp || 0);
+      if (age > 30 * 60 * 1000) {
+        sessionStorage.removeItem("pending_purchase");
+        stored = null;
+      }
+    }
     if (stored) {
       document.getElementById("purchase-banner").style.display = "block";
     }

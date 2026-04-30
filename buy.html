@@ -131,7 +131,7 @@ function init() {
     if (!session) {
       var p = getParams();
       if (p.clip && p.rzp) {
-        savePurchaseToStorage(p);
+        p.timestamp = Date.now(); savePurchaseToStorage(p);
       }
       window.location.href = "login.html";
       return;
@@ -144,7 +144,7 @@ function init() {
 
     var p = getParams();
     if (p.clip && p.rzp) {
-      savePurchaseToStorage(p);
+      p.timestamp = Date.now(); savePurchaseToStorage(p);
       displayPurchase(p);
     } else {
       var stored = getPurchaseFromStorage();
