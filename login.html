@@ -165,7 +165,7 @@ async function signIn() {
 async function signInGoogle() {
   await sb.auth.signInWithOAuth({
     provider: "google",
-    options: {redirectTo: "https://indiadronefootage.com/account.html"}
+    options: {redirectTo: "https://indiadronefootage.com/auth-callback.html"}
   });
 }
 

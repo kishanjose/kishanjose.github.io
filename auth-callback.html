@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Signing you in...</title>
+<style>body{background:#0a0a0a;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}</style>
+</head>
+<body>
+<p style="color:#ff6b00;">Signing you in...</p>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+var sb = window.supabase.createClient("https://pdlvwpsgqnqwrmymqksn.supabase.co", "sb_publishable_IEYtgxxMFdaxn5gshxE1Dw_E7EZCdfa");
+
+sb.auth.onAuthStateChange(function(event, session) {
+  if (event === "SIGNED_IN" && session) {
+    try {
+      var stored = sessionStorage.getItem("pending_purchase");
+      if (stored) {
+        var p = JSON.parse(stored);
+        if (p.clip && p.rzp) {
+          window.location.href = "buy.html?clip=" + encodeURIComponent(p.clip) + "&city=" + encodeURIComponent(p.city) + "&license=" + encodeURIComponent(p.license) + "&drive=" + encodeURIComponent(p.drive) + "&amount=" + p.amount + "&rzp=" + encodeURIComponent(p.rzp);
+          return;
+        }
+      }
+    } catch(e) {}
+    window.location.href = "account.html";
+  }
+});
+
+// Also check immediately
+sb.auth.getSession().then(function(r) {
+  if (r.data.session) {
+    window.location.href = "account.html";
+  }
+});
+</script>
+</body>
+</html>
